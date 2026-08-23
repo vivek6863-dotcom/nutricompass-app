@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -11,12 +12,36 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Global HTML Settings */
 html {
   background: #ffffff;
+  max-width: 100%;
+  overflow-x: hidden;
+
+  /* Hide the visual scrollbar while keeping page scrolling enabled */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
+/* Hide scrollbar in Chrome, Edge, Safari */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Global Body Settings */
 body {
   background: #ffffff;
   color: #171717;
   font-family: Arial, Helvetica, sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+
+  /* Hide the visual scrollbar while keeping page scrolling enabled */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Hide scrollbar in Chrome, Edge, Safari */
+body::-webkit-scrollbar {
+  display: none;
 }
