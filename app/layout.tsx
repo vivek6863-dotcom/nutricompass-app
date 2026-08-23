@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -35,7 +36,6 @@ export const metadata: Metadata = {
   ],
 
   creator: "NutriCompass",
-
   publisher: "NutriCompass",
 
   robots: {
@@ -46,22 +46,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "NutriCompass",
-
     title:
       "NutriCompass | Nutrition, Foods, Nutrients, Symptoms & Healthy Recipes",
-
     description:
       "Explore nutrition information, healthy foods, essential nutrients, common symptoms, and nutritious recipes with NutriCompass.",
-
     locale: "en_US",
   },
 
   twitter: {
     card: "summary_large_image",
-
     title:
       "NutriCompass | Nutrition, Foods, Nutrients, Symptoms & Healthy Recipes",
-
     description:
       "Explore nutrition information, healthy foods, essential nutrients, common symptoms, and nutritious recipes with NutriCompass.",
   },
@@ -78,21 +73,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white text-gray-800">
-
-        {/* Header */}
+        <GoogleTagManager gtmId="GTM-T3MB97GP" />
 
         <Header />
 
-        {/* Main Content */}
-
-        <main className="flex-1">
-          {children}
-        </main>
-
-        {/* Footer */}
+        <main className="flex-1">{children}</main>
 
         <Footer />
-
       </body>
     </html>
   );
