@@ -20,7 +20,7 @@ import {
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://nutricompass.com";
+  "https://nutricompass.in";
 
 /* =========================================================
    DYNAMIC SEO METADATA
@@ -60,14 +60,14 @@ export async function generateMetadata({
   ======================================================= */
 
   const title =
-    `${nutrient.name}: Benefits, Food Sources & Daily Requirement`;
+    `${nutrient.name}: Benefits, Food Sources & Daily Requirement | NutriCompass`;
 
   /* =======================================================
      SEO DESCRIPTION
   ======================================================= */
 
   const description =
-    `Learn about ${nutrient.name} benefits, food sources, deficiency symptoms and daily requirements. Explore practical nutrition information from NutriCompass.`;
+    `Learn about ${nutrient.name} benefits, food sources, deficiency symptoms, and daily requirements with NutriCompass.`;
 
   /* =======================================================
      CANONICAL
@@ -87,17 +87,6 @@ export async function generateMetadata({
     title,
 
     description,
-
-    keywords: [
-      nutrient.name,
-      `${nutrient.name} benefits`,
-      `${nutrient.name} food sources`,
-      `${nutrient.name} deficiency`,
-      `${nutrient.name} daily requirement`,
-      `foods rich in ${nutrient.name}`,
-      "nutrition",
-      "healthy foods",
-    ],
 
     robots: {
       index: true,
@@ -119,8 +108,7 @@ export async function generateMetadata({
     openGraph: {
       type: "article",
 
-      title:
-        `${nutrient.name}: Benefits, Food Sources & Daily Requirement | NutriCompass`,
+      title,
 
       description,
 
@@ -133,13 +121,9 @@ export async function generateMetadata({
       images: [
         {
           url: imageUrl,
-
           width: 1200,
-
           height: 800,
-
-          alt:
-            `${nutrient.name} Benefits And Food Sources`,
+          alt: `${nutrient.name} benefits and food sources`,
         },
       ],
     },
@@ -147,8 +131,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
 
-      title:
-        `${nutrient.name}: Benefits, Food Sources & Daily Requirement`,
+      title,
 
       description,
 
@@ -179,12 +162,12 @@ export default async function NutrientPage({
   if (!nutrient) {
     return (
       <main className="min-h-screen bg-gray-50">
-
         <div className="max-w-5xl mx-auto px-6 py-20">
-
           <div className="bg-white rounded-3xl shadow-md p-10 text-center">
-
-            <div className="text-7xl">
+            <div
+              className="text-7xl"
+              aria-hidden="true"
+            >
               💊
             </div>
 
@@ -202,11 +185,8 @@ export default async function NutrientPage({
             >
               Browse Nutrients
             </Link>
-
           </div>
-
         </div>
-
       </main>
     );
   }
@@ -266,31 +246,22 @@ export default async function NutrientPage({
     itemListElement: [
       {
         "@type": "ListItem",
-
         position: 1,
-
         name: "Home",
-
         item: `${SITE_URL}/`,
       },
 
       {
         "@type": "ListItem",
-
         position: 2,
-
         name: "Nutrients",
-
         item: `${SITE_URL}/nutrients`,
       },
 
       {
         "@type": "ListItem",
-
         position: 3,
-
         name: nutrient.name,
-
         item: canonicalUrl,
       },
     ],
@@ -314,33 +285,27 @@ export default async function NutrientPage({
 
     mainEntityOfPage: {
       "@type": "WebPage",
-
       "@id": canonicalUrl,
     },
 
     url: canonicalUrl,
 
+    author: {
+      "@type": "Organization",
+      name: "NutriCompass",
+      url: SITE_URL,
+    },
+
     publisher: {
       "@type": "Organization",
-
       name: "NutriCompass",
-
       url: SITE_URL,
     },
 
     about: {
       "@type": "Thing",
-
       name: nutrient.name,
     },
-
-    keywords: [
-      nutrient.name,
-      `${nutrient.name} benefits`,
-      `${nutrient.name} food sources`,
-      `${nutrient.name} deficiency`,
-      `${nutrient.name} daily requirement`,
-    ].join(", "),
   };
 
   return (
@@ -353,18 +318,14 @@ export default async function NutrientPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            breadcrumbSchema
-          ),
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            articleSchema
-          ),
+          __html: JSON.stringify(articleSchema),
         }}
       />
 
@@ -373,12 +334,10 @@ export default async function NutrientPage({
       ===================================================== */}
 
       <div className="max-w-6xl mx-auto px-6 pt-8">
-
         <nav
           aria-label="Breadcrumb"
           className="flex flex-wrap items-center gap-2 text-sm text-gray-500"
         >
-
           <Link
             href="/"
             className="hover:text-green-700 transition"
@@ -407,34 +366,31 @@ export default async function NutrientPage({
           >
             {nutrient.name}
           </span>
-
         </nav>
-
       </div>
 
       {/* =====================================================
           HERO
       ===================================================== */}
 
-      <section className="max-w-6xl mx-auto px-6 py-8">
-
+      <section
+        aria-labelledby="nutrient-page-title"
+        className="max-w-6xl mx-auto px-6 py-8"
+      >
         <div className="bg-white rounded-3xl shadow-md overflow-hidden">
-
           <div className="grid md:grid-cols-2">
 
             {/* IMAGE */}
 
             <div className="relative min-h-[320px] md:min-h-[450px] bg-green-50">
-
               <Image
                 src={`/images/nutrients/${nutrient.slug}.jpg`}
-                alt={`${nutrient.name} Nutrition`}
+                alt={`${nutrient.name} benefits and food sources`}
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
-
             </div>
 
             {/* CONTENT */}
@@ -445,8 +401,11 @@ export default async function NutrientPage({
                 💊 Essential Nutrient
               </div>
 
-              <h1 className="mt-6 text-4xl md:text-5xl font-bold text-green-700">
-                {nutrient.name}
+              <h1
+                id="nutrient-page-title"
+                className="mt-6 text-4xl md:text-5xl font-bold text-green-700"
+              >
+                {nutrient.name}: Benefits, Food Sources & Daily Requirement
               </h1>
 
               <p className="mt-6 text-lg md:text-xl text-gray-600 leading-8">
@@ -466,22 +425,24 @@ export default async function NutrientPage({
               </div>
 
             </div>
-
           </div>
-
         </div>
-
       </section>
 
       {/* =====================================================
           QUICK NUTRITION OVERVIEW
       ===================================================== */}
 
-      <section className="max-w-6xl mx-auto px-6 mt-4">
-
+      <section
+        aria-labelledby="quick-overview"
+        className="max-w-6xl mx-auto px-6 mt-4"
+      >
         <div className="bg-white rounded-3xl shadow-md p-8">
 
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2
+            id="quick-overview"
+            className="text-3xl font-bold text-gray-900"
+          >
             Quick Nutrition Overview
           </h2>
 
@@ -496,7 +457,10 @@ export default async function NutrientPage({
 
             <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6">
 
-              <div className="text-3xl">
+              <div
+                className="text-3xl"
+                aria-hidden="true"
+              >
                 📊
               </div>
 
@@ -514,7 +478,10 @@ export default async function NutrientPage({
 
             <div className="bg-green-50 border border-green-100 rounded-2xl p-6">
 
-              <div className="text-3xl">
+              <div
+                className="text-3xl"
+                aria-hidden="true"
+              >
                 🥗
               </div>
 
@@ -532,7 +499,10 @@ export default async function NutrientPage({
 
             <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-6">
 
-              <div className="text-3xl">
+              <div
+                className="text-3xl"
+                aria-hidden="true"
+              >
                 💚
               </div>
 
@@ -550,7 +520,10 @@ export default async function NutrientPage({
 
             <div className="bg-red-50 border border-red-100 rounded-2xl p-6">
 
-              <div className="text-3xl">
+              <div
+                className="text-3xl"
+                aria-hidden="true"
+              >
                 ⚠️
               </div>
 
@@ -565,20 +538,23 @@ export default async function NutrientPage({
             </div>
 
           </div>
-
         </div>
-
       </section>
 
       {/* =====================================================
           BENEFITS
       ===================================================== */}
 
-      <section className="max-w-6xl mx-auto px-6 mt-10">
-
+      <section
+        aria-labelledby="nutrient-benefits"
+        className="max-w-6xl mx-auto px-6 mt-10"
+      >
         <div className="bg-white rounded-3xl shadow-md p-8">
 
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2
+            id="nutrient-benefits"
+            className="text-3xl font-bold text-gray-900"
+          >
             Benefits Of {nutrient.name}
           </h2>
 
@@ -589,15 +565,16 @@ export default async function NutrientPage({
           <div className="grid md:grid-cols-2 gap-5 mt-8">
 
             {nutrient.benefits.map((benefit) => (
-
               <div
                 key={benefit}
                 className="bg-green-50 border border-green-100 rounded-2xl p-6 hover:bg-green-100 hover:shadow-md transition"
               >
-
                 <div className="flex items-start gap-4">
 
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center text-lg">
+                  <div
+                    className="flex-shrink-0 w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center text-lg"
+                    aria-hidden="true"
+                  >
                     ✓
                   </div>
 
@@ -606,30 +583,31 @@ export default async function NutrientPage({
                   </p>
 
                 </div>
-
               </div>
-
             ))}
 
           </div>
-
         </div>
-
       </section>
 
       {/* =====================================================
           BEST FOOD SOURCES
       ===================================================== */}
 
-      <section className="max-w-6xl mx-auto px-6 mt-10">
-
+      <section
+        aria-labelledby="food-sources"
+        className="max-w-6xl mx-auto px-6 mt-10"
+      >
         <div className="bg-white rounded-3xl shadow-md p-8">
 
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
 
             <div>
 
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h2
+                id="food-sources"
+                className="text-3xl font-bold text-gray-900"
+              >
                 Best Food Sources Of {nutrient.name}
               </h2>
 
@@ -642,6 +620,7 @@ export default async function NutrientPage({
             <Link
               href="/foods"
               className="text-green-700 font-semibold hover:underline"
+              aria-label="Explore all healthy foods"
             >
               View All Foods →
             </Link>
@@ -657,6 +636,7 @@ export default async function NutrientPage({
                 <Link
                   key={food.slug}
                   href={foodLink(food.name)}
+                  aria-label={`Learn about ${food.name} nutrition`}
                   className="group bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition"
                 >
 
@@ -664,7 +644,7 @@ export default async function NutrientPage({
 
                     <Image
                       src={food.image}
-                      alt={`${food.name} - source of ${nutrient.name}`}
+                      alt={`${food.name} - food source of ${nutrient.name}`}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition duration-500"
@@ -683,7 +663,7 @@ export default async function NutrientPage({
                     </p>
 
                     <div className="mt-4 text-green-700 font-semibold text-sm">
-                      Explore Food →
+                      Learn About {food.name} →
                     </div>
 
                   </div>
@@ -707,18 +687,22 @@ export default async function NutrientPage({
           )}
 
         </div>
-
       </section>
 
       {/* =====================================================
           DEFICIENCY SYMPTOMS
       ===================================================== */}
 
-      <section className="max-w-6xl mx-auto px-6 mt-10">
-
+      <section
+        aria-labelledby="deficiency-symptoms"
+        className="max-w-6xl mx-auto px-6 mt-10"
+      >
         <div className="bg-white rounded-3xl shadow-md p-8">
 
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2
+            id="deficiency-symptoms"
+            className="text-3xl font-bold text-gray-900"
+          >
             Deficiency Symptoms Of {nutrient.name}
           </h2>
 
@@ -743,12 +727,16 @@ export default async function NutrientPage({
                   <Link
                     key={symptom}
                     href={symptomLink(matchingSymptom.title)}
+                    aria-label={`Learn about ${matchingSymptom.title}`}
                     className="group bg-red-50 border border-red-100 rounded-2xl p-5 hover:bg-red-100 hover:shadow-md transition"
                   >
 
                     <div className="flex items-center gap-3">
 
-                      <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-xl">
+                      <div
+                        className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-xl"
+                        aria-hidden="true"
+                      >
                         🩺
                       </div>
 
@@ -759,12 +747,11 @@ export default async function NutrientPage({
                     </div>
 
                     <p className="mt-4 text-sm text-red-700 font-medium">
-                      Explore Topic →
+                      Learn About {matchingSymptom.title} →
                     </p>
 
                   </Link>
                 );
-
               }
 
               return (
@@ -775,7 +762,10 @@ export default async function NutrientPage({
 
                   <div className="flex items-center gap-3">
 
-                    <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-xl">
+                    <div
+                      className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-xl"
+                      aria-hidden="true"
+                    >
                       ⚠️
                     </div>
 
@@ -792,27 +782,34 @@ export default async function NutrientPage({
           </div>
 
         </div>
-
       </section>
 
       {/* =====================================================
           DAILY REQUIREMENT
       ===================================================== */}
 
-      <section className="max-w-6xl mx-auto px-6 mt-10">
-
+      <section
+        aria-labelledby="daily-requirement"
+        className="max-w-6xl mx-auto px-6 mt-10"
+      >
         <div className="bg-gradient-to-r from-blue-50 to-green-50 border border-blue-100 rounded-3xl p-8 shadow-md">
 
           <div className="grid md:grid-cols-[auto_1fr] gap-6 items-center">
 
-            <div className="w-20 h-20 rounded-2xl bg-white shadow-sm flex items-center justify-center text-4xl">
+            <div
+              className="w-20 h-20 rounded-2xl bg-white shadow-sm flex items-center justify-center text-4xl"
+              aria-hidden="true"
+            >
               📊
             </div>
 
             <div>
 
-              <h2 className="text-3xl font-bold text-gray-900">
-                Recommended Daily Intake
+              <h2
+                id="daily-requirement"
+                className="text-3xl font-bold text-gray-900"
+              >
+                Recommended Daily Intake Of {nutrient.name}
               </h2>
 
               <p className="mt-3 text-xl text-green-700 font-bold">
@@ -829,7 +826,6 @@ export default async function NutrientPage({
           </div>
 
         </div>
-
       </section>
 
       {/* =====================================================
@@ -838,7 +834,10 @@ export default async function NutrientPage({
 
       {relatedRecipes.length > 0 && (
 
-        <section className="max-w-6xl mx-auto px-6 mt-10">
+        <section
+          aria-labelledby="related-recipes"
+          className="max-w-6xl mx-auto px-6 mt-10"
+        >
 
           <div className="bg-white rounded-3xl shadow-md p-8">
 
@@ -846,7 +845,10 @@ export default async function NutrientPage({
 
               <div>
 
-                <h2 className="text-3xl font-bold text-gray-900">
+                <h2
+                  id="related-recipes"
+                  className="text-3xl font-bold text-gray-900"
+                >
                   Recipes With {nutrient.name}
                 </h2>
 
@@ -859,6 +861,7 @@ export default async function NutrientPage({
               <Link
                 href="/recipes"
                 className="text-green-700 font-semibold hover:underline"
+                aria-label="Explore all healthy recipes"
               >
                 View All Recipes →
               </Link>
@@ -872,6 +875,7 @@ export default async function NutrientPage({
                 <Link
                   key={recipe.slug}
                   href={recipeLink(recipe.name)}
+                  aria-label={`View ${recipe.name} recipe`}
                   className="group bg-orange-50 border border-orange-100 rounded-2xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition"
                 >
 
@@ -898,7 +902,7 @@ export default async function NutrientPage({
                     </p>
 
                     <div className="mt-4 text-green-700 font-semibold">
-                      View Recipe →
+                      View {recipe.name} Recipe →
                     </div>
 
                   </div>
@@ -921,11 +925,17 @@ export default async function NutrientPage({
 
       {relatedSymptoms.length > 0 && (
 
-        <section className="max-w-6xl mx-auto px-6 mt-10">
+        <section
+          aria-labelledby="related-topics"
+          className="max-w-6xl mx-auto px-6 mt-10"
+        >
 
           <div className="bg-white rounded-3xl shadow-md p-8">
 
-            <h2 className="text-3xl font-bold text-gray-900">
+            <h2
+              id="related-topics"
+              className="text-3xl font-bold text-gray-900"
+            >
               Related Nutrition Topics
             </h2>
 
@@ -941,10 +951,14 @@ export default async function NutrientPage({
                 <Link
                   key={symptom.slug}
                   href={symptomLink(symptom.title)}
+                  aria-label={`Learn about ${symptom.title}`}
                   className="group bg-green-50 border border-green-100 rounded-2xl p-6 hover:bg-green-100 hover:shadow-md transition"
                 >
 
-                  <div className="text-3xl">
+                  <div
+                    className="text-3xl"
+                    aria-hidden="true"
+                  >
                     🩺
                   </div>
 
@@ -957,7 +971,7 @@ export default async function NutrientPage({
                   </p>
 
                   <div className="mt-4 text-green-700 font-semibold text-sm">
-                    Explore Topic →
+                    Learn About {symptom.title} →
                   </div>
 
                 </Link>
@@ -976,19 +990,28 @@ export default async function NutrientPage({
           IMPORTANT INFORMATION
       ===================================================== */}
 
-      <section className="max-w-6xl mx-auto px-6 mt-10 pb-4">
+      <section
+        aria-labelledby="important-information"
+        className="max-w-6xl mx-auto px-6 mt-10 pb-4"
+      >
 
         <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
 
           <div className="flex gap-4">
 
-            <div className="text-2xl">
+            <div
+              className="text-2xl"
+              aria-hidden="true"
+            >
               ℹ️
             </div>
 
             <div>
 
-              <h2 className="font-bold text-gray-900">
+              <h2
+                id="important-information"
+                className="font-bold text-gray-900"
+              >
                 Important Information
               </h2>
 
