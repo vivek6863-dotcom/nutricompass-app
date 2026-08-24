@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Explore nutrition information, healthy foods, essential nutrients, common symptoms, and healthy recipes with NutriCompass.",
 
   alternates: {
-    canonical: "/",
+    canonical: "https://nutricompass.in/",
   },
 
   openGraph: {
@@ -47,6 +47,7 @@ export default function Home() {
   return (
     <>
       {/* Website Structured Data */}
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -54,7 +55,7 @@ export default function Home() {
         }}
       />
 
-      <div className="min-h-screen bg-gray-50">
+      <main className="min-h-screen bg-gray-50">
         <HeroCarousel />
 
         <CategorySection />
@@ -64,7 +65,7 @@ export default function Home() {
         <PopularFoods />
 
         <LatestArticles />
-      </div>
+      </main>
     </>
   );
 }

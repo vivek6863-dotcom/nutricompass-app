@@ -6,47 +6,42 @@ const symptoms = [
     slug: "iron-deficiency",
     icon: "🩸",
     description:
-      "Explore nutritional information related to iron deficiency, including foods and nutrients associated with iron.",
+      "Explore nutrition information about iron, iron-rich foods, and nutrients associated with maintaining adequate iron intake.",
   },
-
   {
     title: "Hair Loss",
     slug: "hair-loss",
     icon: "💇",
     description:
-      "Explore nutrition-related information about nutrients and foods associated with healthy hair.",
+      "Learn about nutrition and nutrients commonly associated with normal hair health and healthy hair growth.",
   },
-
   {
     title: "Vitamin D Deficiency",
     slug: "vitamin-d-deficiency",
     icon: "☀️",
     description:
-      "Explore foods and nutritional information related to vitamin D and healthy vitamin D levels.",
+      "Explore vitamin D, food sources, and general nutrition information related to maintaining vitamin D intake.",
   },
-
   {
     title: "Fatigue",
     slug: "fatigue",
     icon: "😴",
     description:
-      "Explore nutritional factors and nutrients that may be associated with tiredness and low energy.",
+      "Learn about nutrition-related factors and nutrients that may be relevant to energy levels and tiredness.",
   },
-
   {
     title: "Weakness",
     slug: "weakness",
     icon: "💪",
     description:
-      "Explore nutritional factors and nutrients that may be associated with weakness and low energy.",
+      "Explore general nutrition information about protein, nutrients, and dietary factors related to energy and strength.",
   },
-
   {
     title: "Constipation",
     slug: "constipation",
     icon: "🥗",
     description:
-      "Explore foods, nutrients, fiber, and nutrition-related information that may support healthy digestion.",
+      "Learn about fiber, fluids, foods, and general nutrition factors that support healthy digestive function.",
   },
 ];
 
@@ -54,11 +49,12 @@ export default function TrendingSymptoms() {
   return (
     <section
       aria-labelledby="trending-symptoms"
-      className="max-w-7xl mx-auto py-16 sm:py-20 px-4 sm:px-6 lg:px-8"
+      className="max-w-7xl mx-auto py-14 sm:py-18 lg:py-20 px-4 sm:px-6 lg:px-8"
     >
       {/* Section Heading */}
 
-      <div className="text-center mb-12">
+      <div className="text-center mb-10 sm:mb-12">
+
         <h2
           id="trending-symptoms"
           className="text-3xl sm:text-4xl font-bold text-gray-900"
@@ -66,23 +62,27 @@ export default function TrendingSymptoms() {
           🔥 Trending Symptoms
         </h2>
 
-        <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
-          Explore common symptoms and learn about foods and nutrients that may
-          support your nutritional needs.
+        <p className="mt-4 text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-7 sm:leading-8">
+          Explore common symptoms and learn about nutrition-related
+          information, foods, and nutrients that may support your
+          nutritional needs.
         </p>
+
       </div>
 
       {/* Symptoms Grid */}
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+
         {symptoms.map((item) => (
           <Link
             key={item.slug}
             href={`/symptoms/${item.slug}`}
             aria-label={`Learn more about ${item.title}`}
-            className="group"
+            className="group h-full"
           >
-            <article className="h-full bg-white rounded-2xl border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 p-7 hover:-translate-y-2">
+            <article className="h-full min-h-[320px] flex flex-col bg-white rounded-2xl border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 p-6 sm:p-7 hover:-translate-y-2">
+
               {/* Icon */}
 
               <div
@@ -106,23 +106,28 @@ export default function TrendingSymptoms() {
 
               {/* CTA */}
 
-              <div className="mt-6 text-green-700 font-semibold group-hover:underline">
+              <div className="mt-auto pt-6 text-green-700 font-semibold group-hover:underline">
                 Learn More About {item.title} →
               </div>
+
             </article>
           </Link>
         ))}
+
       </div>
 
       {/* View All */}
 
       <div className="text-center mt-10">
+
         <Link
           href="/symptoms"
-          className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-7 py-3 rounded-full shadow-md transition"
+          aria-label="View all nutrition-related symptoms"
+          className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-semibold px-7 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300"
         >
           View All Symptoms →
         </Link>
+
       </div>
     </section>
   );
