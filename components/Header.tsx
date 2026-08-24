@@ -15,14 +15,21 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+        {/* =====================================================
+            HEADER ROW
+        ===================================================== */}
+
         <div className="h-20 flex items-center justify-between">
 
-          {/* Logo */}
+          {/* =====================================================
+              LOGO
+          ===================================================== */}
 
           <Link
             href="/"
             onClick={closeMenu}
             className="flex items-center"
+            aria-label="NutriCompass Home"
           >
             <Image
               src="/images/branding/logo.png"
@@ -34,9 +41,15 @@ export default function Header() {
             />
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* =====================================================
+              DESKTOP NAVIGATION
+          ===================================================== */}
 
-          <nav className="hidden md:flex items-center gap-7 text-gray-700 font-medium">
+          <nav
+            className="hidden md:flex items-center gap-7 text-gray-700 font-medium"
+            aria-label="Main navigation"
+          >
+            {/* Symptoms */}
 
             <Link
               href="/symptoms"
@@ -45,12 +58,16 @@ export default function Header() {
               Symptoms
             </Link>
 
+            {/* Foods */}
+
             <Link
               href="/foods"
               className="hover:text-green-700 transition-colors duration-300"
             >
               Foods
             </Link>
+
+            {/* Nutrients */}
 
             <Link
               href="/nutrients"
@@ -59,12 +76,16 @@ export default function Header() {
               Nutrients
             </Link>
 
+            {/* Recipes */}
+
             <Link
               href="/recipes"
               className="hover:text-green-700 transition-colors duration-300"
             >
               Recipes
             </Link>
+
+            {/* Articles */}
 
             <Link
               href="/articles"
@@ -73,7 +94,9 @@ export default function Header() {
               Articles
             </Link>
 
-            {/* Search */}
+            {/* =================================================
+                SEARCH
+            ================================================= */}
 
             <Link
               href="/search"
@@ -87,6 +110,7 @@ export default function Header() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 strokeWidth={2}
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -96,24 +120,29 @@ export default function Header() {
               </svg>
             </Link>
 
-            {/* AI Nutrition */}
+            {/* =================================================
+                AI NUTRITION
+            ================================================= */}
 
-            <button
-              type="button"
-              className="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-full shadow-md transition"
+            <Link
+              href="/ai-nutrition"
+              aria-label="Open AI Nutrition"
+              className="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-full shadow-md transition-all duration-300 hover:shadow-lg"
             >
               AI Nutrition
-            </button>
-
+            </Link>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* =====================================================
+              MOBILE MENU BUTTON
+          ===================================================== */}
 
           <button
             type="button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
             className="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg text-gray-700 hover:bg-gray-100 transition"
           >
             {isMenuOpen ? (
@@ -124,6 +153,7 @@ export default function Header() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 strokeWidth={2}
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -139,6 +169,7 @@ export default function Header() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 strokeWidth={2}
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -148,14 +179,18 @@ export default function Header() {
               </svg>
             )}
           </button>
-
         </div>
 
-        {/* Mobile Navigation */}
+        {/* =====================================================
+            MOBILE NAVIGATION
+        ===================================================== */}
 
         {isMenuOpen && (
-          <nav className="md:hidden border-t border-gray-100 py-4">
-
+          <nav
+            id="mobile-navigation"
+            className="md:hidden border-t border-gray-100 py-4"
+            aria-label="Mobile navigation"
+          >
             <div className="flex flex-col gap-1">
 
               {/* Search */}
@@ -165,9 +200,17 @@ export default function Header() {
                 onClick={closeMenu}
                 className="px-4 py-3 rounded-lg text-gray-700 font-medium hover:bg-green-50 hover:text-green-700 transition flex items-center gap-3"
               >
-                <span className="text-xl">🔎</span>
+                <span
+                  className="text-xl"
+                  aria-hidden="true"
+                >
+                  🔎
+                </span>
+
                 Search
               </Link>
+
+              {/* Symptoms */}
 
               <Link
                 href="/symptoms"
@@ -177,6 +220,8 @@ export default function Header() {
                 Symptoms
               </Link>
 
+              {/* Foods */}
+
               <Link
                 href="/foods"
                 onClick={closeMenu}
@@ -184,6 +229,8 @@ export default function Header() {
               >
                 Foods
               </Link>
+
+              {/* Nutrients */}
 
               <Link
                 href="/nutrients"
@@ -193,6 +240,8 @@ export default function Header() {
                 Nutrients
               </Link>
 
+              {/* Recipes */}
+
               <Link
                 href="/recipes"
                 onClick={closeMenu}
@@ -200,6 +249,8 @@ export default function Header() {
               >
                 Recipes
               </Link>
+
+              {/* Articles */}
 
               <Link
                 href="/articles"
@@ -209,20 +260,21 @@ export default function Header() {
                 Articles
               </Link>
 
-              {/* AI Nutrition */}
+              {/* =================================================
+                  AI NUTRITION
+              ================================================= */}
 
-              <button
-                type="button"
-                className="mt-2 bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-full shadow-md transition"
+              <Link
+                href="/ai-nutrition"
+                onClick={closeMenu}
+                aria-label="Open AI Nutrition"
+                className="mt-2 text-center bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-full shadow-md transition-all duration-300 hover:shadow-lg"
               >
                 AI Nutrition
-              </button>
-
+              </Link>
             </div>
-
           </nav>
         )}
-
       </div>
     </header>
   );
