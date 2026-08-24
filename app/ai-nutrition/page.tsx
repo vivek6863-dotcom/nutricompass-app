@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
+import { checkNutritionQuestion } from "@/lib/aiNutritionSafety";
 
 type NutritionTopic =
   | "Foods"
@@ -30,15 +32,6 @@ type AgeGroup =
   | "31–50"
   | "51–65"
   | "65+";
-
-const exampleQuestions = [
-  "What foods are rich in iron?",
-  "What nutrients are important for healthy hair?",
-  "What foods are high in vitamin C?",
-  "What are some healthy high-protein breakfast ideas?",
-  "What foods can support healthy digestion?",
-  "How can I improve iron absorption from food?",
-];
 
 const topicQuestions: Record<NutritionTopic, string[]> = {
   Foods: [
@@ -307,6 +300,20 @@ export default function AiNutritionPage() {
       return;
     }
 
+    // Check the question before generating a response.
+    // This prevents the tool from providing diagnosis,
+    // medication, dosage, or treatment advice.
+    const safetyCheck = checkNutritionQuestion(trimmedQuestion);
+
+    if (!safetyCheck.isSafe) {
+      setAnswer(
+        safetyCheck.response ||
+          "Please ask a general nutrition question."
+      );
+
+      return;
+    }
+
     setIsLoading(true);
     setAnswer("");
 
@@ -390,6 +397,7 @@ export default function AiNutritionPage() {
             </div>
 
             <div>
+
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
                 Ask a Nutrition Question
               </h2>
@@ -398,6 +406,7 @@ export default function AiNutritionPage() {
                 Tell us what you want to know and provide a
                 little context to get more relevant nutrition guidance.
               </p>
+
             </div>
 
           </div>
@@ -574,6 +583,7 @@ export default function AiNutritionPage() {
             />
 
             <div className="mt-2 flex justify-between text-xs text-gray-500">
+
               <span>
                 Press Ctrl + Enter to ask
               </span>
@@ -581,6 +591,7 @@ export default function AiNutritionPage() {
               <span>
                 {question.length}/1000
               </span>
+
             </div>
 
           </div>
@@ -597,12 +608,14 @@ export default function AiNutritionPage() {
           >
             {isLoading ? (
               <span className="flex items-center justify-center gap-3">
+
                 <span
                   className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"
                   aria-hidden="true"
                 />
 
                 Preparing Answer...
+
               </span>
             ) : (
               "Get Nutrition Guidance →"
@@ -670,6 +683,7 @@ export default function AiNutritionPage() {
                 onClick={() => handleExampleClick(example)}
                 className="text-left bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-green-300 hover:bg-green-50 transition-all duration-300"
               >
+
                 <span
                   className="text-xl"
                   aria-hidden="true"
@@ -684,6 +698,7 @@ export default function AiNutritionPage() {
                 <span className="block mt-2 text-green-700 text-sm font-semibold">
                   Ask this question →
                 </span>
+
               </button>
             ))}
 
@@ -785,7 +800,7 @@ export default function AiNutritionPage() {
         </div>
 
         {/* ===================================================
-            DISCLAIMER
+            AI NUTRITION DISCLAIMER
         =================================================== */}
 
         <div className="mt-10 bg-amber-50 border border-amber-200 rounded-2xl p-6">
@@ -802,15 +817,27 @@ export default function AiNutritionPage() {
             <div>
 
               <h2 className="font-bold text-gray-900">
-                Important Information
+                Important Information About AI Nutrition
               </h2>
 
-              <p className="mt-2 text-sm text-gray-600 leading-6">
-                AI Nutrition provides general nutrition information
-                for educational purposes. It is not a substitute for
-                professional medical advice, diagnosis, or treatment.
-                Speak with a qualified healthcare professional for
-                personalized medical or dietary advice.
+              <p className="mt-2 text-sm text-gray-700 leading-6">
+                NutriCompass AI Nutrition provides general nutrition
+                information for educational purposes only. It is designed
+                to help you learn about foods, nutrients, healthy eating,
+                and meal ideas.
+              </p>
+
+              <p className="mt-3 text-sm text-gray-700 leading-6">
+                This tool does not diagnose medical conditions, prescribe
+                medicines or supplements, recommend medication changes,
+                or provide individualized medical treatment.
+              </p>
+
+              <p className="mt-3 text-sm text-gray-700 leading-6">
+                Nutrition needs can vary between individuals. If you have
+                a medical condition, persistent symptoms, are pregnant,
+                take medication, or have other health concerns, consult a
+                qualified healthcare professional for personalized advice.
               </p>
 
             </div>
@@ -819,7 +846,46 @@ export default function AiNutritionPage() {
 
         </div>
 
+        {/* ===================================================
+            LEGAL INFORMATION
+        =================================================== */}
+
+        <div className="mt-6 text-center">
+
+          <p className="text-sm text-gray-500">
+            Please review our information about privacy and use of the
+            AI Nutrition feature.
+          </p>
+
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm">
+
+            <Link
+              href="/privacy-policy"
+              className="text-green-700 font-semibold hover:text-green-800 hover:underline transition"
+            >
+              Privacy Policy
+            </Link>
+
+            <span
+              className="text-gray-300"
+              aria-hidden="true"
+            >
+              |
+            </span>
+
+            <Link
+              href="/ai-nutrition/terms"
+              className="text-green-700 font-semibold hover:text-green-800 hover:underline transition"
+            >
+              AI Nutrition Terms & Disclaimer
+            </Link>
+
+          </div>
+
+        </div>
+
       </section>
+
     </main>
   );
 }

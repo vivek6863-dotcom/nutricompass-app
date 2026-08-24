@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -9,12 +10,13 @@ import "swiper/css/pagination";
 
 const slides = [
   {
-    title: "Find The Root Cause Of Your Symptoms",
+    title: "Explore Nutrition, Foods, Nutrients And Healthy Recipes",
     description:
       "Explore common symptoms and learn about nutrients and foods that may support your nutritional needs.",
     button: "Explore Symptoms",
     link: "/symptoms",
     icon: "🩺",
+    headingLevel: "h1",
   },
 
   {
@@ -24,6 +26,7 @@ const slides = [
     button: "Browse Foods",
     link: "/foods",
     icon: "🥦",
+    headingLevel: "h2",
   },
 
   {
@@ -33,6 +36,7 @@ const slides = [
     button: "Learn Nutrients",
     link: "/nutrients",
     icon: "💊",
+    headingLevel: "h2",
   },
 
   {
@@ -42,13 +46,16 @@ const slides = [
     button: "View Recipes",
     link: "/recipes",
     icon: "🍽️",
+    headingLevel: "h2",
   },
 ];
 
 export default function HeroCarousel() {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10">
-
+    <section
+      aria-label="Explore NutriCompass"
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10"
+    >
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         navigation
@@ -60,50 +67,46 @@ export default function HeroCarousel() {
         loop
         className="rounded-3xl overflow-hidden"
       >
-
         {slides.map((slide) => (
           <SwiperSlide key={slide.title}>
-
-            <div className="min-h-[420px] bg-gradient-to-r from-green-700 to-green-500 text-white rounded-3xl px-6 py-16 sm:px-12 lg:px-16 flex items-center justify-center text-center">
-
+            <div className="h-[480px] sm:h-[480px] lg:h-[480px] bg-gradient-to-r from-green-700 to-green-500 text-white rounded-3xl px-6 py-12 sm:px-12 lg:px-16 flex items-center justify-center text-center">
               <div className="max-w-4xl mx-auto">
-
                 {/* Icon */}
-
-                <div className="text-6xl sm:text-7xl">
+                <div
+                  className="text-6xl sm:text-7xl"
+                  aria-hidden="true"
+                >
                   {slide.icon}
                 </div>
 
                 {/* Heading */}
-
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-6 leading-tight">
-                  {slide.title}
-                </h1>
+                {slide.headingLevel === "h1" ? (
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-6 leading-tight">
+                    {slide.title}
+                  </h1>
+                ) : (
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-6 leading-tight">
+                    {slide.title}
+                  </h2>
+                )}
 
                 {/* Description */}
-
                 <p className="mt-6 text-lg sm:text-xl text-green-50 max-w-2xl mx-auto leading-8">
                   {slide.description}
                 </p>
 
                 {/* CTA */}
-
                 <Link
                   href={slide.link}
                   className="inline-block mt-10 bg-white text-green-700 font-semibold px-8 py-4 rounded-full hover:bg-green-50 hover:scale-105 transition-all duration-300 shadow-lg"
                 >
                   {slide.button} →
                 </Link>
-
               </div>
-
             </div>
-
           </SwiperSlide>
         ))}
-
       </Swiper>
-
     </section>
   );
 }

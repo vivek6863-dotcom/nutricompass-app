@@ -5,7 +5,7 @@ const foods = [
     name: "Spinach",
     slug: "spinach",
     emoji: "🥬",
-    benefit: "Rich In Iron",
+    benefit: "A Source Of Iron",
     color: "bg-green-50",
   },
 
@@ -13,7 +13,7 @@ const foods = [
     name: "Lean Red Meat",
     slug: "lean-red-meat",
     emoji: "🥩",
-    benefit: "Highly Absorbable Iron",
+    benefit: "A Source Of Highly Absorbable Iron",
     color: "bg-red-50",
   },
 
@@ -21,7 +21,7 @@ const foods = [
     name: "Lentils",
     slug: "lentils",
     emoji: "🫘",
-    benefit: "Rich In Iron & Protein",
+    benefit: "A Source Of Iron & Protein",
     color: "bg-orange-50",
   },
 
@@ -29,7 +29,7 @@ const foods = [
     name: "Pumpkin Seeds",
     slug: "pumpkin-seeds",
     emoji: "🎃",
-    benefit: "Rich In Iron & Magnesium",
+    benefit: "A Source Of Iron & Magnesium",
     color: "bg-yellow-50",
   },
 
@@ -37,7 +37,7 @@ const foods = [
     name: "Beans",
     slug: "beans",
     emoji: "🫘",
-    benefit: "Iron & Fiber",
+    benefit: "A Source Of Iron & Fiber",
     color: "bg-purple-50",
   },
 
@@ -45,50 +45,53 @@ const foods = [
     name: "Broccoli",
     slug: "broccoli",
     emoji: "🥦",
-    benefit: "Rich In Vitamin C",
+    benefit: "A Source Of Vitamin C",
     color: "bg-lime-50",
   },
 ];
 
 export default function PopularFoods() {
   return (
-    <section className="py-16 sm:py-20 bg-white">
-
+    <section
+      aria-labelledby="popular-foods"
+      className="py-16 sm:py-20 bg-white"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* Section Heading */}
 
         <div className="text-center mb-12">
-
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+          <h2
+            id="popular-foods"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900"
+          >
             🥗 Popular Healthy Foods
           </h2>
 
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover nutrient-rich foods and learn how they can support
-            a balanced and nutritious diet.
+            Discover nutrient-rich foods and learn about their nutritional
+            value, key nutrients, and role in a balanced diet.
           </p>
-
         </div>
 
         {/* Food Cards */}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
-
           {foods.map((food) => (
             <Link
               key={food.slug}
               href={`/foods/${food.slug}`}
+              aria-label={`Explore ${food.name} nutrition information`}
               className="group"
             >
-
               <article
                 className={`${food.color} h-full rounded-3xl p-6 text-center border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2`}
               >
-
                 {/* Food Icon */}
 
-                <div className="text-6xl group-hover:scale-110 transition-transform duration-300">
+                <div
+                  className="text-6xl group-hover:scale-110 transition-transform duration-300"
+                  aria-hidden="true"
+                >
                   {food.emoji}
                 </div>
 
@@ -98,7 +101,7 @@ export default function PopularFoods() {
                   {food.name}
                 </h3>
 
-                {/* Benefit */}
+                {/* Nutritional Highlight */}
 
                 <p className="text-green-700 mt-2 font-medium text-sm">
                   {food.benefit}
@@ -107,31 +110,25 @@ export default function PopularFoods() {
                 {/* CTA */}
 
                 <div className="mt-5 text-green-700 font-semibold text-sm group-hover:underline">
-                  View Food →
+                  Explore {food.name} →
                 </div>
-
               </article>
-
             </Link>
           ))}
-
         </div>
 
         {/* View All Foods */}
 
         <div className="text-center mt-10">
-
           <Link
             href="/foods"
+            aria-label="Explore all foods on NutriCompass"
             className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-7 py-3 rounded-full shadow-md transition"
           >
             View All Foods →
           </Link>
-
         </div>
-
       </div>
-
     </section>
   );
 }

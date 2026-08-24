@@ -22,7 +22,7 @@ import {
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://nutricompass.com";
+  "https://nutricompass.in";
 
 /* =========================================================
    DYNAMIC SEO METADATA
@@ -35,9 +35,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
 
-  const food = foods.find(
-    (item) => item.slug === slug
-  );
+  const food = foods.find((item) => item.slug === slug);
 
   /* =======================================================
      NOT FOUND
@@ -62,14 +60,14 @@ export async function generateMetadata({
   ======================================================= */
 
   const title =
-    `${food.name}: Benefits, Nutrients & Nutrition Information`;
+    `${food.name}: Nutrition, Benefits & Key Nutrients | NutriCompass`;
 
   /* =======================================================
      SEO DESCRIPTION
   ======================================================= */
 
   const description =
-    `Learn about ${food.name} benefits, key nutrients, nutrition information and healthy ways to include it in your diet. Explore ${food.name} with NutriCompass.`;
+    `Explore ${food.name} nutrition, key nutrients, benefits, and ways to include ${food.name} in a balanced diet. Learn more with NutriCompass.`;
 
   /* =======================================================
      IMAGE
@@ -93,18 +91,6 @@ export async function generateMetadata({
 
     description,
 
-    keywords: [
-      food.name,
-      `${food.name} benefits`,
-      `${food.name} nutrition`,
-      `${food.name} nutrients`,
-      `health benefits of ${food.name}`,
-      `foods rich in ${food.name}`,
-      "healthy foods",
-      "nutrition",
-      ...food.nutrients,
-    ],
-
     robots: {
       index: true,
       follow: true,
@@ -125,8 +111,7 @@ export async function generateMetadata({
     openGraph: {
       type: "article",
 
-      title:
-        `${title} | NutriCompass`,
+      title,
 
       description,
 
@@ -139,13 +124,9 @@ export async function generateMetadata({
       images: [
         {
           url: imageUrl,
-
           width: 1200,
-
           height: 800,
-
-          alt:
-            `${food.name} Nutrition And Health Benefits`,
+          alt: `${food.name} nutrition and key nutrients`,
         },
       ],
     },
@@ -153,8 +134,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
 
-      title:
-        `${title} | NutriCompass`,
+      title,
 
       description,
 
@@ -174,9 +154,7 @@ export default async function FoodPage({
 }) {
   const { slug } = await params;
 
-  const food = foods.find(
-    (item) => item.slug === slug
-  );
+  const food = foods.find((item) => item.slug === slug);
 
   /* =======================================================
      NOT FOUND
@@ -185,12 +163,12 @@ export default async function FoodPage({
   if (!food) {
     return (
       <main className="min-h-screen bg-gray-50">
-
         <div className="max-w-6xl mx-auto px-6 py-20">
-
           <div className="bg-white rounded-3xl shadow-md p-10 text-center">
-
-            <div className="text-7xl">
+            <div
+              className="text-7xl"
+              aria-hidden="true"
+            >
               🥗
             </div>
 
@@ -208,11 +186,8 @@ export default async function FoodPage({
             >
               Browse Foods
             </Link>
-
           </div>
-
         </div>
-
       </main>
     );
   }
@@ -288,37 +263,27 @@ export default async function FoodPage({
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
-
     "@type": "BreadcrumbList",
 
     itemListElement: [
       {
         "@type": "ListItem",
-
         position: 1,
-
         name: "Home",
-
         item: `${SITE_URL}/`,
       },
 
       {
         "@type": "ListItem",
-
         position: 2,
-
         name: "Foods",
-
         item: `${SITE_URL}/foods`,
       },
 
       {
         "@type": "ListItem",
-
         position: 3,
-
         name: food.name,
-
         item: canonicalUrl,
       },
     ],
@@ -326,11 +291,10 @@ export default async function FoodPage({
 
   /* =======================================================
      FOOD ARTICLE STRUCTURED DATA
-     
-     There is no standard Schema.org "Food" page type
-     suitable for all of these fields, so we use Article
-     + about/Thing rather than inventing unsupported
-     nutrition values.
+
+     There is no generic Schema.org "Food" page type
+     suitable for all of these fields, so Article + about
+     is used for this informational food page.
   ======================================================= */
 
   const foodSchema = {
@@ -339,48 +303,40 @@ export default async function FoodPage({
     "@type": "Article",
 
     headline:
-      `${food.name}: Benefits, Nutrients & Nutrition Information`,
+      `${food.name}: Nutrition, Benefits & Key Nutrients`,
 
     description: food.description,
 
-    image: [
-      imageUrl,
-    ],
+    image: [imageUrl],
 
     url: canonicalUrl,
 
     mainEntityOfPage: {
       "@type": "WebPage",
-
       "@id": canonicalUrl,
     },
 
     author: {
       "@type": "Organization",
-
       name: "NutriCompass",
-
       url: SITE_URL,
     },
 
     publisher: {
       "@type": "Organization",
-
       name: "NutriCompass",
-
       url: SITE_URL,
     },
 
     about: {
       "@type": "Thing",
-
       name: food.name,
     },
 
     keywords: [
       food.name,
-      `${food.name} benefits`,
       `${food.name} nutrition`,
+      `${food.name} benefits`,
       `${food.name} nutrients`,
       ...food.nutrients,
     ].join(", "),
@@ -388,7 +344,6 @@ export default async function FoodPage({
 
   return (
     <main className="min-h-screen bg-gray-50">
-
       {/* =====================================================
           STRUCTURED DATA
       ===================================================== */}
@@ -396,18 +351,14 @@ export default async function FoodPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            breadcrumbSchema
-          ),
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            foodSchema
-          ),
+          __html: JSON.stringify(foodSchema),
         }}
       />
 
@@ -416,12 +367,10 @@ export default async function FoodPage({
       ===================================================== */}
 
       <div className="max-w-6xl mx-auto px-6 pt-8">
-
         <nav
           aria-label="Breadcrumb"
           className="flex flex-wrap items-center gap-2 text-sm text-gray-500"
         >
-
           <Link
             href="/"
             className="hover:text-green-700 transition"
@@ -450,9 +399,7 @@ export default async function FoodPage({
           >
             {food.name}
           </span>
-
         </nav>
-
       </div>
 
       {/* =====================================================
@@ -460,9 +407,7 @@ export default async function FoodPage({
       ===================================================== */}
 
       <section className="max-w-6xl mx-auto px-6 py-8">
-
         <div className="bg-white rounded-3xl shadow-md overflow-hidden">
-
           <div className="grid md:grid-cols-2">
 
             {/* =================================================
@@ -470,30 +415,25 @@ export default async function FoodPage({
             ================================================= */}
 
             <div className="relative min-h-[350px] md:min-h-[450px] bg-gradient-to-br from-green-50 to-green-100">
-
               {food.image ? (
-
                 <Image
                   src={food.image}
-                  alt={`${food.name} Nutrition And Health Benefits`}
+                  alt={`${food.name} nutrition and key nutrients`}
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover p-8"
                 />
-
               ) : (
-
                 <div className="h-full min-h-[350px] flex items-center justify-center">
-
-                  <div className="text-9xl">
+                  <div
+                    className="text-9xl"
+                    aria-hidden="true"
+                  >
                     🥗
                   </div>
-
                 </div>
-
               )}
-
             </div>
 
             {/* =================================================
@@ -501,36 +441,35 @@ export default async function FoodPage({
             ================================================= */}
 
             <div className="p-8 md:p-12 flex flex-col justify-center">
-
               <div className="inline-flex self-start items-center bg-green-100 text-green-700 px-4 py-2 rounded-full font-semibold">
                 🥗 Healthy Food
               </div>
 
               <h1 className="mt-6 text-4xl md:text-5xl font-bold text-green-700">
-                {food.name}
+                {food.name} Nutrition, Benefits & Key Nutrients
               </h1>
 
               <p className="mt-6 text-lg md:text-xl text-gray-600 leading-8">
                 {food.description}
               </p>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
       {/* =====================================================
           KEY NUTRIENTS
       ===================================================== */}
 
-      <section className="max-w-6xl mx-auto px-6">
-
+      <section
+        aria-labelledby="key-nutrients"
+        className="max-w-6xl mx-auto px-6"
+      >
         <div className="bg-white rounded-3xl shadow-md p-8">
-
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2
+            id="key-nutrients"
+            className="text-3xl font-bold text-gray-900"
+          >
             Key Nutrients In {food.name}
           </h2>
 
@@ -539,9 +478,7 @@ export default async function FoodPage({
           </p>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 mt-8">
-
             {food.nutrients.map((nutrientName) => {
-
               const nutrient = nutrients.find(
                 (item) =>
                   createSlug(item.name) ===
@@ -549,34 +486,36 @@ export default async function FoodPage({
               );
 
               if (!nutrient) {
-
                 return (
                   <div
                     key={nutrientName}
                     className="bg-green-50 border border-green-200 rounded-2xl p-5"
                   >
-
-                    <div className="text-3xl">
+                    <div
+                      className="text-3xl"
+                      aria-hidden="true"
+                    >
                       💊
                     </div>
 
                     <div className="mt-3 font-semibold text-green-700">
                       {nutrientName}
                     </div>
-
                   </div>
                 );
-
               }
 
               return (
                 <Link
                   key={nutrient.name}
                   href={nutrientLink(nutrient.name)}
+                  aria-label={`Learn about ${nutrient.name}`}
                   className="group bg-green-50 border border-green-200 rounded-2xl p-5 hover:bg-green-100 hover:shadow-md transition"
                 >
-
-                  <div className="text-3xl">
+                  <div
+                    className="text-3xl"
+                    aria-hidden="true"
+                  >
                     💊
                   </div>
 
@@ -587,55 +526,49 @@ export default async function FoodPage({
                   <div className="mt-1 text-sm text-gray-600">
                     Learn About {nutrient.name} →
                   </div>
-
                 </Link>
               );
-
             })}
-
           </div>
-
         </div>
-
       </section>
 
       {/* =====================================================
           HEALTH BENEFITS
       ===================================================== */}
 
-      <section className="max-w-6xl mx-auto px-6 mt-10">
-
+      <section
+        aria-labelledby="health-benefits"
+        className="max-w-6xl mx-auto px-6 mt-10"
+      >
         <div className="bg-white rounded-3xl shadow-md p-8">
-
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2
+            id="health-benefits"
+            className="text-3xl font-bold text-gray-900"
+          >
             Health Benefits Of {food.name}
           </h2>
 
           <div className="grid md:grid-cols-2 gap-5 mt-8">
-
             {food.benefits.map((benefit) => (
-
               <div
                 key={benefit}
                 className="bg-blue-50 border border-blue-200 rounded-2xl p-5"
               >
-
-                <span className="mr-2">
+                <span
+                  className="mr-2"
+                  aria-hidden="true"
+                >
                   ✅
                 </span>
 
                 <span className="text-gray-800">
                   {benefit}
                 </span>
-
               </div>
-
             ))}
-
           </div>
-
         </div>
-
       </section>
 
       {/* =====================================================
@@ -643,12 +576,15 @@ export default async function FoodPage({
       ===================================================== */}
 
       {relatedSymptoms.length > 0 && (
-
-        <section className="max-w-6xl mx-auto px-6 mt-10">
-
+        <section
+          aria-labelledby="related-symptoms"
+          className="max-w-6xl mx-auto px-6 mt-10"
+        >
           <div className="bg-white rounded-3xl shadow-md p-8">
-
-            <h2 className="text-3xl font-bold text-gray-900">
+            <h2
+              id="related-symptoms"
+              className="text-3xl font-bold text-gray-900"
+            >
               Nutrition-Related Symptoms
             </h2>
 
@@ -657,16 +593,17 @@ export default async function FoodPage({
             </p>
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 mt-8">
-
               {relatedSymptoms.map((symptom) => (
-
                 <Link
                   key={symptom.slug}
                   href={symptomLink(symptom.title)}
+                  aria-label={`Learn more about ${symptom.title}`}
                   className="group bg-red-50 border border-red-200 rounded-2xl p-5 hover:bg-red-100 hover:shadow-md transition"
                 >
-
-                  <div className="text-3xl">
+                  <div
+                    className="text-3xl"
+                    aria-hidden="true"
+                  >
                     🩺
                   </div>
 
@@ -679,19 +616,13 @@ export default async function FoodPage({
                   </p>
 
                   <div className="mt-3 text-green-700 font-semibold text-sm">
-                    Learn More →
+                    Learn More About {symptom.title} →
                   </div>
-
                 </Link>
-
               ))}
-
             </div>
-
           </div>
-
         </section>
-
       )}
 
       {/* =====================================================
@@ -699,26 +630,30 @@ export default async function FoodPage({
       ===================================================== */}
 
       {relatedRecipes.length > 0 && (
-
-        <section className="max-w-6xl mx-auto px-6 mt-10">
-
+        <section
+          aria-labelledby="related-recipes"
+          className="max-w-6xl mx-auto px-6 mt-10"
+        >
           <div className="bg-white rounded-3xl shadow-md p-8">
-
-            <h2 className="text-3xl font-bold text-gray-900">
+            <h2
+              id="related-recipes"
+              className="text-3xl font-bold text-gray-900"
+            >
               Healthy Recipes Using {food.name}
             </h2>
 
             <div className="grid md:grid-cols-2 gap-5 mt-8">
-
               {relatedRecipes.map((recipe) => (
-
                 <Link
                   key={recipe.slug}
                   href={recipeLink(recipe.name)}
+                  aria-label={`View ${recipe.name} recipe`}
                   className="group bg-orange-50 border border-orange-200 rounded-2xl p-6 hover:bg-orange-100 hover:shadow-md transition"
                 >
-
-                  <div className="text-4xl">
+                  <div
+                    className="text-4xl"
+                    aria-hidden="true"
+                  >
                     🍽️
                   </div>
 
@@ -731,19 +666,13 @@ export default async function FoodPage({
                   </p>
 
                   <div className="mt-4 text-green-700 font-semibold">
-                    View Recipe →
+                    View {recipe.name} Recipe →
                   </div>
-
                 </Link>
-
               ))}
-
             </div>
-
           </div>
-
         </section>
-
       )}
 
       {/* =====================================================
@@ -751,35 +680,37 @@ export default async function FoodPage({
       ===================================================== */}
 
       {relatedArticles.length > 0 && (
-
-        <section className="max-w-6xl mx-auto px-6 mt-10">
-
+        <section
+          aria-labelledby="related-articles"
+          className="max-w-6xl mx-auto px-6 mt-10"
+        >
           <div className="bg-white rounded-3xl shadow-md p-8">
-
-            <h2 className="text-3xl font-bold text-gray-900">
+            <h2
+              id="related-articles"
+              className="text-3xl font-bold text-gray-900"
+            >
               Related Articles About {food.name}
             </h2>
 
             <div className="grid md:grid-cols-2 gap-5 mt-8">
-
               {relatedArticles.map((article) => (
-
                 <Link
                   key={article.slug}
                   href={articleLink(article.title)}
+                  aria-label={`Read ${article.title}`}
                   className="group bg-purple-50 border border-purple-200 rounded-2xl p-6 hover:bg-purple-100 hover:shadow-md transition"
                 >
-
                   <div className="flex items-center justify-between gap-4">
-
-                    <div className="text-4xl">
+                    <div
+                      className="text-4xl"
+                      aria-hidden="true"
+                    >
                       📖
                     </div>
 
                     <span className="text-sm font-semibold text-purple-700">
                       {article.category}
                     </span>
-
                   </div>
 
                   <h3 className="mt-4 text-xl font-bold text-gray-800 group-hover:text-green-700">
@@ -791,38 +722,37 @@ export default async function FoodPage({
                   </p>
 
                   <div className="mt-4 text-green-700 font-semibold">
-                    Read Article →
+                    Read {article.title} →
                   </div>
-
                 </Link>
-
               ))}
-
             </div>
-
           </div>
-
         </section>
-
       )}
 
       {/* =====================================================
           IMPORTANT INFORMATION
       ===================================================== */}
 
-      <section className="max-w-6xl mx-auto px-6 mt-10">
-
+      <section
+        aria-labelledby="important-information"
+        className="max-w-6xl mx-auto px-6 mt-10"
+      >
         <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
-
           <div className="flex gap-4">
-
-            <div className="text-2xl">
+            <div
+              className="text-2xl"
+              aria-hidden="true"
+            >
               ℹ️
             </div>
 
             <div>
-
-              <h2 className="font-bold text-gray-900">
+              <h2
+                id="important-information"
+                className="font-bold text-gray-900"
+              >
                 Important Information
               </h2>
 
@@ -833,13 +763,9 @@ export default async function FoodPage({
                 a medical condition. Speak with a qualified healthcare
                 professional for personalized advice.
               </p>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
       {/* =====================================================
@@ -847,16 +773,13 @@ export default async function FoodPage({
       ===================================================== */}
 
       <div className="max-w-6xl mx-auto px-6 py-12">
-
         <Link
           href="/foods"
           className="inline-flex items-center text-green-700 font-semibold hover:underline"
         >
           ← Back To Foods
         </Link>
-
       </div>
-
     </main>
   );
 }

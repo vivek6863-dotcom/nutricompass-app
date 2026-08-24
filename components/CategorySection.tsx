@@ -8,15 +8,13 @@ const categories = [
     href: "/symptoms",
     icon: "🩺",
   },
-
   {
     title: "Foods",
     description:
-      "Discover healthy foods, nutrients, and their benefits.",
+      "Discover healthy foods, nutrients, and their nutritional benefits.",
     href: "/foods",
     icon: "🥗",
   },
-
   {
     title: "Nutrients",
     description:
@@ -24,19 +22,17 @@ const categories = [
     href: "/nutrients",
     icon: "💊",
   },
-
   {
     title: "Recipes",
     description:
-      "Discover nutritious recipes made with wholesome foods.",
+      "Discover nutritious recipes made with wholesome foods and ingredients.",
     href: "/recipes",
     icon: "🍽️",
   },
-
   {
     title: "Articles",
     description:
-      "Read helpful nutrition and healthy eating guides.",
+      "Read helpful nutrition, healthy eating, and food-related guides.",
     href: "/articles",
     icon: "📖",
   },
@@ -44,37 +40,42 @@ const categories = [
 
 export default function CategorySection() {
   return (
-    <section className="max-w-7xl mx-auto py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
-
+    <section
+      aria-labelledby="explore-nutricompass"
+      className="max-w-7xl mx-auto py-16 sm:py-20 px-4 sm:px-6 lg:px-8"
+    >
       {/* Section Heading */}
 
       <div className="text-center mb-12">
-
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
+        <h2
+          id="explore-nutricompass"
+          className="text-3xl sm:text-4xl font-bold text-gray-800"
+        >
           Explore NutriCompass
         </h2>
 
         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-          Explore symptoms, foods, nutrients, recipes, and helpful
-          nutrition articles in one place.
+          Explore symptoms, foods, nutrients, recipes, and helpful nutrition
+          articles in one place.
         </p>
-
       </div>
 
       {/* Category Cards */}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
-
         {categories.map((category) => (
           <Link
             key={category.title}
             href={category.href}
+            aria-label={`Explore ${category.title}`}
             className="group bg-white rounded-2xl border border-gray-200 shadow-md p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
           >
-
             {/* Icon */}
 
-            <div className="w-16 h-16 rounded-2xl bg-green-50 flex items-center justify-center text-4xl group-hover:bg-green-100 transition">
+            <div
+              className="w-16 h-16 rounded-2xl bg-green-50 flex items-center justify-center text-4xl group-hover:bg-green-100 transition"
+              aria-hidden="true"
+            >
               {category.icon}
             </div>
 
@@ -93,14 +94,11 @@ export default function CategorySection() {
             {/* CTA */}
 
             <div className="mt-5 text-green-700 font-semibold text-sm">
-              Explore →
+              Explore {category.title} →
             </div>
-
           </Link>
         ))}
-
       </div>
-
     </section>
   );
 }
