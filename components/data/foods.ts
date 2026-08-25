@@ -217,23 +217,23 @@ export const foods: Food[] = [
   },
 
   {
-    id: 12,
-    name: "Nuts",
-    slug: "nuts",
-    image: "/images/foods/nuts.jpg",
-    nutrients: ["Protein", "Magnesium", "Zinc", "Healthy Fats"],
-    benefits: [
-      "Provides Plant Protein",
-      "Provides Magnesium",
-      "Provides Healthy Fats",
-    ],
-    relatedSymptoms: [
-      "Weakness",
-      "Fatigue",
-    ],
-    description:
-      "Nuts are nutrient-dense foods that provide protein, magnesium, zinc, fiber, and unsaturated fats.",
-  },
+  id: 12,
+  name: "Nuts",
+  slug: "nuts",
+  image: "/images/foods/nuts.jpg",
+  nutrients: ["Protein", "Magnesium", "Zinc"],
+  benefits: [
+    "Provides Plant Protein",
+    "Provides Magnesium",
+    "Provides Healthy Fats",
+  ],
+  relatedSymptoms: [
+    "Weakness",
+    "Fatigue",
+  ],
+  description:
+    "Nuts are nutrient-dense foods that provide protein, magnesium, zinc, fiber, and unsaturated fats.",
+},
 
   {
     id: 13,
@@ -634,5 +634,24 @@ export const foods: Food[] = [
     ],
     description:
       "Whole wheat pasta is made from whole-grain wheat and provides fiber, B vitamins, iron, and other nutrients.",
+  },
+    {
+    id: 34,
+    name: "Whole Wheat Bread",
+    slug: "whole-wheat-bread",
+    image: "/images/foods/whole-wheat-bread.jpg",
+    nutrients: ["Fiber", "B Vitamins", "Protein"],
+    benefits: [
+      "Provides Dietary Fiber",
+      "Provides B Vitamins",
+      "Provides Plant Protein",
+    ],
+    relatedSymptoms: [
+      "Fatigue",
+      "Weakness",
+      "Constipation",
+    ],
+    description:
+      "Whole wheat bread is made from whole grains and provides dietary fiber, B vitamins, and other nutrients that can contribute to a balanced diet.",
   },
 ];
