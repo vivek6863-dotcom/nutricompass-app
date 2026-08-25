@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 import { foods } from "@/components/data/foods";
 import { symptoms } from "@/components/data/symptoms";
@@ -21,8 +22,22 @@ import {
 ========================================================= */
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://nutricompass.in";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://nutricompass.in";
+
+/* =========================================================
+   STATIC GENERATION
+========================================================= */
+
+export function generateStaticParams() {
+  return foods.map((food) => ({
+    slug: food.slug,
+  }));
+}
+
+/*
+  Unknown food URLs should return a proper 404.
+*/
+export const dynamicParams = false;
 
 /* =========================================================
    DYNAMIC SEO METADATA
@@ -37,17 +52,11 @@ export async function generateMetadata({
 
   const food = foods.find((item) => item.slug === slug);
 
-  /* =======================================================
-     NOT FOUND
-  ======================================================= */
-
   if (!food) {
     return {
       title: "Food Not Found | NutriCompass",
-
       description:
         "The requested food could not be found on NutriCompass.",
-
       robots: {
         index: false,
         follow: false,
@@ -55,23 +64,11 @@ export async function generateMetadata({
     };
   }
 
-  /* =======================================================
-     SEO TITLE
-  ======================================================= */
-
   const title =
-    `${food.name}: Nutrition, Benefits & Key Nutrients | NutriCompass`;
-
-  /* =======================================================
-     SEO DESCRIPTION
-  ======================================================= */
+    `${food.name} Nutrition, Benefits & Nutrients | NutriCompass`;
 
   const description =
-    `Explore ${food.name} nutrition, key nutrients, benefits, and ways to include ${food.name} in a balanced diet. Learn more with NutriCompass.`;
-
-  /* =======================================================
-     IMAGE
-  ======================================================= */
+    `Learn about ${food.name} nutrition, key nutrients, benefits, and how it can fit into a balanced diet. Explore related foods, symptoms, recipes, and nutrition topics.`;
 
   const imageUrl = food.image
     ? food.image.startsWith("http")
@@ -79,17 +76,20 @@ export async function generateMetadata({
       : `${SITE_URL}${food.image}`
     : `${SITE_URL}/images/foods/${food.slug}.jpg`;
 
-  /* =======================================================
-     CANONICAL
-  ======================================================= */
-
-  const canonicalUrl =
-    `${SITE_URL}/foods/${food.slug}`;
+  const canonicalUrl = `${SITE_URL}/foods/${food.slug}`;
 
   return {
     title,
-
     description,
+
+    keywords: [
+      `${food.name}`,
+      `${food.name} nutrition`,
+      `${food.name} benefits`,
+      `${food.name} nutrients`,
+      `${food.name} nutrition benefits`,
+      ...food.nutrients.map((nutrient) => `${food.name} ${nutrient}`),
+    ],
 
     robots: {
       index: true,
@@ -110,15 +110,10 @@ export async function generateMetadata({
 
     openGraph: {
       type: "article",
-
       title,
-
       description,
-
       url: canonicalUrl,
-
       siteName: "NutriCompass",
-
       locale: "en_US",
 
       images: [
@@ -126,18 +121,15 @@ export async function generateMetadata({
           url: imageUrl,
           width: 1200,
           height: 800,
-          alt: `${food.name} nutrition and key nutrients`,
+          alt: `${food.name} nutrition`,
         },
       ],
     },
 
     twitter: {
       card: "summary_large_image",
-
       title,
-
       description,
-
       images: [imageUrl],
     },
   };
@@ -156,48 +148,14 @@ export default async function FoodPage({
 
   const food = foods.find((item) => item.slug === slug);
 
-  /* =======================================================
-     NOT FOUND
-  ======================================================= */
-
+  /*
+    Proper 404 for invalid food slugs.
+  */
   if (!food) {
-    return (
-      <main className="min-h-screen bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6 py-20">
-          <div className="bg-white rounded-3xl shadow-md p-10 text-center">
-            <div
-              className="text-7xl"
-              aria-hidden="true"
-            >
-              🥗
-            </div>
-
-            <h1 className="mt-6 text-4xl font-bold text-gray-900">
-              Food Not Found
-            </h1>
-
-            <p className="mt-4 text-gray-600">
-              We couldn't find the food you're looking for.
-            </p>
-
-            <Link
-              href="/foods"
-              className="inline-block mt-8 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold transition"
-            >
-              Browse Foods
-            </Link>
-          </div>
-        </div>
-      </main>
-    );
+    notFound();
   }
 
-  /* =======================================================
-     CANONICAL + IMAGE URL
-  ======================================================= */
-
-  const canonicalUrl =
-    `${SITE_URL}/foods/${food.slug}`;
+  const canonicalUrl = `${SITE_URL}/foods/${food.slug}`;
 
   const imageUrl = food.image
     ? food.image.startsWith("http")
@@ -272,14 +230,12 @@ export default async function FoodPage({
         name: "Home",
         item: `${SITE_URL}/`,
       },
-
       {
         "@type": "ListItem",
         position: 2,
         name: "Foods",
         item: `${SITE_URL}/foods`,
       },
-
       {
         "@type": "ListItem",
         position: 3,
@@ -290,42 +246,24 @@ export default async function FoodPage({
   };
 
   /* =======================================================
-     FOOD ARTICLE STRUCTURED DATA
-
-     There is no generic Schema.org "Food" page type
-     suitable for all of these fields, so Article + about
-     is used for this informational food page.
+     WEB PAGE STRUCTURED DATA
   ======================================================= */
 
   const foodSchema = {
     "@context": "https://schema.org",
+    "@type": "WebPage",
 
-    "@type": "Article",
-
-    headline:
-      `${food.name}: Nutrition, Benefits & Key Nutrients`,
+    name: `${food.name} Nutrition, Benefits & Nutrients`,
 
     description: food.description,
 
-    image: [imageUrl],
-
     url: canonicalUrl,
 
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": canonicalUrl,
-    },
+    image: [imageUrl],
 
-    author: {
-      "@type": "Organization",
-      name: "NutriCompass",
-      url: SITE_URL,
-    },
-
-    publisher: {
-      "@type": "Organization",
-      name: "NutriCompass",
-      url: SITE_URL,
+    mainEntity: {
+      "@type": "Thing",
+      name: food.name,
     },
 
     about: {
@@ -340,10 +278,17 @@ export default async function FoodPage({
       `${food.name} nutrients`,
       ...food.nutrients,
     ].join(", "),
+
+    isPartOf: {
+      "@type": "WebSite",
+      name: "NutriCompass",
+      url: SITE_URL,
+    },
   };
 
   return (
     <main className="min-h-screen bg-gray-50">
+
       {/* =====================================================
           STRUCTURED DATA
       ===================================================== */}
@@ -408,21 +353,21 @@ export default async function FoodPage({
 
       <section className="max-w-6xl mx-auto px-6 py-8">
         <div className="bg-white rounded-3xl shadow-md overflow-hidden">
+
           <div className="grid md:grid-cols-2">
 
-            {/* =================================================
-                FOOD IMAGE
-            ================================================= */}
+            {/* FOOD IMAGE */}
 
             <div className="relative min-h-[350px] md:min-h-[450px] bg-gradient-to-br from-green-50 to-green-100">
+
               {food.image ? (
                 <Image
                   src={food.image}
-                  alt={`${food.name} nutrition and key nutrients`}
+                  alt={`${food.name} nutrition and benefits`}
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover p-8"
+                  className="object-cover"
                 />
               ) : (
                 <div className="h-full min-h-[350px] flex items-center justify-center">
@@ -434,25 +379,27 @@ export default async function FoodPage({
                   </div>
                 </div>
               )}
+
             </div>
 
-            {/* =================================================
-                CONTENT
-            ================================================= */}
+            {/* CONTENT */}
 
             <div className="p-8 md:p-12 flex flex-col justify-center">
+
               <div className="inline-flex self-start items-center bg-green-100 text-green-700 px-4 py-2 rounded-full font-semibold">
                 🥗 Healthy Food
               </div>
 
-              <h1 className="mt-6 text-4xl md:text-5xl font-bold text-green-700">
+              <h1 className="mt-6 text-4xl md:text-5xl font-bold text-green-700 leading-tight">
                 {food.name} Nutrition, Benefits & Key Nutrients
               </h1>
 
               <p className="mt-6 text-lg md:text-xl text-gray-600 leading-8">
                 {food.description}
               </p>
+
             </div>
+
           </div>
         </div>
       </section>
@@ -466,6 +413,7 @@ export default async function FoodPage({
         className="max-w-6xl mx-auto px-6"
       >
         <div className="bg-white rounded-3xl shadow-md p-8">
+
           <h2
             id="key-nutrients"
             className="text-3xl font-bold text-gray-900"
@@ -474,11 +422,14 @@ export default async function FoodPage({
           </h2>
 
           <p className="mt-2 text-gray-600">
-            Important nutrients found in {food.name}.
+            Explore the important nutrients found in {food.name}
+            and learn more about their nutritional roles.
           </p>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 mt-8">
+
             {food.nutrients.map((nutrientName) => {
+
               const nutrient = nutrients.find(
                 (item) =>
                   createSlug(item.name) ===
@@ -528,7 +479,9 @@ export default async function FoodPage({
                   </div>
                 </Link>
               );
+
             })}
+
           </div>
         </div>
       </section>
@@ -542,14 +495,21 @@ export default async function FoodPage({
         className="max-w-6xl mx-auto px-6 mt-10"
       >
         <div className="bg-white rounded-3xl shadow-md p-8">
+
           <h2
             id="health-benefits"
             className="text-3xl font-bold text-gray-900"
           >
-            Health Benefits Of {food.name}
+            Nutritional Benefits Of {food.name}
           </h2>
 
+          <p className="mt-3 text-gray-600 leading-7">
+            {food.name} contains nutrients that can contribute
+            to overall nutritional intake as part of a balanced diet.
+          </p>
+
           <div className="grid md:grid-cols-2 gap-5 mt-8">
+
             {food.benefits.map((benefit) => (
               <div
                 key={benefit}
@@ -567,6 +527,7 @@ export default async function FoodPage({
                 </span>
               </div>
             ))}
+
           </div>
         </div>
       </section>
@@ -581,6 +542,7 @@ export default async function FoodPage({
           className="max-w-6xl mx-auto px-6 mt-10"
         >
           <div className="bg-white rounded-3xl shadow-md p-8">
+
             <h2
               id="related-symptoms"
               className="text-3xl font-bold text-gray-900"
@@ -589,10 +551,12 @@ export default async function FoodPage({
             </h2>
 
             <p className="mt-2 text-gray-600">
-              Explore nutrition topics related to {food.name}.
+              Explore nutrition information related to
+              {` ${food.name}`}.
             </p>
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 mt-8">
+
               {relatedSymptoms.map((symptom) => (
                 <Link
                   key={symptom.slug}
@@ -620,6 +584,7 @@ export default async function FoodPage({
                   </div>
                 </Link>
               ))}
+
             </div>
           </div>
         </section>
@@ -635,6 +600,7 @@ export default async function FoodPage({
           className="max-w-6xl mx-auto px-6 mt-10"
         >
           <div className="bg-white rounded-3xl shadow-md p-8">
+
             <h2
               id="related-recipes"
               className="text-3xl font-bold text-gray-900"
@@ -642,7 +608,12 @@ export default async function FoodPage({
               Healthy Recipes Using {food.name}
             </h2>
 
+            <p className="mt-2 text-gray-600">
+              Discover recipes that include {food.name}.
+            </p>
+
             <div className="grid md:grid-cols-2 gap-5 mt-8">
+
               {relatedRecipes.map((recipe) => (
                 <Link
                   key={recipe.slug}
@@ -670,6 +641,7 @@ export default async function FoodPage({
                   </div>
                 </Link>
               ))}
+
             </div>
           </div>
         </section>
@@ -685,14 +657,21 @@ export default async function FoodPage({
           className="max-w-6xl mx-auto px-6 mt-10"
         >
           <div className="bg-white rounded-3xl shadow-md p-8">
+
             <h2
               id="related-articles"
               className="text-3xl font-bold text-gray-900"
             >
-              Related Articles About {food.name}
+              Related Nutrition Articles About {food.name}
             </h2>
 
+            <p className="mt-2 text-gray-600">
+              Read more nutrition guides related to {food.name}
+              and its key nutrients.
+            </p>
+
             <div className="grid md:grid-cols-2 gap-5 mt-8">
+
               {relatedArticles.map((article) => (
                 <Link
                   key={article.slug}
@@ -701,6 +680,7 @@ export default async function FoodPage({
                   className="group bg-purple-50 border border-purple-200 rounded-2xl p-6 hover:bg-purple-100 hover:shadow-md transition"
                 >
                   <div className="flex items-center justify-between gap-4">
+
                     <div
                       className="text-4xl"
                       aria-hidden="true"
@@ -711,6 +691,7 @@ export default async function FoodPage({
                     <span className="text-sm font-semibold text-purple-700">
                       {article.category}
                     </span>
+
                   </div>
 
                   <h3 className="mt-4 text-xl font-bold text-gray-800 group-hover:text-green-700">
@@ -726,10 +707,40 @@ export default async function FoodPage({
                   </div>
                 </Link>
               ))}
+
             </div>
           </div>
         </section>
       )}
+
+      {/* =====================================================
+          EXPLORE MORE FOODS
+      ===================================================== */}
+
+      <section className="max-w-6xl mx-auto px-6 mt-10">
+
+        <div className="bg-green-700 rounded-3xl p-8 md:p-10 text-center text-white">
+
+          <h2 className="text-3xl font-bold">
+            Explore More Healthy Foods
+          </h2>
+
+          <p className="mt-3 text-green-50 max-w-2xl mx-auto">
+            Discover more nutrient-rich foods and learn about
+            their nutrients, nutritional benefits, and related
+            nutrition topics.
+          </p>
+
+          <Link
+            href="/foods"
+            className="inline-flex mt-6 bg-white text-green-700 font-semibold px-7 py-3 rounded-full hover:bg-green-50 transition"
+          >
+            Browse All Foods →
+          </Link>
+
+        </div>
+
+      </section>
 
       {/* =====================================================
           IMPORTANT INFORMATION
@@ -740,7 +751,9 @@ export default async function FoodPage({
         className="max-w-6xl mx-auto px-6 mt-10"
       >
         <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+
           <div className="flex gap-4">
+
             <div
               className="text-2xl"
               aria-hidden="true"
@@ -749,6 +762,7 @@ export default async function FoodPage({
             </div>
 
             <div>
+
               <h2
                 id="important-information"
                 className="font-bold text-gray-900"
@@ -757,13 +771,15 @@ export default async function FoodPage({
               </h2>
 
               <p className="mt-2 text-sm text-gray-600 leading-6">
-                NutriCompass provides general nutrition information for
-                educational purposes. Individual nutritional needs can vary,
-                and food information should not be used to diagnose or treat
-                a medical condition. Speak with a qualified healthcare
-                professional for personalized advice.
+                NutriCompass provides general nutrition information
+                for educational purposes. Individual nutritional needs
+                can vary, and food information should not be used to
+                diagnose or treat a medical condition. Speak with a
+                qualified healthcare professional for personalized advice.
               </p>
+
             </div>
+
           </div>
         </div>
       </section>
@@ -773,13 +789,16 @@ export default async function FoodPage({
       ===================================================== */}
 
       <div className="max-w-6xl mx-auto px-6 py-12">
+
         <Link
           href="/foods"
           className="inline-flex items-center text-green-700 font-semibold hover:underline"
         >
           ← Back To Foods
         </Link>
+
       </div>
+
     </main>
   );
 }

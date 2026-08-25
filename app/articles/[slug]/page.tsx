@@ -16,7 +16,7 @@ import {
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://nutricompass.com";
+  "https://nutricompass.in";
 
 /* =========================================================
    STATIC ARTICLE PATHS
@@ -320,6 +320,47 @@ export default async function ArticlePage({
   };
 
   /* =======================================================
+     WEBPAGE STRUCTURED DATA
+  ======================================================= */
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+
+    "@type": "WebPage",
+
+    name: article.title,
+
+    description: article.description,
+
+    url: canonicalUrl,
+
+    isPartOf: {
+      "@type": "WebSite",
+
+      name: "NutriCompass",
+
+      url: SITE_URL,
+    },
+
+    about: [
+      ...article.relatedFoods.map((food) => ({
+        "@type": "Thing",
+        name: food,
+      })),
+
+      ...article.relatedNutrients.map((nutrient) => ({
+        "@type": "Thing",
+        name: nutrient,
+      })),
+
+      ...article.relatedSymptoms.map((symptom) => ({
+        "@type": "Thing",
+        name: symptom,
+      })),
+    ],
+  };
+
+  /* =======================================================
      BREADCRUMB STRUCTURED DATA
   ======================================================= */
 
@@ -378,6 +419,16 @@ export default async function ArticlePage({
           __html:
             JSON.stringify(
               articleSchema
+            ),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html:
+            JSON.stringify(
+              webPageSchema
             ),
         }}
       />
@@ -727,7 +778,10 @@ export default async function ArticlePage({
 
           <div className="flex gap-4">
 
-            <div className="text-2xl">
+            <div
+              className="text-2xl"
+              aria-hidden="true"
+            >
               ℹ️
             </div>
 
@@ -739,9 +793,9 @@ export default async function ArticlePage({
 
               <p className="mt-2 text-sm text-gray-600 leading-6">
                 NutriCompass provides general nutrition information for
-                educational purposes. This content should not be used as a
-                substitute for professional medical advice, diagnosis or
-                treatment.
+                educational purposes. This content should not be used as
+                a substitute for professional medical advice, diagnosis,
+                or treatment.
               </p>
 
             </div>
