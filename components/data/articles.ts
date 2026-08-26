@@ -1326,4 +1326,316 @@ export const articles: Article[] = [
       "Magnesium",
     ],
   },
+    {
+    id: 11,
+
+    title: "High Fiber Foods: A Complete Guide To Fiber-Rich Foods",
+
+    slug: "high-fiber-foods",
+
+    description:
+      "Discover high fiber foods including lentils, beans, oats, whole grains, brown rice, quinoa, fruits, berries, vegetables, and whole wheat foods.",
+
+    category: "Healthy Eating",
+
+    author: "NutriCompass Team",
+
+    readTime: "8 min read",
+
+    publishedDate: "August 26, 2026",
+
+    content:
+      "High fiber foods are an important part of a varied and balanced diet. Dietary fiber is found naturally in many plant foods, including legumes, whole grains, fruits, vegetables, nuts, and seeds.\n\nIncluding a variety of fiber-rich foods can help add nutritional variety to meals while providing other important nutrients such as vitamins, minerals, protein, and healthy fats.\n\nGood sources of dietary fiber include lentils, beans, oats, whole grains, brown rice, quinoa, whole wheat bread, whole wheat pasta, berries, fruits, avocado, broccoli, carrots, and sweet potatoes.\n\nFiber intake can be increased through a gradual approach that includes a variety of plant foods throughout the day. Adequate fluid intake is also important when increasing dietary fiber.\n\nPeople have different nutritional needs. If you have persistent digestive symptoms or specific dietary concerns, speak with a qualified healthcare professional.",
+
+    contentHtml: `
+      <p>
+        <strong>High fiber foods</strong> are foods that provide dietary fiber as
+        part of their overall nutritional profile. Fiber is found naturally in
+        many plant foods, including legumes, whole grains, fruits, vegetables,
+        nuts, and seeds.
+      </p>
+
+      <p>
+        Including a variety of <strong>fiber-rich foods</strong> can add
+        nutritional variety to meals while also providing other nutrients such
+        as vitamins, minerals, protein, and healthy fats.
+      </p>
+
+      <h2>What Are High Fiber Foods?</h2>
+
+      <p>
+        High fiber foods are generally plant-based foods that contribute
+        dietary fiber to the diet. Common examples include
+        <a href="/foods/lentils">lentils</a>,
+        <a href="/foods/beans">beans</a>,
+        <a href="/foods/oats">oats</a>,
+        <a href="/foods/whole-grains">whole grains</a>,
+        fruits, vegetables, nuts, and seeds.
+      </p>
+
+      <p>
+        Fiber is one part of a healthy eating pattern. Choosing a variety of
+        minimally processed plant foods can help provide different nutrients
+        throughout the day.
+      </p>
+
+      <h2>Best High Fiber Foods</h2>
+
+      <p>
+        There is no single best fiber-rich food. Different foods provide
+        different combinations of fiber and other nutrients.
+      </p>
+
+      <h3>Lentils</h3>
+
+      <p>
+        <a href="/foods/lentils">Lentils</a> provide fiber along with
+        plant-based protein, iron, and other nutrients. They can be included
+        in soups, curries, salads, and other balanced meals.
+      </p>
+
+      <h3>Beans</h3>
+
+      <p>
+        <a href="/foods/beans">Beans</a> are a versatile plant food that can
+        provide fiber, protein, iron, and other nutrients. They can be used in
+        salads, soups, curries, and grain-based meals.
+      </p>
+
+      <h3>Oats</h3>
+
+      <p>
+        <a href="/foods/oats">Oats</a> are whole grains that provide fiber,
+        iron, magnesium, and protein. They can be used in breakfast meals,
+        porridge, and other recipes.
+      </p>
+
+      <h3>Whole Grains</h3>
+
+      <p>
+        <a href="/foods/whole-grains">Whole grains</a> contain the grain
+        kernel and provide dietary fiber along with nutrients such as
+        magnesium, iron, and B vitamins.
+      </p>
+
+      <h3>Brown Rice</h3>
+
+      <p>
+        <a href="/foods/brown-rice">Brown rice</a> is a whole grain that
+        provides fiber, magnesium, and B vitamins. It can be used as a base
+        for balanced meals.
+      </p>
+
+      <h3>Quinoa</h3>
+
+      <p>
+        <a href="/foods/quinoa">Quinoa</a> provides fiber along with
+        plant-based protein, iron, and magnesium. It can be included in
+        grain bowls, salads, and other meals.
+      </p>
+
+      <h3>Whole Wheat Bread</h3>
+
+      <p>
+        <a href="/foods/whole-wheat-bread">Whole wheat bread</a> is made from
+        whole grains and provides dietary fiber, B vitamins, and protein.
+      </p>
+
+      <h3>Whole Wheat Pasta</h3>
+
+      <p>
+        <a href="/foods/whole-wheat-pasta">Whole wheat pasta</a> provides
+        dietary fiber along with iron and B vitamins and can be included in
+        balanced meals.
+      </p>
+
+      <h3>Fruits And Berries</h3>
+
+      <p>
+        <a href="/foods/fruits">Fruits</a> and
+        <a href="/foods/berries">berries</a> can provide fiber along with
+        vitamins, minerals, and naturally occurring plant compounds.
+      </p>
+
+      <h3>Vegetables</h3>
+
+      <p>
+        Vegetables such as
+        <a href="/foods/broccoli">broccoli</a>,
+        <a href="/foods/carrots">carrots</a>, and
+        <a href="/foods/sweet-potatoes">sweet potatoes</a>
+        can contribute fiber as part of a varied diet.
+      </p>
+
+      <h3>Avocado</h3>
+
+      <p>
+        <a href="/foods/avocado">Avocado</a> provides fiber along with
+        healthy unsaturated fats and other nutrients.
+      </p>
+
+      <h2>High Fiber Foods And Other Nutrients</h2>
+
+      <p>
+        One advantage of choosing a variety of fiber-rich foods is that they
+        can provide more than just fiber.
+      </p>
+
+      <p>
+        For example,
+        <a href="/foods/lentils">lentils</a> provide fiber, protein, and iron,
+        while <a href="/foods/oats">oats</a> provide fiber, iron, magnesium,
+        and protein.
+      </p>
+
+      <p>
+        <a href="/foods/quinoa">Quinoa</a> provides fiber, protein, iron, and
+        magnesium, while
+        <a href="/foods/berries">berries</a> provide fiber and vitamin C.
+      </p>
+
+      <p>
+        Learn more about
+        <a href="/nutrients/fiber">Dietary Fiber</a>
+        and the role it plays in overall nutrition.
+      </p>
+
+      <h2>High Fiber Foods For Everyday Meals</h2>
+
+      <h3>Breakfast</h3>
+
+      <p>
+        Oats, berries, fruits, and whole wheat bread can be included in
+        breakfast meals. Combining these foods with an appropriate protein
+        source can help create a more varied meal.
+      </p>
+
+      <h3>Lunch And Dinner</h3>
+
+      <p>
+        Lentils, beans, brown rice, quinoa, whole wheat pasta, broccoli, and
+        other vegetables can be used in balanced lunch and dinner meals.
+      </p>
+
+      <h3>Snacks</h3>
+
+      <p>
+        Fruits, berries, nuts, and other minimally processed plant foods can
+        be useful options for adding nutritional variety between meals.
+      </p>
+
+      <h2>How To Add More Fiber To Your Diet</h2>
+
+      <p>
+        A practical approach is to gradually include more vegetables, fruits,
+        legumes, and whole grains throughout the day.
+      </p>
+
+      <p>
+        If you are increasing your fiber intake, doing so gradually may be
+        more comfortable than making a sudden large change. Adequate fluid
+        intake is also important.
+      </p>
+
+      <h2>High Fiber Foods And Healthy Digestion</h2>
+
+      <p>
+        Dietary fiber is commonly associated with digestive health. Foods
+        containing fiber can be part of an overall eating pattern that
+        supports normal digestion.
+      </p>
+
+      <p>
+        For more information, explore our
+        <a href="/symptoms/constipation">Constipation</a>
+        nutrition page.
+      </p>
+
+      <h2>High Fiber Foods And Recipes</h2>
+
+      <p>
+        One of the easiest ways to include more fiber-rich foods is to use
+        them in everyday meals. Explore our
+        <a href="/recipes">Healthy Recipes</a>
+        for more meal ideas using nutritious foods.
+      </p>
+
+      <h2>Frequently Asked Questions About High Fiber Foods</h2>
+
+      <h3>What Are High Fiber Foods?</h3>
+
+      <p>
+        High fiber foods are foods that contribute dietary fiber to the diet.
+        Common examples include legumes, whole grains, fruits, vegetables,
+        nuts, and seeds.
+      </p>
+
+      <h3>Which Foods Are Rich In Fiber?</h3>
+
+      <p>
+        Lentils, beans, oats, whole grains, brown rice, quinoa, fruits,
+        berries, vegetables, and whole wheat foods are examples of foods that
+        can provide dietary fiber.
+      </p>
+
+      <h3>Are Fruits Good Sources Of Fiber?</h3>
+
+      <p>
+        Many fruits provide dietary fiber along with vitamins, minerals, and
+        other naturally occurring plant compounds. Eating a variety of fruits
+        can contribute to overall nutritional variety.
+      </p>
+
+      <h3>Are Whole Grains High In Fiber?</h3>
+
+      <p>
+        Whole grains can be important sources of dietary fiber. Examples
+        include oats, brown rice, quinoa, and whole wheat foods.
+      </p>
+
+      <h3>How Can I Add More Fiber To My Diet?</h3>
+
+      <p>
+        You can gradually add more legumes, whole grains, fruits, vegetables,
+        nuts, and seeds to meals while maintaining adequate fluid intake.
+      </p>
+
+      <p>
+        Individual nutritional needs vary. Persistent digestive symptoms or
+        specific dietary concerns should be discussed with a qualified
+        healthcare professional.
+      </p>
+    `,
+
+    relatedSymptoms: [
+      "Constipation",
+      "Fatigue",
+      "Weakness",
+    ],
+
+    relatedFoods: [
+      "Lentils",
+      "Beans",
+      "Oats",
+      "Whole Grains",
+      "Brown Rice",
+      "Quinoa",
+      "Whole Wheat Bread",
+      "Whole Wheat Pasta",
+      "Berries",
+      "Fruits",
+      "Broccoli",
+      "Carrots",
+      "Sweet Potatoes",
+      "Avocado",
+    ],
+
+    relatedNutrients: [
+      "Fiber",
+      "Magnesium",
+      "Iron",
+      "Protein",
+      "Vitamin C",
+    ],
+  },
 ];
