@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -17,6 +18,29 @@ import {
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ||
   "https://nutricompass.in";
+
+/* =========================================================
+   ARTICLE IMAGE
+========================================================= */
+
+/*
+  Images are automatically matched using the article slug.
+
+  Example:
+  slug:
+  understanding-iron-deficiency
+
+  image:
+  /images/articles/understanding-iron-deficiency.jpg
+*/
+
+function getArticleImage(slug: string) {
+  return `/images/articles/${slug}.jpg`;
+}
+
+function getAbsoluteImageUrl(slug: string) {
+  return `${SITE_URL}${getArticleImage(slug)}`;
+}
 
 /* =========================================================
    STATIC ARTICLE PATHS
@@ -93,6 +117,13 @@ export async function generateMetadata({
     publishedDate.toISOString();
 
   /* =======================================================
+     ARTICLE IMAGE
+  ======================================================= */
+
+  const imageUrl =
+    getAbsoluteImageUrl(article.slug);
+
+  /* =======================================================
      RETURN METADATA
   ======================================================= */
 
@@ -130,6 +161,10 @@ export async function generateMetadata({
       canonical: canonicalUrl,
     },
 
+    /* =====================================================
+       OPEN GRAPH
+    ===================================================== */
+
     openGraph: {
       type: "article",
 
@@ -148,7 +183,23 @@ export async function generateMetadata({
       authors: [
         article.author,
       ],
+
+      images: [
+        {
+          url: imageUrl,
+
+          width: 1200,
+
+          height: 800,
+
+          alt: `${article.title} - NutriCompass`,
+        },
+      ],
     },
+
+    /* =====================================================
+       TWITTER
+    ===================================================== */
 
     twitter: {
       card: "summary_large_image",
@@ -156,6 +207,14 @@ export async function generateMetadata({
       title,
 
       description,
+
+      images: [
+        {
+          url: imageUrl,
+
+          alt: `${article.title} - NutriCompass`,
+        },
+      ],
     },
   };
 }
@@ -199,6 +258,16 @@ export default async function ArticlePage({
 
   const publishedISO =
     publishedDate.toISOString();
+
+  /* =======================================================
+     ARTICLE IMAGE
+  ======================================================= */
+
+  const articleImage =
+    getArticleImage(article.slug);
+
+  const articleImageUrl =
+    getAbsoluteImageUrl(article.slug);
 
   /* =======================================================
      RELATED ARTICLES
@@ -278,6 +347,10 @@ export default async function ArticlePage({
 
     description: article.description,
 
+    image: [
+      articleImageUrl,
+    ],
+
     articleBody: article.content,
 
     datePublished: publishedISO,
@@ -298,6 +371,12 @@ export default async function ArticlePage({
       name: "NutriCompass",
 
       url: SITE_URL,
+
+      logo: {
+        "@type": "ImageObject",
+
+        url: `${SITE_URL}/logo.png`,
+      },
     },
 
     mainEntityOfPage: {
@@ -333,6 +412,12 @@ export default async function ArticlePage({
     description: article.description,
 
     url: canonicalUrl,
+
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+
+      url: articleImageUrl,
+    },
 
     isPartOf: {
       "@type": "WebSite",
@@ -495,6 +580,22 @@ export default async function ArticlePage({
 
         <article className="bg-white rounded-3xl shadow-md overflow-hidden">
 
+          {/* =================================================
+    ARTICLE HERO IMAGE
+================================================= */}
+
+<div className="relative w-full max-w-3xl mx-auto aspect-[3/2] bg-gray-100 overflow-hidden rounded-2xl">
+
+  <Image
+    src={articleImage}
+    alt={`${article.title} - NutriCompass`}
+    fill
+    priority
+    sizes="(max-width: 768px) 100vw, 768px"
+    className="object-cover"
+  />
+
+</div>
           {/* =================================================
               ARTICLE HEADER
           ================================================= */}
@@ -737,22 +838,42 @@ export default async function ArticlePage({
                       className="group"
                     >
 
-                      <article className="h-full border border-gray-200 rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                      <article className="h-full border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
 
-                        <span className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
-                          {relatedArticle.category}
-                        </span>
+                        {/* Related Article Image */}
 
-                        <h3 className="mt-4 text-xl font-bold text-gray-800 group-hover:text-green-700 transition">
-                          {relatedArticle.title}
-                        </h3>
+                        <div className="relative w-full aspect-[3/2] bg-gray-100">
 
-                        <p className="mt-3 text-gray-600 leading-7">
-                          {relatedArticle.description}
-                        </p>
+                          <Image
+                            src={getArticleImage(
+                              relatedArticle.slug
+                            )}
+                            alt={`${relatedArticle.title} - NutriCompass`}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
 
-                        <div className="mt-5 text-green-700 font-semibold">
-                          Read Article →
+                        </div>
+
+                        <div className="p-6">
+
+                          <span className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
+                            {relatedArticle.category}
+                          </span>
+
+                          <h3 className="mt-4 text-xl font-bold text-gray-800 group-hover:text-green-700 transition">
+                            {relatedArticle.title}
+                          </h3>
+
+                          <p className="mt-3 text-gray-600 leading-7">
+                            {relatedArticle.description}
+                          </p>
+
+                          <div className="mt-5 text-green-700 font-semibold">
+                            Read Article →
+                          </div>
+
                         </div>
 
                       </article>

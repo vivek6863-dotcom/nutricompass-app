@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import { articles } from "@/components/data/articles";
@@ -6,6 +7,14 @@ import { nutrientLink } from "@/lib/links";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://nutricompass.in";
+
+/* =========================================================
+   ARTICLE IMAGE
+   ========================================================= */
+
+function getArticleImage(slug: string) {
+  return `/images/articles/${slug}.jpg`;
+}
 
 /* =========================================================
    SEO METADATA
@@ -308,14 +317,19 @@ export default function ArticlesPage() {
                 aria-label={`Read article: ${article.title}`}
               >
 
-                <div className="h-52 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+                {/* =================================================
+                    ARTICLE IMAGE
+                ================================================= */}
 
-                  <span
-                    className="text-7xl group-hover:scale-110 transition-transform duration-300"
-                    aria-hidden="true"
-                  >
-                    📖
-                  </span>
+                <div className="relative w-full aspect-[3/2] bg-gray-100 overflow-hidden">
+
+                  <Image
+                    src={getArticleImage(article.slug)}
+                    alt={`${article.title} - NutriCompass`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
 
                 </div>
 
