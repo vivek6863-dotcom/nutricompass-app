@@ -116,11 +116,17 @@ export default function HeroCarousel() {
                     {slide.icon}
                   </div>
 
-                  {/* Main Homepage H1 */}
+                  {/* Homepage Heading */}
 
-                  <h1 className="mt-4 sm:mt-5 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight drop-shadow-md">
-                    {slide.title}
-                  </h1>
+                  {index === 0 ? (
+                    <h1 className="mt-4 sm:mt-5 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight drop-shadow-md">
+                      {slide.title}
+                    </h1>
+                  ) : (
+                    <h2 className="mt-4 sm:mt-5 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight drop-shadow-md">
+                      {slide.title}
+                    </h2>
+                  )}
 
                   {/* Description */}
 
