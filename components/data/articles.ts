@@ -1638,4 +1638,1265 @@ export const articles: Article[] = [
       "Vitamin C",
     ],
   },
+    {
+    id: 12,
+    title: "High Protein Foods: A Guide To Protein-Rich Foods",
+    slug: "high-protein-foods",
+    description:
+      "Discover protein-rich foods including eggs, lentils, beans, fish, lean red meat, Greek yogurt, nuts, quinoa, and other nutritious protein sources.",
+    category: "Nutrition",
+    author: "NutriCompass Team",
+    readTime: "8 min read",
+    publishedDate: "August 26, 2026",
+    content:
+      "Protein is an essential nutrient found in a wide variety of foods. Protein-rich foods can include animal foods such as eggs, fish, lean red meat, milk, yogurt, and cheese, as well as plant foods such as lentils, beans, nuts, seeds, and quinoa.\n\nChoosing a variety of protein sources can help add nutritional variety to a balanced diet. Many protein-rich foods also provide other nutrients such as iron, calcium, vitamin B12, magnesium, fiber, and healthy fats.\n\nProtein needs vary between individuals depending on factors such as age, activity level, overall diet, and health status. This guide focuses on food sources rather than individualized protein requirements.",
+    contentHtml: `
+      <p>
+        <strong>High protein foods</strong> are foods that provide protein as
+        part of their nutritional profile. Protein-rich foods include eggs,
+        fish, lean meats, dairy foods, legumes, nuts, seeds, and some whole
+        grains.
+      </p>
+
+      <h2>Best High Protein Foods</h2>
+
+      <p>
+        There is no single best protein food. A varied diet can include
+        different protein sources depending on personal preferences and
+        dietary patterns.
+      </p>
+
+      <h3>Eggs</h3>
+      <p>
+        <a href="/foods/eggs">Eggs</a> provide protein along with vitamin B12,
+        vitamin D, and choline.
+      </p>
+
+      <h3>Lentils</h3>
+      <p>
+        <a href="/foods/lentils">Lentils</a> provide plant-based protein,
+        iron, and fiber and can be used in soups, curries, salads, and other
+        meals.
+      </p>
+
+      <h3>Beans</h3>
+      <p>
+        <a href="/foods/beans">Beans</a> provide plant-based protein along
+        with fiber, iron, and folate.
+      </p>
+
+      <h3>Lean Red Meat</h3>
+      <p>
+        <a href="/foods/lean-red-meat">Lean red meat</a> provides protein,
+        iron, and vitamin B12.
+      </p>
+
+      <h3>Fish</h3>
+      <p>
+        <a href="/foods/fish">Fish</a> can provide protein and other nutrients
+        depending on the type of fish.
+      </p>
+
+      <h3>Greek Yogurt</h3>
+      <p>
+        <a href="/foods/greek-yogurt">Greek yogurt</a> provides protein,
+        calcium, and vitamin B12.
+      </p>
+
+      <h3>Nuts</h3>
+      <p>
+        <a href="/foods/nuts">Nuts</a> provide protein along with magnesium,
+        zinc, fiber, and unsaturated fats.
+      </p>
+
+      <h3>Quinoa</h3>
+      <p>
+        <a href="/foods/quinoa">Quinoa</a> provides protein, fiber, iron, and
+        magnesium.
+      </p>
+
+      <h2>Plant-Based Protein Foods</h2>
+
+      <p>
+        Useful plant-based protein sources include lentils, beans, nuts,
+        seeds, quinoa, and other legumes and whole grains. Combining a
+        variety of plant foods can add nutritional variety to meals.
+      </p>
+
+      <h2>Protein Foods For Everyday Meals</h2>
+
+      <p>
+        Eggs and Greek yogurt can be included in breakfast meals. Lentils,
+        beans, fish, lean meat, and quinoa can be used in lunch and dinner
+        meals. Nuts and other protein-containing foods can also be included as
+        snacks depending on individual dietary preferences.
+      </p>
+
+      <h2>Protein And Other Nutrients</h2>
+
+      <p>
+        Protein-rich foods often provide additional nutrients. For example,
+        lentils provide protein, iron, and fiber, while eggs provide protein,
+        vitamin B12, vitamin D, and choline.
+      </p>
+
+      <p>
+        Learn more about
+        <a href="/nutrients/protein">Protein</a>
+        and explore our
+        <a href="/recipes">Healthy Recipes</a>.
+      </p>
+
+      <h2>Frequently Asked Questions About High Protein Foods</h2>
+
+      <h3>What Are High Protein Foods?</h3>
+      <p>
+        High protein foods are foods that provide a meaningful amount of
+        protein. Examples include eggs, fish, lean meat, dairy foods, lentils,
+        beans, nuts, seeds, and quinoa.
+      </p>
+
+      <h3>What Are Good Plant-Based Protein Foods?</h3>
+      <p>
+        Lentils, beans, nuts, seeds, and quinoa are examples of plant-based
+        foods that provide protein.
+      </p>
+
+      <h3>Can Vegetarians Eat Protein-Rich Foods?</h3>
+      <p>
+        Yes. Vegetarian protein sources can include lentils, beans, eggs,
+        Greek yogurt, milk, cheese, nuts, seeds, and quinoa.
+      </p>
+    `,
+    relatedSymptoms: [
+      "Weakness",
+      "Fatigue",
+      "Hair Loss",
+    ],
+    relatedFoods: [
+      "Eggs",
+      "Lentils",
+      "Beans",
+      "Lean Red Meat",
+      "Fish",
+      "Greek Yogurt",
+      "Nuts",
+      "Quinoa",
+    ],
+    relatedNutrients: [
+      "Protein",
+      "Iron",
+      "Vitamin B12",
+      "Magnesium",
+    ],
+  },
+
+  {
+    id: 13,
+    title: "Iron Rich Foods: A Guide To Foods High In Iron",
+    slug: "iron-rich-foods",
+    description:
+      "Explore iron-rich foods including lean red meat, spinach, lentils, beans, pumpkin seeds, oats, quinoa, and other foods that provide iron.",
+    category: "Nutrition",
+    author: "NutriCompass Team",
+    readTime: "8 min read",
+    publishedDate: "August 26, 2026",
+    content:
+      "Iron is an essential nutrient involved in normal red blood cell formation and oxygen transport. Iron is found in both animal and plant foods, including lean red meat, lentils, beans, spinach, pumpkin seeds, oats, quinoa, and other foods.\n\nA varied diet can include different sources of iron. Plant-based sources can be combined with foods containing vitamin C to support absorption of non-heme iron.",
+    contentHtml: `
+      <p>
+        <strong>Iron-rich foods</strong> include a variety of animal and plant
+        foods. Examples include lean red meat, lentils, beans, spinach,
+        pumpkin seeds, oats, quinoa, and other nutrient-rich foods.
+      </p>
+
+      <h2>Best Iron Rich Foods</h2>
+
+      <h3>Lean Red Meat</h3>
+      <p>
+        <a href="/foods/lean-red-meat">Lean red meat</a> provides iron,
+        protein, and vitamin B12.
+      </p>
+
+      <h3>Spinach</h3>
+      <p>
+        <a href="/foods/spinach">Spinach</a> provides iron, vitamin C, and
+        folate.
+      </p>
+
+      <h3>Lentils</h3>
+      <p>
+        <a href="/foods/lentils">Lentils</a> provide plant-based iron along
+        with protein and fiber.
+      </p>
+
+      <h3>Beans</h3>
+      <p>
+        <a href="/foods/beans">Beans</a> provide plant-based iron, fiber, and
+        folate.
+      </p>
+
+      <h3>Pumpkin Seeds</h3>
+      <p>
+        <a href="/foods/pumpkin-seeds">Pumpkin seeds</a> provide iron,
+        magnesium, and zinc.
+      </p>
+
+      <h3>Oats</h3>
+      <p>
+        <a href="/foods/oats">Oats</a> provide iron, fiber, magnesium, and
+        protein.
+      </p>
+
+      <h3>Quinoa</h3>
+      <p>
+        <a href="/foods/quinoa">Quinoa</a> provides iron, protein, fiber, and
+        magnesium.
+      </p>
+
+      <h2>Plant-Based Sources Of Iron</h2>
+
+      <p>
+        Lentils, beans, spinach, pumpkin seeds, oats, quinoa, and other plant
+        foods can contribute dietary iron. Including vitamin-C-rich foods such
+        as broccoli, oranges, kiwi, or strawberries alongside plant-based
+        iron sources can support absorption of non-heme iron.
+      </p>
+
+      <h2>Iron Rich Foods And Vitamin C</h2>
+
+      <p>
+        Vitamin C can improve absorption of non-heme iron from plant foods.
+        Explore
+        <a href="/nutrients/vitamin-c">Vitamin C</a>
+        and
+        <a href="/articles/vitamin-c-rich-foods">Vitamin C Rich Foods</a>
+        for more information.
+      </p>
+
+      <h2>Iron And Nutrition</h2>
+
+      <p>
+        Learn more about
+        <a href="/nutrients/iron">Iron</a>
+        and explore
+        <a href="/symptoms/iron-deficiency">Iron Deficiency</a>
+        for related nutrition information.
+      </p>
+
+      <h2>Frequently Asked Questions About Iron Rich Foods</h2>
+
+      <h3>What Foods Are High In Iron?</h3>
+      <p>
+        Lean red meat, lentils, beans, spinach, pumpkin seeds, oats, and
+        quinoa are examples of foods that provide iron.
+      </p>
+
+      <h3>What Are Good Plant-Based Iron Foods?</h3>
+      <p>
+        Lentils, beans, spinach, pumpkin seeds, oats, and quinoa can provide
+        plant-based dietary iron.
+      </p>
+
+      <h3>What Foods Help With Iron Absorption?</h3>
+      <p>
+        Vitamin-C-rich foods can support absorption of non-heme iron from
+        plant foods. Examples include oranges, kiwi, strawberries, broccoli,
+        and bell peppers.
+      </p>
+    `,
+    relatedSymptoms: [
+      "Iron Deficiency",
+      "Fatigue",
+      "Weakness",
+      "Low Hemoglobin",
+    ],
+    relatedFoods: [
+      "Lean Red Meat",
+      "Spinach",
+      "Lentils",
+      "Beans",
+      "Pumpkin Seeds",
+      "Oats",
+      "Quinoa",
+    ],
+    relatedNutrients: [
+      "Iron",
+      "Vitamin C",
+      "Vitamin B12",
+      "Folate",
+    ],
+  },
+
+  {
+    id: 14,
+    title: "Vitamin C Rich Foods: Foods High In Vitamin C",
+    slug: "vitamin-c-rich-foods",
+    description:
+      "Discover vitamin C-rich foods including oranges, kiwi, strawberries, broccoli, bell peppers, berries, and other fruits and vegetables.",
+    category: "Nutrition",
+    author: "NutriCompass Team",
+    readTime: "7 min read",
+    publishedDate: "August 26, 2026",
+    content:
+      "Vitamin C is an essential nutrient found in many fruits and vegetables. Foods that provide vitamin C include oranges, kiwi, strawberries, broccoli, bell peppers, berries, and other plant foods.\n\nVitamin C supports normal immune function, collagen formation, and absorption of non-heme iron from plant foods.",
+    contentHtml: `
+      <p>
+        <strong>Vitamin C-rich foods</strong> include many fruits and
+        vegetables. Common examples include oranges, kiwi, strawberries,
+        broccoli, bell peppers, and berries.
+      </p>
+
+      <h2>Best Vitamin C Rich Foods</h2>
+
+      <h3>Oranges</h3>
+      <p>
+        <a href="/foods/oranges">Oranges</a> provide vitamin C and can be a
+        convenient fruit option.
+      </p>
+
+      <h3>Kiwi</h3>
+      <p>
+        <a href="/foods/kiwi">Kiwi</a> provides vitamin C along with fiber and
+        other nutrients.
+      </p>
+
+      <h3>Strawberries</h3>
+      <p>
+        <a href="/foods/strawberries">Strawberries</a> provide vitamin C and
+        other nutrients.
+      </p>
+
+      <h3>Broccoli</h3>
+      <p>
+        <a href="/foods/broccoli">Broccoli</a> provides vitamin C, fiber, and
+        folate.
+      </p>
+
+      <h3>Bell Peppers</h3>
+      <p>
+        <a href="/foods/bell-peppers">Bell peppers</a> are vegetables that
+        provide vitamin C and other nutrients.
+      </p>
+
+      <h3>Berries</h3>
+      <p>
+        <a href="/foods/berries">Berries</a> provide vitamin C and fiber as
+        part of a varied diet.
+      </p>
+
+      <h2>Vitamin C And Iron Absorption</h2>
+
+      <p>
+        Vitamin C can help improve absorption of non-heme iron from plant
+        foods. Combining foods such as lentils, beans, spinach, or other
+        plant-based iron sources with vitamin-C-rich foods can be a practical
+        way to include both nutrients in a meal.
+      </p>
+
+      <p>
+        Learn more about
+        <a href="/nutrients/vitamin-c">Vitamin C</a>
+        and
+        <a href="/nutrients/iron">Iron</a>.
+      </p>
+
+      <h2>Vitamin C Rich Foods For Everyday Meals</h2>
+
+      <p>
+        Fruits can be included at breakfast or as snacks, while vegetables
+        such as broccoli and bell peppers can be included in lunch and dinner
+        meals.
+      </p>
+
+      <h2>Frequently Asked Questions About Vitamin C Foods</h2>
+
+      <h3>What Foods Are High In Vitamin C?</h3>
+      <p>
+        Oranges, kiwi, strawberries, broccoli, bell peppers, and berries are
+        examples of foods that provide vitamin C.
+      </p>
+
+      <h3>Are Fruits Good Sources Of Vitamin C?</h3>
+      <p>
+        Many fruits provide vitamin C along with fiber and other nutrients.
+      </p>
+
+      <h3>Why Is Vitamin C Important In A Balanced Diet?</h3>
+      <p>
+        Vitamin C is involved in normal collagen formation, immune function,
+        and absorption of non-heme iron.
+      </p>
+    `,
+    relatedSymptoms: [
+      "Vitamin C Deficiency",
+      "Low Immunity",
+      "Iron Deficiency",
+    ],
+    relatedFoods: [
+      "Oranges",
+      "Kiwi",
+      "Strawberries",
+      "Broccoli",
+      "Bell Peppers",
+      "Berries",
+    ],
+    relatedNutrients: [
+      "Vitamin C",
+      "Iron",
+    ],
+  },
+
+  {
+    id: 15,
+    title: "Vitamin D Foods: Best Food Sources Of Vitamin D",
+    slug: "vitamin-d-foods",
+    description:
+      "Explore foods that can provide vitamin D, including fatty fish, salmon, eggs, fortified milk, yogurt, and mushrooms.",
+    category: "Nutrition",
+    author: "NutriCompass Team",
+    readTime: "7 min read",
+    publishedDate: "August 26, 2026",
+    content:
+      "Vitamin D is an essential nutrient that supports normal bones, muscles, and immune function. Dietary sources can include fatty fish, salmon, eggs, fortified milk, yogurt, and some mushrooms.\n\nVitamin D status depends on more than food alone. Sunlight exposure, individual circumstances, and other factors can also influence vitamin D levels.",
+    contentHtml: `
+      <p>
+        <strong>Vitamin D foods</strong> include fatty fish, salmon, eggs,
+        fortified milk, yogurt, and some mushrooms. Vitamin D supports normal
+        bone health, muscle function, and immune function.
+      </p>
+
+      <h2>Best Vitamin D Food Sources</h2>
+
+      <h3>Salmon</h3>
+      <p>
+        <a href="/foods/salmon">Salmon</a> provides vitamin D along with
+        protein and omega-3 fatty acids.
+      </p>
+
+      <h3>Fatty Fish</h3>
+      <p>
+        <a href="/foods/fatty-fish">Fatty fish</a> can provide vitamin D,
+        protein, and omega-3 fatty acids.
+      </p>
+
+      <h3>Eggs</h3>
+      <p>
+        <a href="/foods/eggs">Eggs</a> provide vitamin D along with protein,
+        vitamin B12, and choline.
+      </p>
+
+      <h3>Fortified Milk</h3>
+      <p>
+        <a href="/foods/fortified-milk">Fortified milk</a> provides vitamin D,
+        calcium, protein, and vitamin B12.
+      </p>
+
+      <h3>Yogurt</h3>
+      <p>
+        <a href="/foods/yogurt">Yogurt</a> can contribute protein, calcium,
+        and other nutrients. Vitamin D content depends on whether the product
+        is fortified.
+      </p>
+
+      <h3>Mushrooms</h3>
+      <p>
+        <a href="/foods/mushrooms">Mushrooms</a> provide several nutrients,
+        and some varieties can provide vitamin D when appropriately exposed
+        to UV light.
+      </p>
+
+      <h2>Vitamin D And Overall Nutrition</h2>
+
+      <p>
+        Vitamin D is only one part of a balanced diet. Foods such as fatty
+        fish, eggs, and fortified dairy products can provide vitamin D along
+        with other nutrients.
+      </p>
+
+      <p>
+        Learn more about
+        <a href="/nutrients/vitamin-d">Vitamin D</a>
+        and
+        <a href="/symptoms/vitamin-d-deficiency">Vitamin D Deficiency</a>.
+      </p>
+
+      <h2>Frequently Asked Questions About Vitamin D Foods</h2>
+
+      <h3>What Foods Contain Vitamin D?</h3>
+      <p>
+        Food sources can include fatty fish, salmon, eggs, fortified milk,
+        some fortified dairy products, and certain mushrooms.
+      </p>
+
+      <h3>Are Eggs A Source Of Vitamin D?</h3>
+      <p>
+        Eggs can provide vitamin D along with protein and other nutrients.
+      </p>
+
+      <h3>Can Food Alone Determine Vitamin D Status?</h3>
+      <p>
+        No. Vitamin D status can be influenced by dietary intake, sunlight
+        exposure, individual circumstances, and other factors.
+      </p>
+    `,
+    relatedSymptoms: [
+      "Vitamin D Deficiency",
+      "Fatigue",
+      "Weakness",
+    ],
+    relatedFoods: [
+      "Salmon",
+      "Fatty Fish",
+      "Eggs",
+      "Fortified Milk",
+      "Yogurt",
+      "Mushrooms",
+    ],
+    relatedNutrients: [
+      "Vitamin D",
+      "Calcium",
+      "Magnesium",
+    ],
+  },
+
+  {
+    id: 16,
+    title: "Vitamin B12 Foods: Best Food Sources Of Vitamin B12",
+    slug: "vitamin-b12-foods",
+    description:
+      "Learn about vitamin B12-rich foods including eggs, milk, yogurt, fish, salmon, lean red meat, cheese, and other food sources.",
+    category: "Nutrition",
+    author: "NutriCompass Team",
+    readTime: "7 min read",
+    publishedDate: "August 26, 2026",
+    content:
+      "Vitamin B12 is an essential nutrient involved in normal red blood cell formation and nervous system function. Food sources include eggs, milk, yogurt, cheese, fish, salmon, and lean red meat.\n\nPeople following vegetarian or vegan diets may need to pay particular attention to reliable vitamin B12 sources because naturally occurring vitamin B12 is primarily found in animal-derived foods.",
+    contentHtml: `
+      <p>
+        <strong>Vitamin B12-rich foods</strong> include eggs, milk, yogurt,
+        cheese, fish, salmon, and lean red meat. Vitamin B12 is important for
+        normal red blood cell formation and nervous system function.
+      </p>
+
+      <h2>Best Vitamin B12 Foods</h2>
+
+      <h3>Eggs</h3>
+      <p>
+        <a href="/foods/eggs">Eggs</a> provide vitamin B12 along with protein,
+        vitamin D, and choline.
+      </p>
+
+      <h3>Milk</h3>
+      <p>
+        <a href="/foods/milk">Milk</a> provides protein, calcium, and vitamin
+        B12.
+      </p>
+
+      <h3>Greek Yogurt</h3>
+      <p>
+        <a href="/foods/greek-yogurt">Greek yogurt</a> provides protein,
+        calcium, and vitamin B12.
+      </p>
+
+      <h3>Fish</h3>
+      <p>
+        <a href="/foods/fish">Fish</a> can provide vitamin B12 and protein,
+        depending on the type.
+      </p>
+
+      <h3>Salmon</h3>
+      <p>
+        <a href="/foods/salmon">Salmon</a> provides vitamin B12 along with
+        protein, vitamin D, and omega-3 fatty acids.
+      </p>
+
+      <h3>Lean Red Meat</h3>
+      <p>
+        <a href="/foods/lean-red-meat">Lean red meat</a> provides vitamin B12,
+        protein, and iron.
+      </p>
+
+      <h2>Vitamin B12 And Dietary Patterns</h2>
+
+      <p>
+        Eggs and dairy foods can provide vitamin B12 for people who include
+        them in their diets. Fish and meat are additional sources.
+      </p>
+
+      <p>
+        People who avoid animal-derived foods should discuss reliable vitamin
+        B12 sources with a qualified healthcare professional or registered
+        dietitian.
+      </p>
+
+      <p>
+        Learn more about
+        <a href="/nutrients/vitamin-b12">Vitamin B12</a>
+        and
+        <a href="/symptoms/vitamin-b12-deficiency">Vitamin B12 Deficiency</a>.
+      </p>
+
+      <h2>Frequently Asked Questions About Vitamin B12 Foods</h2>
+
+      <h3>What Foods Are High In Vitamin B12?</h3>
+      <p>
+        Fish, salmon, lean red meat, eggs, milk, yogurt, and cheese can
+        provide vitamin B12.
+      </p>
+
+      <h3>Do Eggs Contain Vitamin B12?</h3>
+      <p>
+        Yes. Eggs provide vitamin B12 along with protein and other nutrients.
+      </p>
+
+      <h3>What About Vitamin B12 On A Vegan Diet?</h3>
+      <p>
+        Naturally occurring vitamin B12 is primarily found in animal-derived
+        foods. People following a vegan diet should discuss fortified foods
+        or supplements with an appropriate healthcare professional.
+      </p>
+    `,
+    relatedSymptoms: [
+      "Vitamin B12 Deficiency",
+      "Fatigue",
+      "Weakness",
+    ],
+    relatedFoods: [
+      "Eggs",
+      "Milk",
+      "Greek Yogurt",
+      "Yogurt",
+      "Cheese",
+      "Fish",
+      "Salmon",
+      "Lean Red Meat",
+    ],
+    relatedNutrients: [
+      "Vitamin B12",
+      "Iron",
+      "Protein",
+      "Folate",
+    ],
+  },
+
+  {
+    id: 17,
+    title: "Zinc Rich Foods: Foods High In Zinc",
+    slug: "zinc-rich-foods",
+    description:
+      "Discover zinc-rich foods including pumpkin seeds, nuts, lean red meat, beans, lentils, cheese, and other nutritious foods.",
+    category: "Nutrition",
+    author: "NutriCompass Team",
+    readTime: "7 min read",
+    publishedDate: "August 26, 2026",
+    content:
+      "Zinc is an essential mineral found in a variety of foods. Food sources include pumpkin seeds, nuts, lean red meat, beans, lentils, and cheese.\n\nIncluding a variety of zinc-containing foods as part of a balanced diet can contribute to overall nutritional adequacy.",
+    contentHtml: `
+      <p>
+        <strong>Zinc-rich foods</strong> include pumpkin seeds, nuts, lean red
+        meat, beans, lentils, and cheese. Zinc is an essential mineral that
+        plays several roles in normal body function.
+      </p>
+
+      <h2>Best Zinc Rich Foods</h2>
+
+      <h3>Pumpkin Seeds</h3>
+      <p>
+        <a href="/foods/pumpkin-seeds">Pumpkin seeds</a> provide zinc along
+        with iron and magnesium.
+      </p>
+
+      <h3>Nuts</h3>
+      <p>
+        <a href="/foods/nuts">Nuts</a> provide zinc, magnesium, protein, fiber,
+        and unsaturated fats.
+      </p>
+
+      <h3>Lean Red Meat</h3>
+      <p>
+        <a href="/foods/lean-red-meat">Lean red meat</a> provides zinc along
+        with iron, protein, and vitamin B12.
+      </p>
+
+      <h3>Beans</h3>
+      <p>
+        <a href="/foods/beans">Beans</a> provide zinc along with fiber, iron,
+        folate, and protein.
+      </p>
+
+      <h3>Lentils</h3>
+      <p>
+        <a href="/foods/lentils">Lentils</a> provide plant-based protein,
+        iron, and fiber and can contribute zinc to the diet.
+      </p>
+
+      <h3>Cheese</h3>
+      <p>
+        <a href="/foods/cheese">Cheese</a> provides protein, calcium, and
+        vitamin B12 and can also contribute zinc.
+      </p>
+
+      <h2>Zinc And A Balanced Diet</h2>
+
+      <p>
+        Zinc-containing foods can be included across different dietary
+        patterns. Plant-based choices include legumes, nuts, and seeds, while
+        animal foods such as meat and dairy can provide additional sources.
+      </p>
+
+      <p>
+        Learn more about
+        <a href="/nutrients/zinc">Zinc</a>
+        and explore our
+        <a href="/foods">Healthy Foods</a>.
+      </p>
+
+      <h2>Frequently Asked Questions About Zinc Foods</h2>
+
+      <h3>What Foods Are High In Zinc?</h3>
+      <p>
+        Pumpkin seeds, nuts, lean red meat, beans, lentils, and cheese are
+        examples of zinc-containing foods.
+      </p>
+
+      <h3>What Are Plant-Based Sources Of Zinc?</h3>
+      <p>
+        Beans, lentils, nuts, and seeds such as pumpkin seeds can contribute
+        zinc to a plant-based diet.
+      </p>
+
+      <h3>Why Is Zinc Important?</h3>
+      <p>
+        Zinc is an essential mineral involved in several normal body
+        functions. A varied diet can provide zinc from multiple food sources.
+      </p>
+    `,
+    relatedSymptoms: [
+      "Low Immunity",
+      "Hair Loss",
+      "Weakness",
+    ],
+    relatedFoods: [
+      "Pumpkin Seeds",
+      "Nuts",
+      "Lean Red Meat",
+      "Beans",
+      "Lentils",
+      "Cheese",
+    ],
+    relatedNutrients: [
+      "Zinc",
+      "Protein",
+      "Iron",
+      "Magnesium",
+    ],
+  },
+
+  {
+    id: 18,
+    title: "Healthy Foods: A Guide To Nutritious Foods",
+    slug: "healthy-foods",
+    description:
+      "Explore nutritious foods from vegetables, fruits, legumes, whole grains, dairy, fish, nuts, and other food groups for a varied balanced diet.",
+    category: "Healthy Eating",
+    author: "NutriCompass Team",
+    readTime: "8 min read",
+    publishedDate: "August 26, 2026",
+    content:
+      "Healthy eating can include a wide variety of foods from different food groups. Vegetables, fruits, legumes, whole grains, fish, eggs, dairy foods, nuts, and seeds can all contribute different nutrients to a balanced diet.\n\nThere is no single food that provides every nutrient needed by the body. Variety and balance are important when building an overall eating pattern.",
+    contentHtml: `
+      <p>
+        <strong>Healthy foods</strong> can include vegetables, fruits, legumes,
+        whole grains, fish, eggs, dairy foods, nuts, seeds, and other
+        nutrient-rich foods.
+      </p>
+
+      <h2>What Makes A Food Nutritious?</h2>
+
+      <p>
+        Nutritious foods can provide important nutrients such as protein,
+        fiber, vitamins, minerals, and healthy fats. The nutritional value of
+        a food depends on its overall composition rather than one nutrient
+        alone.
+      </p>
+
+      <h2>Healthy Foods To Include In A Varied Diet</h2>
+
+      <h3>Vegetables</h3>
+      <p>
+        Vegetables such as <a href="/foods/spinach">spinach</a>,
+        <a href="/foods/broccoli">broccoli</a>,
+        <a href="/foods/carrots">carrots</a>, and
+        <a href="/foods/sweet-potatoes">sweet potatoes</a> provide different
+        vitamins, minerals, fiber, and other nutrients.
+      </p>
+
+      <h3>Fruits</h3>
+      <p>
+        Fruits and berries can provide fiber, vitamin C, and other nutrients.
+        Explore <a href="/foods/fruits">Fruits</a> and
+        <a href="/foods/berries">Berries</a>.
+      </p>
+
+      <h3>Legumes</h3>
+      <p>
+        <a href="/foods/lentils">Lentils</a> and
+        <a href="/foods/beans">beans</a> provide plant-based protein, fiber,
+        and other nutrients.
+      </p>
+
+      <h3>Whole Grains</h3>
+      <p>
+        <a href="/foods/oats">Oats</a>,
+        <a href="/foods/brown-rice">brown rice</a>, and
+        <a href="/foods/quinoa">quinoa</a> provide combinations of fiber,
+        protein, minerals, and other nutrients.
+      </p>
+
+      <h3>Protein-Rich Foods</h3>
+      <p>
+        Eggs, fish, lean red meat, dairy foods, legumes, nuts, and seeds can
+        provide protein as part of a varied diet.
+      </p>
+
+      <h2>Why Variety Matters</h2>
+
+      <p>
+        Different foods provide different combinations of nutrients. Eating a
+        varied selection can make it easier to include a broader range of
+        vitamins, minerals, protein, fiber, and other nutrients.
+      </p>
+
+      <p>
+        Explore our <a href="/foods">Healthy Foods</a>,
+        <a href="/nutrients">Essential Nutrients</a>, and
+        <a href="/recipes">Healthy Recipes</a>.
+      </p>
+
+      <h2>Frequently Asked Questions About Healthy Foods</h2>
+
+      <h3>What Are Healthy Foods To Eat Every Day?</h3>
+      <p>
+        A varied diet can include vegetables, fruits, legumes, whole grains,
+        protein-rich foods, nuts, seeds, and other nutritious foods.
+      </p>
+
+      <h3>What Are Nutrient-Rich Foods?</h3>
+      <p>
+        Nutrient-rich foods provide useful amounts of one or more nutrients
+        relative to their overall composition. Examples include vegetables,
+        fruits, legumes, whole grains, fish, eggs, nuts, and seeds.
+      </p>
+
+      <h3>Is One Food Enough For Good Nutrition?</h3>
+      <p>
+        No. Different foods provide different nutrients, so variety is an
+        important part of a balanced eating pattern.
+      </p>
+    `,
+    relatedSymptoms: [
+      "Fatigue",
+      "Weakness",
+      "Constipation",
+    ],
+    relatedFoods: [
+      "Spinach",
+      "Broccoli",
+      "Lentils",
+      "Beans",
+      "Oats",
+      "Brown Rice",
+      "Quinoa",
+      "Berries",
+      "Fruits",
+      "Eggs",
+      "Nuts",
+    ],
+    relatedNutrients: [
+      "Protein",
+      "Fiber",
+      "Iron",
+      "Vitamin C",
+      "Magnesium",
+    ],
+  },
+
+  {
+    id: 19,
+    title: "Healthy Eating: A Practical Guide To Balanced Nutrition",
+    slug: "healthy-eating",
+    description:
+      "Learn practical healthy eating principles including food variety, balanced meals, whole grains, vegetables, fruits, protein, and nutrient-rich foods.",
+    category: "Healthy Eating",
+    author: "NutriCompass Team",
+    readTime: "8 min read",
+    publishedDate: "August 26, 2026",
+    content:
+      "Healthy eating is about building a varied and balanced overall eating pattern rather than relying on one particular food. Meals can include vegetables, fruits, whole grains, protein-rich foods, and other nutrient-rich choices.\n\nIndividual dietary needs differ. A practical approach is to focus on variety, balance, and foods that fit your preferences and nutritional needs.",
+    contentHtml: `
+      <p>
+        <strong>Healthy eating</strong> means building a varied and balanced
+        eating pattern rather than relying on a single food or nutrient.
+      </p>
+
+      <h2>What Is Healthy Eating?</h2>
+
+      <p>
+        Healthy eating can include a variety of vegetables, fruits, legumes,
+        whole grains, protein-rich foods, nuts, seeds, and other nutritious
+        choices.
+      </p>
+
+      <h2>Build Meals Around A Variety Of Foods</h2>
+
+      <p>
+        A balanced meal can combine vegetables or fruit with a protein source,
+        whole grains or other carbohydrate foods, and appropriate sources of
+        healthy fats.
+      </p>
+
+      <h2>Include Protein-Rich Foods</h2>
+
+      <p>
+        Eggs, fish, lean meat, dairy foods, lentils, beans, nuts, and quinoa
+        can contribute protein to meals. Explore our
+        <a href="/articles/high-protein-foods">High Protein Foods</a> guide.
+      </p>
+
+      <h2>Choose Fiber-Rich Foods</h2>
+
+      <p>
+        Lentils, beans, oats, whole grains, fruits, vegetables, and other
+        plant foods can contribute dietary fiber.
+      </p>
+
+      <p>
+        Explore our
+        <a href="/articles/high-fiber-foods">High Fiber Foods</a>
+        guide for more examples.
+      </p>
+
+      <h2>Include A Variety Of Nutrients</h2>
+
+      <p>
+        Different foods provide different nutrients. Explore
+        <a href="/nutrients">Essential Nutrients</a>
+        to learn more about vitamins, minerals, protein, and fiber.
+      </p>
+
+      <h2>Healthy Eating Is Individual</h2>
+
+      <p>
+        Dietary needs can vary according to age, activity, health status,
+        food preferences, culture, and other factors. A qualified healthcare
+        professional or registered dietitian can provide individualized
+        nutrition guidance when needed.
+      </p>
+
+      <h2>Frequently Asked Questions About Healthy Eating</h2>
+
+      <h3>What Is A Healthy Eating Pattern?</h3>
+      <p>
+        A healthy eating pattern generally emphasizes variety and includes
+        different nutrient-rich foods across meals and throughout the day.
+      </p>
+
+      <h3>What Foods Should Be Included In A Balanced Diet?</h3>
+      <p>
+        Vegetables, fruits, whole grains, legumes, protein-rich foods, nuts,
+        seeds, and other nutritious foods can all contribute to a balanced
+        eating pattern.
+      </p>
+
+      <h3>How Can I Start Eating More Healthily?</h3>
+      <p>
+        Start with practical changes such as adding more vegetables and
+        fruits, choosing whole grains more often, and including varied
+        protein sources.
+      </p>
+    `,
+    relatedSymptoms: [
+      "Fatigue",
+      "Weakness",
+      "Constipation",
+    ],
+    relatedFoods: [
+      "Spinach",
+      "Broccoli",
+      "Lentils",
+      "Beans",
+      "Oats",
+      "Brown Rice",
+      "Eggs",
+      "Nuts",
+      "Fruits",
+      "Berries",
+    ],
+    relatedNutrients: [
+      "Protein",
+      "Fiber",
+      "Iron",
+      "Vitamin C",
+      "Magnesium",
+    ],
+  },
+
+  {
+    id: 20,
+    title: "Nutrition Facts: Understanding Food Nutrition Information",
+    slug: "nutrition-facts",
+    description:
+      "Learn how to understand food nutrition information, including nutrients, protein, fiber, vitamins, minerals, and nutritional value.",
+    category: "Nutrition",
+    author: "NutriCompass Team",
+    readTime: "8 min read",
+    publishedDate: "August 26, 2026",
+    content:
+      "Nutrition information helps people understand the nutrients provided by different foods. Key areas include protein, carbohydrates, fiber, fats, vitamins, minerals, and other components of food.\n\nUnderstanding nutrition information can make it easier to compare foods and build a varied eating pattern. The nutritional value of a food should be considered as part of the overall diet rather than in isolation.",
+    contentHtml: `
+      <p>
+        <strong>Nutrition facts</strong> and food nutrition information can
+        help you understand the nutrients provided by different foods.
+      </p>
+
+      <h2>What Is Food Nutrition Information?</h2>
+
+      <p>
+        Food nutrition information describes the nutrients and other
+        components found in a food. Depending on the food and available data,
+        this can include protein, carbohydrates, fats, fiber, vitamins,
+        minerals, and energy.
+      </p>
+
+      <h2>Key Nutrients To Understand</h2>
+
+      <h3>Protein</h3>
+      <p>
+        Protein is found in foods such as eggs, fish, dairy foods, legumes,
+        nuts, seeds, and lean meat. Explore
+        <a href="/nutrients/protein">Protein</a>.
+      </p>
+
+      <h3>Fiber</h3>
+      <p>
+        Fiber is found mainly in plant foods such as legumes, whole grains,
+        fruits, and vegetables. Explore
+        <a href="/nutrients/fiber">Fiber</a>.
+      </p>
+
+      <h3>Vitamins And Minerals</h3>
+      <p>
+        Vitamins and minerals perform different roles in normal body
+        function. Explore our
+        <a href="/nutrients">Nutrients</a>
+        library for individual nutrient guides.
+      </p>
+
+      <h2>Why Food Nutrition Matters</h2>
+
+      <p>
+        Looking at the overall nutritional profile of foods can help people
+        make informed choices. A food that provides one particular nutrient
+        may also provide several other nutrients.
+      </p>
+
+      <p>
+        For example,
+        <a href="/foods/lentils">lentils</a> provide protein, iron, and fiber,
+        while <a href="/foods/eggs">eggs</a> provide protein, vitamin B12,
+        vitamin D, and choline.
+      </p>
+
+      <h2>Nutrition Information At NutriCompass</h2>
+
+      <p>
+        Explore our <a href="/foods">Food Library</a> to learn about
+        individual foods, their key nutrients, and their nutritional
+        characteristics.
+      </p>
+
+      <h2>Frequently Asked Questions About Nutrition Facts</h2>
+
+      <h3>What Are Nutrition Facts?</h3>
+      <p>
+        Nutrition facts provide information about the nutritional components
+        of a food, such as protein, fiber, fats, carbohydrates, vitamins, and
+        minerals.
+      </p>
+
+      <h3>Why Should I Look At Nutritional Information?</h3>
+      <p>
+        Nutrition information can help you understand what different foods
+        contribute to your overall eating pattern.
+      </p>
+
+      <h3>Does One Nutrient Determine Whether A Food Is Healthy?</h3>
+      <p>
+        No. Foods can provide multiple nutrients, and overall dietary
+        patterns are more useful than judging a food based on one nutrient
+        alone.
+      </p>
+    `,
+    relatedSymptoms: [
+      "Fatigue",
+      "Weakness",
+      "Constipation",
+    ],
+    relatedFoods: [
+      "Lentils",
+      "Eggs",
+      "Spinach",
+      "Beans",
+      "Oats",
+      "Broccoli",
+      "Nuts",
+      "Quinoa",
+    ],
+    relatedNutrients: [
+      "Protein",
+      "Fiber",
+      "Iron",
+      "Vitamin C",
+      "Vitamin B12",
+      "Vitamin D",
+    ],
+  },
+
+  {
+    id: 21,
+    title: "Healthy Indian Foods: Nutritious Foods For Indian Meals",
+    slug: "healthy-indian-foods",
+    description:
+      "Explore nutritious foods commonly used in Indian meals, including lentils, beans, whole grains, vegetables, fruits, nuts, seeds, and dairy foods.",
+    category: "Healthy Eating",
+    author: "NutriCompass Team",
+    readTime: "8 min read",
+    publishedDate: "August 26, 2026",
+    content:
+      "Indian cuisine includes a wide variety of vegetables, legumes, grains, fruits, dairy foods, nuts, and seeds. These foods can contribute protein, fiber, vitamins, minerals, and other nutrients to a varied eating pattern.\n\nHealthy Indian meals can be built around a combination of nutritious foods rather than relying on one particular ingredient. Individual dietary needs and food preferences should always be considered.",
+    contentHtml: `
+      <p>
+        <strong>Healthy Indian foods</strong> can include legumes, whole
+        grains, vegetables, fruits, nuts, seeds, dairy foods, and other
+        nutrient-rich ingredients commonly used in Indian meals.
+      </p>
+
+      <h2>Nutritious Foods Commonly Used In Indian Meals</h2>
+
+      <h3>Lentils</h3>
+      <p>
+        <a href="/foods/lentils">Lentils</a> are widely useful in Indian-style
+        meals and provide protein, fiber, and iron.
+      </p>
+
+      <h3>Beans</h3>
+      <p>
+        <a href="/foods/beans">Beans</a> provide plant-based protein, fiber,
+        iron, and folate and can be used in a variety of dishes.
+      </p>
+
+      <h3>Whole Grains</h3>
+      <p>
+        <a href="/foods/whole-grains">Whole grains</a>,
+        <a href="/foods/brown-rice">brown rice</a>, oats, and other whole-grain
+        foods can contribute fiber and other nutrients.
+      </p>
+
+      <h3>Vegetables</h3>
+      <p>
+        Vegetables such as
+        <a href="/foods/spinach">spinach</a>,
+        <a href="/foods/broccoli">broccoli</a>,
+        <a href="/foods/carrots">carrots</a>, and
+        <a href="/foods/sweet-potatoes">sweet potatoes</a> can add fiber,
+        vitamins, minerals, and variety to meals.
+      </p>
+
+      <h3>Nuts And Seeds</h3>
+      <p>
+        <a href="/foods/nuts">Nuts</a> and
+        <a href="/foods/pumpkin-seeds">pumpkin seeds</a> can provide protein,
+        magnesium, zinc, and healthy unsaturated fats.
+      </p>
+
+      <h3>Dairy Foods</h3>
+      <p>
+        Milk, yogurt, Greek yogurt, and cheese can provide protein, calcium,
+        and other nutrients.
+      </p>
+
+      <h2>Building A Balanced Indian Meal</h2>
+
+      <p>
+        A balanced meal can combine a protein source such as lentils, beans,
+        dairy, eggs, fish, or lean meat with vegetables and a grain or other
+        carbohydrate food. Fruit, nuts, or seeds can also contribute variety.
+      </p>
+
+      <h2>High Protein Indian Food Choices</h2>
+
+      <p>
+        Lentils, beans, eggs, dairy foods, fish, lean meat, nuts, seeds, and
+        quinoa can contribute protein. Explore our
+        <a href="/articles/high-protein-foods">High Protein Foods</a>
+        guide.
+      </p>
+
+      <h2>High Fiber Indian Food Choices</h2>
+
+      <p>
+        Lentils, beans, whole grains, vegetables, and fruits can contribute
+        dietary fiber. Explore our
+        <a href="/articles/high-fiber-foods">High Fiber Foods</a>
+        guide.
+      </p>
+
+      <h2>Frequently Asked Questions About Healthy Indian Foods</h2>
+
+      <h3>What Are Some Healthy Indian Foods?</h3>
+      <p>
+        Lentils, beans, vegetables, whole grains, fruits, nuts, seeds, dairy
+        foods, eggs, and other minimally processed foods can contribute to a
+        varied Indian eating pattern.
+      </p>
+
+      <h3>What Are Some High Protein Indian Food Choices?</h3>
+      <p>
+        Lentils, beans, eggs, dairy foods, fish, lean meat, nuts, seeds, and
+        quinoa can provide protein.
+      </p>
+
+      <h3>What Are Some High Fiber Indian Food Choices?</h3>
+      <p>
+        Lentils, beans, whole grains, vegetables, fruits, nuts, and seeds can
+        contribute dietary fiber.
+      </p>
+    `,
+    relatedSymptoms: [
+      "Fatigue",
+      "Weakness",
+      "Constipation",
+      "Iron Deficiency",
+    ],
+    relatedFoods: [
+      "Lentils",
+      "Beans",
+      "Spinach",
+      "Broccoli",
+      "Carrots",
+      "Brown Rice",
+      "Whole Grains",
+      "Nuts",
+      "Pumpkin Seeds",
+      "Eggs",
+    ],
+    relatedNutrients: [
+      "Protein",
+      "Fiber",
+      "Iron",
+      "Magnesium",
+      "Vitamin C",
+    ],
+  },
 ];
