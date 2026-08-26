@@ -6,6 +6,7 @@ import { symptoms } from "@/components/data/symptoms";
 import { foods } from "@/components/data/foods";
 import { nutrients } from "@/components/data/nutrients";
 import { recipes } from "@/components/data/recipes";
+import { articles } from "@/components/data/articles";
 
 import SymptomOverview from "@/components/SymptomOverview";
 import SymptomHero from "@/components/SymptomHero";
@@ -24,7 +25,7 @@ import {
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://nutricompass.com";
+  "https://nutricompass.in";
 
 /* =========================================================
    DYNAMIC SEO METADATA
@@ -261,6 +262,17 @@ export default async function SymptomPage({
       (relatedSymptom) =>
         createSlug(relatedSymptom) ===
         symptom.slug
+    )
+  );
+
+  /* =======================================================
+     RELATED ARTICLES
+  ======================================================= */
+
+  const relatedArticles = articles.filter((article) =>
+    article.relatedSymptoms.some(
+      (relatedSymptom) =>
+        createSlug(relatedSymptom) === symptom.slug
     )
   );
 
@@ -694,6 +706,61 @@ export default async function SymptomPage({
 
         </section>
 
+      )}
+
+      {/* =====================================================
+          RELATED NUTRITION ARTICLES
+      ===================================================== */}
+
+      {relatedArticles.length > 0 && (
+        <section className="max-w-6xl mx-auto px-6">
+          <div className="mt-10 bg-white rounded-2xl shadow-md p-8">
+
+            <h2 className="text-3xl font-bold text-gray-900">
+              Related Nutrition Articles About {symptom.title}
+            </h2>
+
+            <p className="mt-2 text-gray-600">
+              Explore nutrition guides related to {symptom.title.toLowerCase()}
+              and the nutrients and foods connected with it.
+            </p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+
+              {relatedArticles.map((article) => (
+                <Link
+                  key={article.slug}
+                  href={`/articles/${article.slug}`}
+                  aria-label={`Read ${article.title}`}
+                  className="group bg-purple-50 border border-purple-200 rounded-2xl p-6 hover:bg-purple-100 hover:shadow-md transition"
+                >
+                  <div className="flex items-center justify-between gap-4">
+                    <div className="text-4xl" aria-hidden="true">
+                      📖
+                    </div>
+
+                    <span className="text-sm font-semibold text-purple-700">
+                      {article.category}
+                    </span>
+                  </div>
+
+                  <h3 className="mt-4 text-xl font-bold text-gray-800 group-hover:text-green-700 transition">
+                    {article.title}
+                  </h3>
+
+                  <p className="mt-2 text-gray-600 leading-7 line-clamp-3">
+                    {article.description}
+                  </p>
+
+                  <div className="mt-4 text-green-700 font-semibold">
+                    Read {article.title} →
+                  </div>
+                </Link>
+              ))}
+
+            </div>
+          </div>
+        </section>
       )}
 
       {/* =====================================================

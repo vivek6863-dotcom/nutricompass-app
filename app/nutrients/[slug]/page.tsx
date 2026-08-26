@@ -6,6 +6,7 @@ import { nutrients } from "@/components/data/nutrients";
 import { foods } from "@/components/data/foods";
 import { symptoms } from "@/components/data/symptoms";
 import { recipes } from "@/components/data/recipes";
+import { articles } from "@/components/data/articles";
 
 import {
   createSlug,
@@ -231,6 +232,17 @@ export default async function NutrientPage({
     recipe.nutrients.some(
       (recipeNutrient) =>
         createSlug(recipeNutrient) === nutrient.slug
+    )
+  );
+
+  /* =======================================================
+     RELATED ARTICLES
+  ======================================================= */
+
+  const relatedArticles = articles.filter((article) =>
+    article.relatedNutrients.some(
+      (relatedNutrient) =>
+        createSlug(relatedNutrient) === nutrient.slug
     )
   );
 
@@ -984,6 +996,73 @@ export default async function NutrientPage({
 
         </section>
 
+      )}
+
+      {/* =====================================================
+          RELATED NUTRITION ARTICLES
+      ===================================================== */}
+
+      {relatedArticles.length > 0 && (
+        <section
+          aria-labelledby="related-articles"
+          className="max-w-6xl mx-auto px-6 mt-10"
+        >
+          <div className="bg-white rounded-3xl shadow-md p-8">
+
+            <h2
+              id="related-articles"
+              className="text-3xl font-bold text-gray-900"
+            >
+              Related Nutrition Articles About {nutrient.name}
+            </h2>
+
+            <p className="mt-2 text-gray-600">
+              Explore nutrition guides related to {nutrient.name}, its food
+              sources, benefits, and related nutrition topics.
+            </p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+
+              {relatedArticles.map((article) => (
+                <Link
+                  key={article.slug}
+                  href={`/articles/${article.slug}`}
+                  aria-label={`Read ${article.title}`}
+                  className="group bg-purple-50 border border-purple-200 rounded-2xl overflow-hidden hover:bg-purple-100 hover:shadow-lg hover:-translate-y-1 transition"
+                >
+                  <div className="relative h-48 bg-purple-100 overflow-hidden">
+                    <Image
+                      src={`/images/articles/${article.slug}.jpg`}
+                      alt={article.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition duration-500"
+                    />
+                  </div>
+
+                  <div className="p-6">
+                    <div className="text-sm font-semibold text-purple-700">
+                      {article.category}
+                    </div>
+
+                    <h3 className="mt-2 text-xl font-bold text-gray-900 group-hover:text-green-700 transition">
+                      {article.title}
+                    </h3>
+
+                    <p className="mt-2 text-gray-600 leading-7 line-clamp-3">
+                      {article.description}
+                    </p>
+
+                    <div className="mt-4 text-green-700 font-semibold">
+                      Read {article.title} →
+                    </div>
+                  </div>
+                </Link>
+              ))}
+
+            </div>
+          </div>
+        </section>
       )}
 
       {/* =====================================================

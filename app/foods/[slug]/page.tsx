@@ -677,33 +677,34 @@ export default async function FoodPage({
                   key={article.slug}
                   href={articleLink(article.title)}
                   aria-label={`Read ${article.title}`}
-                  className="group bg-purple-50 border border-purple-200 rounded-2xl p-6 hover:bg-purple-100 hover:shadow-md transition"
+                  className="group bg-purple-50 border border-purple-200 rounded-2xl overflow-hidden hover:bg-purple-100 hover:shadow-lg hover:-translate-y-1 transition"
                 >
-                  <div className="flex items-center justify-between gap-4">
-
-                    <div
-                      className="text-4xl"
-                      aria-hidden="true"
-                    >
-                      📖
-                    </div>
-
-                    <span className="text-sm font-semibold text-purple-700">
-                      {article.category}
-                    </span>
-
+                  <div className="relative h-48 bg-purple-100 overflow-hidden">
+                    <Image
+                      src={`/images/articles/${article.slug}.jpg`}
+                      alt={article.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition duration-500"
+                    />
                   </div>
 
-                  <h3 className="mt-4 text-xl font-bold text-gray-800 group-hover:text-green-700">
-                    {article.title}
-                  </h3>
+                  <div className="p-6">
+                    <div className="text-sm font-semibold text-purple-700">
+                      {article.category}
+                    </div>
 
-                  <p className="mt-2 text-gray-600 leading-7">
-                    {article.description}
-                  </p>
+                    <h3 className="mt-2 text-xl font-bold text-gray-800 group-hover:text-green-700">
+                      {article.title}
+                    </h3>
 
-                  <div className="mt-4 text-green-700 font-semibold">
-                    Read {article.title} →
+                    <p className="mt-2 text-gray-600 leading-7 line-clamp-3">
+                      {article.description}
+                    </p>
+
+                    <div className="mt-4 text-green-700 font-semibold">
+                      Read {article.title} →
+                    </div>
                   </div>
                 </Link>
               ))}
