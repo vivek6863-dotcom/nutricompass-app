@@ -3569,4 +3569,279 @@
     "Iron",
   ],
 },
+{
+  id: 25,
+  title: "Vitamin D Foods For Vegetarians",
+  slug: "vitamin-d-foods-for-vegetarians",
+  description:
+    "Explore vitamin D foods for vegetarians, including eggs, fortified milk and plant-based drinks, fortified cereals, yogurt, cheese, and UV-exposed mushrooms.",
+  category: "Nutrition",
+  author: "NutriCompass Team",
+  readTime: "7 min read",
+  publishedDate: "September 23, 2026",
+
+  content:
+    "Vegetarians can get vitamin D from a limited number of foods, including egg yolks, some dairy foods, fortified milk and plant-based drinks, fortified cereals, and certain mushrooms exposed to ultraviolet light. Vitamin D is naturally present in relatively few foods, so checking food labels for fortification can be important.\n\nVitamin D also comes from sunlight exposure and supplements, but dietary sources are one part of overall vitamin D nutrition. Individual needs and vitamin D status can vary.",
+
+  contentHtml: `
+    <p>
+      <strong>Vitamin D foods for vegetarians</strong> include egg yolks,
+      fortified milk and plant-based drinks, fortified breakfast cereals,
+      yogurt, cheese, and certain mushrooms that have been exposed to
+      ultraviolet (UV) light. Very few foods naturally contain vitamin D,
+      so fortified foods can be particularly useful for people who do not
+      eat fish or other animal foods.
+    </p>
+
+    <p>
+      The amount of vitamin D in a food can vary by product, preparation,
+      fortification, and country. Always check the nutrition label when
+      choosing a food specifically for its vitamin D content.
+    </p>
+
+    <h2>Why Is Vitamin D Important?</h2>
+
+    <p>
+      Vitamin D helps the body absorb calcium and supports normal bone
+      health. It also has roles in normal muscle and immune function.
+      Vitamin D status is influenced by dietary intake, sunlight exposure,
+      absorption, and other individual factors.
+    </p>
+
+    <h2>Vitamin D Foods For Vegetarians</h2>
+
+    <h3>1. Eggs</h3>
+
+    <p>
+      <a href="/foods/eggs">Eggs</a> contain vitamin D, with the vitamin
+      found in the yolk. They also provide protein, vitamin B12, and other
+      nutrients. For vegetarians who eat eggs, they can be one of the
+      naturally occurring dietary sources of vitamin D.
+    </p>
+
+    <h3>2. Fortified Milk</h3>
+
+    <p>
+      Some milk is fortified with vitamin D. Fortified milk can provide
+      vitamin D along with nutrients such as calcium and protein. The amount
+      of vitamin D varies by product and country, so check the nutrition
+      label rather than assuming that all milk is fortified.
+    </p>
+
+    <h3>3. Fortified Plant-Based Drinks</h3>
+
+    <p>
+      Some soy, almond, oat, and other plant-based drinks are fortified with
+      vitamin D. If you use a plant-based milk alternative, look for vitamin
+      D on the nutrition label and compare products based on their actual
+      nutrient content.
+    </p>
+
+    <h3>4. Fortified Breakfast Cereals</h3>
+
+    <p>
+      Some breakfast cereals contain added vitamin D. Fortified cereals can
+      be useful for vegetarians because vitamin D is naturally present in
+      relatively few foods. Check the serving size and nutrition label to
+      see how much vitamin D the cereal provides.
+    </p>
+
+    <h3>5. Yogurt</h3>
+
+    <p>
+      Some yogurt products are fortified with vitamin D. Yogurt can also
+      provide protein and calcium. Because vitamin D fortification is not
+      universal, check the label of the specific product.
+    </p>
+
+    <h3>6. Cheese</h3>
+
+    <p>
+      Cheese contains small amounts of vitamin D, although it is not usually
+      a major dietary source. Cheese can still contribute to overall nutrient
+      intake when included as part of a varied diet.
+    </p>
+
+    <h3>7. UV-Exposed Mushrooms</h3>
+
+    <p>
+      <a href="/foods/mushrooms">Mushrooms</a> can provide vitamin D2, and
+      some mushrooms are exposed to UV light to increase their vitamin D
+      content. The amount can vary considerably between products, so the
+      label or product information is useful when available.
+    </p>
+
+    <h2>Vegetarian Sources Compared With Vegan Sources</h2>
+
+    <p>
+      Vegetarians who eat eggs and dairy have more food sources of vitamin D
+      available than people following a vegan diet. Eggs can provide some
+      naturally occurring vitamin D, while dairy foods and plant-based
+      alternatives may provide vitamin D when they are fortified.
+    </p>
+
+    <p>
+      Vegans do not consume eggs or dairy, so fortified plant-based drinks,
+      fortified cereals, fortified spreads, and other appropriately fortified
+      foods may be useful sources. People following a vegan diet should check
+      labels because fortification varies between products.
+    </p>
+
+    <h2>How Much Vitamin D Do Adults Need?</h2>
+
+    <p>
+      According to the U.S. National Institutes of Health, the recommended
+      dietary allowance for adults ages 19 to 70 is
+      <strong>15 micrograms (600 IU) per day</strong>. For adults age 71
+      and older, the recommended amount is
+      <strong>20 micrograms (800 IU) per day</strong>.
+    </p>
+
+    <p>
+      Nutrient requirements and supplement recommendations can differ for
+      particular health conditions or life stages. If you are concerned about
+      your vitamin D intake or blood vitamin D level, discuss your situation
+      with a qualified healthcare professional.
+    </p>
+
+    <h2>Vitamin D And Calcium</h2>
+
+    <p>
+      Vitamin D helps the body absorb calcium, so these nutrients are closely
+      connected. Vegetarian foods such as dairy products and fortified
+      plant-based drinks may provide both calcium and vitamin D, depending on
+      the product.
+    </p>
+
+    <p>
+      Learn more about
+      <a href="/nutrients/vitamin-d">Vitamin D</a>
+      and
+      <a href="/nutrients/calcium">Calcium</a>.
+    </p>
+
+    <h2>Can Vegetarians Get Enough Vitamin D From Food?</h2>
+
+    <p>
+      It can be difficult to obtain all vitamin D needs from naturally
+      occurring food sources alone because relatively few foods contain
+      substantial amounts of vitamin D. Fortified foods can help increase
+      dietary intake, but the amount provided depends on the foods and
+      products chosen.
+    </p>
+
+    <p>
+      Sunlight exposure also contributes to vitamin D production in the body,
+      but the amount produced varies with factors such as season, location,
+      skin exposure, age, and other circumstances.
+    </p>
+
+    <h2>Simple Ways To Include Vitamin D Foods</h2>
+
+    <ul>
+      <li>Choose milk or plant-based drinks that are fortified with vitamin D.</li>
+      <li>Check breakfast cereal labels for added vitamin D.</li>
+      <li>Include eggs if they fit your vegetarian eating pattern.</li>
+      <li>Choose yogurt products that list vitamin D when available.</li>
+      <li>Use UV-exposed mushrooms when they are available and labeled as a vitamin D source.</li>
+      <li>Check nutrition labels because fortification varies between products.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions About Vitamin D Foods For Vegetarians</h2>
+
+    <h3>What Are Good Vitamin D Foods For Vegetarians?</h3>
+
+    <p>
+      Options can include eggs, fortified milk, fortified plant-based drinks,
+      fortified breakfast cereals, some fortified yogurt products, cheese,
+      and UV-exposed mushrooms.
+    </p>
+
+    <h3>Are Eggs A Source Of Vitamin D?</h3>
+
+    <p>
+      Yes. Egg yolks contain vitamin D, although eggs are not among the
+      highest dietary sources.
+    </p>
+
+    <h3>Do Plant-Based Foods Naturally Contain Vitamin D?</h3>
+
+    <p>
+      Very few plant foods naturally contain vitamin D. Some mushrooms can
+      provide vitamin D2, particularly when they have been exposed to UV
+      light. Many other plant-based products provide vitamin D only when the
+      nutrient has been added through fortification.
+    </p>
+
+    <h3>Is All Milk Fortified With Vitamin D?</h3>
+
+    <p>
+      No. Fortification practices vary by country and product. Check the
+      nutrition label to determine whether a particular milk contains added
+      vitamin D.
+    </p>
+
+    <h3>Can Vegans Get Vitamin D From Food?</h3>
+
+    <p>
+      Yes, some fortified plant-based drinks, fortified cereals, fortified
+      spreads, and certain other products can provide vitamin D. However,
+      the amount varies by product, so labels should be checked carefully.
+    </p>
+
+    <h3>Is Sunlight A Food Source Of Vitamin D?</h3>
+
+    <p>
+      No. Sunlight is not a food source. Instead, the body can produce
+      vitamin D when skin is exposed to ultraviolet radiation.
+    </p>
+
+    <h2>Related Vitamin D Guides</h2>
+
+    <ul>
+      <li>
+        <a href="/articles/vitamin-d-rich-foods">
+          Vitamin D Rich Foods
+        </a>
+      </li>
+
+      <li>
+        <a href="/articles/vitamin-d-foods">
+          Vitamin D Foods: Best Food Sources Of Vitamin D
+        </a>
+      </li>
+
+      <li>
+        <a href="/nutrients/vitamin-d">
+          Vitamin D
+        </a>
+      </li>
+
+      <li>
+        <a href="/symptoms/vitamin-d-deficiency">
+          Vitamin D Deficiency
+        </a>
+      </li>
+    </ul>
+  `,
+
+  relatedSymptoms: [
+    "Vitamin D Deficiency",
+    "Fatigue",
+    "Weakness",
+  ],
+
+  relatedFoods: [
+    "Eggs",
+    "Milk",
+    "Yogurt",
+    "Cheese",
+    "Mushrooms",
+  ],
+
+  relatedNutrients: [
+    "Vitamin D",
+    "Calcium",
+  ],
+},
   ];
