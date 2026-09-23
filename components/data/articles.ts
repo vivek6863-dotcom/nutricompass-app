@@ -3844,4 +3844,1019 @@
     "Calcium",
   ],
 },
+/*
+  NutriCompass — Vitamin D Cluster
+  Add these 5 article objects after the existing article with id: 25.
+  IDs: 26–30
+*/
+
+{
+  id: 26,
+  title: "Vitamin D Deficiency: Symptoms And Causes",
+  slug: "vitamin-d-deficiency-symptoms-causes",
+  description:
+    "Learn about vitamin D deficiency symptoms and causes, including limited sunlight exposure, dietary factors, absorption issues, risk factors, and when testing may be appropriate.",
+  category: "Nutrition",
+  author: "NutriCompass Team",
+  readTime: "8 min read",
+  publishedDate: "September 23, 2026",
+
+  content:
+    "Vitamin D deficiency occurs when the body does not have enough vitamin D to support normal functions. Vitamin D helps the body absorb calcium and supports normal bones, muscles, and other functions. Some people with low vitamin D have no obvious symptoms, while more significant deficiency can be associated with bone pain or muscle weakness. Vitamin D status is influenced by sunlight exposure, diet, absorption, and individual circumstances.",
+
+  contentHtml: `
+    <p>
+      <strong>Vitamin D deficiency</strong> can occur when the body does not
+      have enough vitamin D to support normal functions. Vitamin D helps the
+      body absorb calcium and supports normal bone and muscle health.
+    </p>
+
+    <p>
+      Some people with low vitamin D may have no obvious symptoms. When
+      deficiency becomes more significant, symptoms can include bone pain,
+      muscle weakness, or general tiredness. These symptoms are not specific
+      to vitamin D deficiency and cannot confirm a deficiency on their own.
+    </p>
+
+    <h2>What Is Vitamin D Deficiency?</h2>
+
+    <p>
+      Vitamin D deficiency means that vitamin D status is too low for the
+      body's needs. Vitamin D can come from sunlight exposure, foods, and
+      supplements. The amount produced or obtained can vary considerably
+      between people.
+    </p>
+
+    <p>
+      Vitamin D is important because it helps the body absorb calcium.
+      Together, vitamin D and calcium support normal bone health. Vitamin D
+      also has roles in normal muscle and immune function.
+    </p>
+
+    <h2>Vitamin D Deficiency Symptoms</h2>
+
+    <h3>Bone Pain</h3>
+    <p>
+      More significant vitamin D deficiency can be associated with bone pain
+      and disorders such as osteomalacia in adults. Bone pain can have many
+      causes, so it should not automatically be attributed to vitamin D.
+    </p>
+
+    <h3>Muscle Weakness</h3>
+    <p>
+      Vitamin D deficiency can be associated with muscle weakness. Significant
+      weakness that affects walking, climbing stairs, or getting up from a
+      chair deserves medical evaluation.
+    </p>
+
+    <h3>Tiredness And General Symptoms</h3>
+    <p>
+      Some people report tiredness or general aches when vitamin D levels are
+      low. However, tiredness is common and has many possible causes, including
+      sleep problems, anemia, infections, medication effects, and other
+      health conditions.
+    </p>
+
+    <h2>What Causes Vitamin D Deficiency?</h2>
+
+    <h3>Limited Sunlight Exposure</h3>
+    <p>
+      The body can make vitamin D when skin is exposed to ultraviolet radiation.
+      Spending little time outdoors can reduce this source of vitamin D.
+    </p>
+
+    <h3>Limited Dietary Sources</h3>
+    <p>
+      Very few foods naturally contain substantial amounts of vitamin D.
+      Dietary sources include fatty fish, egg yolks, and some other animal
+      foods, while fortified milk, plant-based drinks, cereals, and other
+      products can provide vitamin D when it has been added.
+    </p>
+
+    <h3>Problems Absorbing Vitamin D</h3>
+    <p>
+      Certain conditions that affect fat absorption can make it harder for the
+      body to absorb vitamin D. Medical conditions, surgery, or other
+      circumstances can therefore affect vitamin D status.
+    </p>
+
+    <h3>Other Individual Risk Factors</h3>
+    <p>
+      Vitamin D status can also be affected by age, skin exposure to sunlight,
+      clothing that covers much of the skin, geographic and seasonal factors,
+      and some medicines or medical conditions.
+    </p>
+
+    <h2>Who May Be At Higher Risk?</h2>
+
+    <ul>
+      <li>People who spend little time outdoors.</li>
+      <li>People with limited dietary sources of vitamin D.</li>
+      <li>Older adults.</li>
+      <li>People with conditions that affect nutrient absorption.</li>
+      <li>People taking medicines that can affect vitamin D metabolism.</li>
+      <li>People whose circumstances substantially limit skin exposure to sunlight.</li>
+    </ul>
+
+    <h2>Vitamin D Deficiency And Bone Health</h2>
+
+    <p>
+      Vitamin D helps the body absorb calcium, making it important for normal
+      bone health. Severe or prolonged deficiency can contribute to disorders
+      such as osteomalacia in adults and rickets in children.
+    </p>
+
+    <p>
+      Learn more about
+      <a href="/nutrients/vitamin-d">Vitamin D</a>
+      and
+      <a href="/nutrients/calcium">Calcium</a>.
+    </p>
+
+    <h2>How Is Vitamin D Deficiency Diagnosed?</h2>
+
+    <p>
+      Symptoms alone cannot establish vitamin D deficiency. When testing is
+      appropriate, a healthcare professional can assess vitamin D status using
+      a blood test and consider the person's symptoms, risk factors, medical
+      history, and other relevant findings.
+    </p>
+
+    <h2>Can Food Help With Vitamin D Intake?</h2>
+
+    <p>
+      Food can contribute vitamin D, although relatively few foods naturally
+      contain substantial amounts. Fatty fish are among the best natural food
+      sources, while fortified milk, fortified plant-based drinks, fortified
+      cereals, and selected other products can provide vitamin D when the
+      nutrient has been added.
+    </p>
+
+    <p>
+      Explore
+      <a href="/articles/vitamin-d-rich-foods">Vitamin D Rich Foods</a>,
+      <a href="/articles/vitamin-d-foods">Vitamin D Foods</a>, and
+      <a href="/articles/vitamin-d-foods-for-vegetarians">
+        Vitamin D Foods For Vegetarians
+      </a>.
+    </p>
+
+    <h2>When To Speak With A Healthcare Professional</h2>
+
+    <p>
+      Speak with a qualified healthcare professional if you have persistent
+      bone pain, significant muscle weakness, ongoing symptoms, or concerns
+      about your vitamin D status. Testing and treatment decisions should be
+      based on individual circumstances rather than symptoms alone.
+    </p>
+
+    <h2>Frequently Asked Questions About Vitamin D Deficiency</h2>
+
+    <h3>What Are Common Vitamin D Deficiency Symptoms?</h3>
+    <p>
+      Significant deficiency can be associated with bone pain and muscle
+      weakness. Tiredness and general aches may also occur, but these symptoms
+      have many possible causes and do not confirm deficiency.
+    </p>
+
+    <h3>Can You Have Vitamin D Deficiency Without Symptoms?</h3>
+    <p>
+      Yes. Some people with low vitamin D levels may have no obvious symptoms.
+      A healthcare professional can determine whether testing is appropriate.
+    </p>
+
+    <h3>Can Diet Cause Low Vitamin D?</h3>
+    <p>
+      A diet with limited vitamin D sources can contribute to low intake,
+      although vitamin D status is also influenced by sunlight exposure,
+      absorption, and other factors.
+    </p>
+
+    <h3>How Do You Know If You Have Vitamin D Deficiency?</h3>
+    <p>
+      Symptoms alone are not enough to confirm deficiency. When clinically
+      appropriate, a healthcare professional can order a blood test to assess
+      vitamin D status.
+    </p>
+
+    <h2>Related Vitamin D Guides</h2>
+    <ul>
+      <li><a href="/articles/vitamin-d-rich-foods">Vitamin D Rich Foods</a></li>
+      <li><a href="/articles/vitamin-d-foods">Vitamin D Foods</a></li>
+      <li><a href="/articles/vitamin-d-foods-for-vegetarians">Vitamin D Foods For Vegetarians</a></li>
+      <li><a href="/nutrients/vitamin-d">Vitamin D</a></li>
+      <li><a href="/symptoms/vitamin-d-deficiency">Vitamin D Deficiency</a></li>
+    </ul>
+  `,
+
+  relatedSymptoms: [
+    "Vitamin D Deficiency",
+    "Fatigue",
+    "Weakness",
+  ],
+
+  relatedFoods: [
+    "Salmon",
+    "Fatty Fish",
+    "Eggs",
+    "Fortified Milk",
+    "Milk",
+    "Mushrooms",
+  ],
+
+  relatedNutrients: [
+    "Vitamin D",
+    "Calcium",
+  ],
+},
+
+{
+  id: 27,
+  title: "Best Foods For Vitamin D And Calcium",
+  slug: "vitamin-d-and-calcium-foods",
+  description:
+    "Explore foods that provide vitamin D and calcium, including fortified milk, yogurt, cheese, eggs, UV-exposed mushrooms, and fish, with practical meal ideas.",
+  category: "Nutrition",
+  author: "NutriCompass Team",
+  readTime: "8 min read",
+  publishedDate: "September 23, 2026",
+
+  content:
+    "Vitamin D and calcium work together in bone health. Food sources of calcium include milk, yogurt, cheese, some fortified plant-based drinks, and certain vegetables, while vitamin D is found naturally in a limited number of foods and is also added to some fortified products.",
+
+  contentHtml: `
+    <p>
+      <strong>Vitamin D and calcium foods</strong> can help provide two
+      nutrients that work together in maintaining normal bone health. Calcium
+      is a major mineral in bones and teeth, while vitamin D helps the body
+      absorb calcium.
+    </p>
+
+    <p>
+      No single food needs to provide all of your vitamin D and calcium.
+      Building meals around a variety of nutrient-rich foods can make it
+      easier to obtain both nutrients as part of an overall balanced diet.
+    </p>
+
+    <h2>Why Vitamin D And Calcium Work Together</h2>
+
+    <p>
+      Calcium helps build and maintain strong bones and also supports normal
+      muscle and nerve function. Vitamin D helps the body absorb calcium and
+      supports normal bone and muscle function.
+    </p>
+
+    <p>
+      Learn more about
+      <a href="/nutrients/vitamin-d">Vitamin D</a>
+      and
+      <a href="/nutrients/calcium">Calcium</a>.
+    </p>
+
+    <h2>Best Foods For Vitamin D And Calcium</h2>
+
+    <h3>Fortified Milk</h3>
+    <p>
+      <a href="/foods/fortified-milk">Fortified milk</a> can provide both
+      vitamin D and calcium, along with protein and other nutrients. The amount
+      of vitamin D and calcium varies by product, so check the label.
+    </p>
+
+    <h3>Milk</h3>
+    <p>
+      <a href="/foods/milk">Milk</a> is a major dietary source of calcium in
+      many diets. Whether it provides meaningful vitamin D depends on whether
+      the product is fortified.
+    </p>
+
+    <h3>Yogurt</h3>
+    <p>
+      <a href="/foods/yogurt">Yogurt</a> provides calcium and protein. Some
+      yogurt products are also fortified with vitamin D, so the nutrition label
+      can help you identify products that provide both nutrients.
+    </p>
+
+    <h3>Cheese</h3>
+    <p>
+      <a href="/foods/cheese">Cheese</a> provides calcium and protein and can
+      contribute to overall calcium intake. Vitamin D content varies and cheese
+      is not generally a major vitamin D source.
+    </p>
+
+    <h3>Eggs</h3>
+    <p>
+      <a href="/foods/eggs">Eggs</a> contain vitamin D in the yolk and also
+      provide protein and vitamin B12. Eggs are not a major calcium source,
+      but they can contribute vitamin D to a varied diet.
+    </p>
+
+    <h3>UV-Exposed Mushrooms</h3>
+    <p>
+      <a href="/foods/mushrooms">Mushrooms</a> can provide vitamin D2, especially
+      when they have been exposed to ultraviolet light. They are not generally
+      a major calcium source.
+    </p>
+
+    <h3>Fatty Fish</h3>
+    <p>
+      <a href="/foods/fatty-fish">Fatty fish</a> such as salmon can be among
+      the best natural food sources of vitamin D. Some fish eaten with bones,
+      such as canned sardines, can also provide calcium.
+    </p>
+
+    <h2>Vegetarian Options</h2>
+
+    <p>
+      Vegetarians can combine calcium-rich foods such as milk, yogurt, and
+      cheese with vitamin D sources such as eggs and appropriately fortified
+      foods. Fortified plant-based drinks can also provide vitamin D and
+      calcium when both nutrients have been added.
+    </p>
+
+    <p>
+      Read
+      <a href="/articles/vitamin-d-foods-for-vegetarians">
+        Vitamin D Foods For Vegetarians
+      </a>
+      for more vegetarian-focused options.
+    </p>
+
+    <h2>Simple Meal Combinations</h2>
+
+    <ul>
+      <li>Fortified milk with a balanced breakfast.</li>
+      <li>Yogurt with fruit and a meal that includes other nutrient-rich foods.</li>
+      <li>Eggs with vegetables and a calcium-rich food.</li>
+      <li>Fortified plant-based drink with a balanced breakfast.</li>
+      <li>Fatty fish with vegetables and another calcium-containing food.</li>
+    </ul>
+
+    <h2>How To Choose Foods With Both Nutrients</h2>
+
+    <p>
+      Fortification varies between products and countries. When choosing a
+      food specifically for vitamin D or calcium, check the nutrition label
+      rather than assuming that every version of a food contains the same
+      amounts.
+    </p>
+
+    <h2>Frequently Asked Questions About Vitamin D And Calcium Foods</h2>
+
+    <h3>What Foods Have Both Vitamin D And Calcium?</h3>
+    <p>
+      Fortified milk and some fortified plant-based drinks can provide both
+      vitamin D and calcium. Some yogurt products can also provide both when
+      fortified.
+    </p>
+
+    <h3>Does Milk Have Vitamin D And Calcium?</h3>
+    <p>
+      Milk is naturally a source of calcium. Vitamin D is present in meaningful
+      amounts when the milk has been fortified, so check the product label.
+    </p>
+
+    <h3>Are Eggs High In Calcium?</h3>
+    <p>
+      Eggs are not a major calcium source. They can contribute vitamin D,
+      particularly through the yolk, along with protein and other nutrients.
+    </p>
+
+    <h3>Can Vegetarians Get Vitamin D And Calcium From Food?</h3>
+    <p>
+      Yes. Vegetarian diets can include dairy foods, eggs, and appropriately
+      fortified plant-based foods. The available amounts depend on the specific
+      foods and products chosen.
+    </p>
+
+    <h2>Related Vitamin D And Calcium Guides</h2>
+    <ul>
+      <li><a href="/articles/vitamin-d-rich-foods">Vitamin D Rich Foods</a></li>
+      <li><a href="/articles/vitamin-d-foods">Vitamin D Foods</a></li>
+      <li><a href="/articles/vitamin-d-foods-for-vegetarians">Vitamin D Foods For Vegetarians</a></li>
+      <li><a href="/articles/vitamin-d-and-calcium">Vitamin D And Calcium</a></li>
+      <li><a href="/nutrients/vitamin-d">Vitamin D</a></li>
+      <li><a href="/nutrients/calcium">Calcium</a></li>
+    </ul>
+  `,
+
+  relatedSymptoms: [
+    "Vitamin D Deficiency",
+    "Weakness",
+    "Fatigue",
+  ],
+
+  relatedFoods: [
+    "Fortified Milk",
+    "Milk",
+    "Yogurt",
+    "Cheese",
+    "Eggs",
+    "Mushrooms",
+    "Fatty Fish",
+  ],
+
+  relatedNutrients: [
+    "Vitamin D",
+    "Calcium",
+  ],
+},
+
+{
+  id: 28,
+  title: "Foods That Help Support Healthy Vitamin D Levels",
+  slug: "foods-that-support-vitamin-d-levels",
+  description:
+    "Learn which foods can contribute to vitamin D intake, including fatty fish, eggs, fortified milk, plant-based drinks, cereals, yogurt, and mushrooms.",
+  category: "Nutrition",
+  author: "NutriCompass Team",
+  readTime: "8 min read",
+  publishedDate: "September 23, 2026",
+
+  content:
+    "Food is one part of overall vitamin D nutrition. Fatty fish provide some of the highest natural dietary amounts, while fortified milk, plant-based drinks, cereals, yogurt, and other fortified products can contribute vitamin D depending on the product.",
+
+  contentHtml: `
+    <p>
+      <strong>Foods that support vitamin D intake</strong> include fatty fish,
+      egg yolks, fortified milk, fortified plant-based drinks, fortified
+      breakfast cereals, some yogurt products, and certain mushrooms exposed
+      to ultraviolet light.
+    </p>
+
+    <p>
+      Vitamin D is unusual because relatively few foods naturally contain
+      substantial amounts. Food is only one part of vitamin D status, which can
+      also be influenced by sunlight exposure, absorption, and individual
+      circumstances.
+    </p>
+
+    <h2>Can Food Help Support Vitamin D Intake?</h2>
+
+    <p>
+      Yes. Including foods that contain vitamin D can contribute to dietary
+      intake. However, food alone does not determine a person's vitamin D
+      status, and some people may have higher needs or risk factors that
+      require individualized medical advice.
+    </p>
+
+    <h2>Foods That Provide Vitamin D</h2>
+
+    <h3>Fatty Fish</h3>
+    <p>
+      <a href="/foods/fatty-fish">Fatty fish</a> such as salmon, trout, tuna,
+      and mackerel are among the best natural food sources of vitamin D.
+      They also provide protein and, depending on the fish, omega-3 fatty acids.
+    </p>
+
+    <h3>Eggs</h3>
+    <p>
+      <a href="/foods/eggs">Eggs</a> contain vitamin D in the yolk. They also
+      provide protein, vitamin B12, and other nutrients.
+    </p>
+
+    <h3>Fortified Milk</h3>
+    <p>
+      <a href="/foods/fortified-milk">Fortified milk</a> can provide vitamin D
+      along with calcium and protein. Fortification levels vary by product and
+      country.
+    </p>
+
+    <h3>Plant-Based Drinks</h3>
+    <p>
+      Soy, almond, oat, and other plant-based drinks may be fortified with
+      vitamin D. Check the nutrition label to confirm whether vitamin D has
+      been added and how much is provided per serving.
+    </p>
+
+    <h3>Fortified Breakfast Cereals</h3>
+    <p>
+      Some breakfast cereals contain added vitamin D. The amount varies between
+      brands, so compare the nutrition label and serving size.
+    </p>
+
+    <h3>Yogurt</h3>
+    <p>
+      Some <a href="/foods/yogurt">yogurt</a> products contain added vitamin D.
+      Yogurt can also provide calcium and protein.
+    </p>
+
+    <h3>UV-Exposed Mushrooms</h3>
+    <p>
+      <a href="/foods/mushrooms">Mushrooms</a> can provide vitamin D2, and some
+      products are exposed to UV light to increase their vitamin D content.
+      The amount can vary substantially.
+    </p>
+
+    <h2>How Much Vitamin D Do Adults Need?</h2>
+
+    <p>
+      The U.S. National Institutes of Health lists a recommended dietary
+      allowance of <strong>15 mcg (600 IU) per day for adults ages 19 to 70</strong>
+      and <strong>20 mcg (800 IU) per day for adults 71 and older</strong>.
+    </p>
+
+    <p>
+      Requirements and medical recommendations can differ in particular
+      circumstances. The amount of vitamin D obtained from sunlight is not
+      included in the dietary allowance.
+    </p>
+
+    <h2>Food, Sunlight, And Vitamin D</h2>
+
+    <p>
+      The body can make vitamin D when skin is exposed to ultraviolet
+      radiation. How much vitamin D is produced varies with factors such as
+      season, location, skin exposure, age, and other circumstances.
+    </p>
+
+    <p>
+      Food therefore remains an important dietary source, especially when
+      naturally occurring sources are limited or fortified foods are available.
+    </p>
+
+    <h2>Food Vs Supplements</h2>
+
+    <p>
+      Food can provide vitamin D as part of a varied diet. Supplements may be
+      appropriate for some people, but whether a supplement is needed depends
+      on diet, risk factors, vitamin D status, and individual circumstances.
+      Discuss supplementation with a qualified healthcare professional when
+      needed.
+    </p>
+
+    <h2>Simple Ways To Include Vitamin D Foods</h2>
+
+    <ul>
+      <li>Choose fortified milk or a fortified plant-based drink.</li>
+      <li>Check breakfast cereal labels for added vitamin D.</li>
+      <li>Include eggs if they fit your eating pattern.</li>
+      <li>Include fatty fish when you eat fish.</li>
+      <li>Choose yogurt products that list vitamin D when available.</li>
+      <li>Look for UV-exposed mushrooms when they are available.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions About Foods For Vitamin D</h2>
+
+    <h3>What Food Has The Most Vitamin D?</h3>
+    <p>
+      Among common foods, fatty fish such as trout and salmon can provide
+      substantial amounts of vitamin D. Fortified foods can also provide
+      meaningful amounts depending on the product.
+    </p>
+
+    <h3>Can Eggs Increase Vitamin D Intake?</h3>
+    <p>
+      Yes. Egg yolks contain vitamin D and can contribute to dietary intake.
+    </p>
+
+    <h3>Are Mushrooms A Vitamin D Source?</h3>
+    <p>
+      Some mushrooms can provide vitamin D2, especially when exposed to UV
+      light. The amount varies between products.
+    </p>
+
+    <h3>Can Food Alone Correct Vitamin D Deficiency?</h3>
+    <p>
+      Food can contribute vitamin D, but confirmed deficiency may require
+      professional evaluation and individualized treatment. Do not use food
+      intake alone to assume that a deficiency has been corrected.
+    </p>
+
+    <h2>Related Vitamin D Guides</h2>
+    <ul>
+      <li><a href="/articles/vitamin-d-rich-foods">Vitamin D Rich Foods</a></li>
+      <li><a href="/articles/vitamin-d-foods">Vitamin D Foods</a></li>
+      <li><a href="/articles/vitamin-d-foods-for-vegetarians">Vitamin D Foods For Vegetarians</a></li>
+      <li><a href="/articles/vitamin-d-deficiency-symptoms-causes">Vitamin D Deficiency: Symptoms And Causes</a></li>
+      <li><a href="/nutrients/vitamin-d">Vitamin D</a></li>
+    </ul>
+  `,
+
+  relatedSymptoms: [
+    "Vitamin D Deficiency",
+    "Fatigue",
+    "Weakness",
+  ],
+
+  relatedFoods: [
+    "Fatty Fish",
+    "Salmon",
+    "Eggs",
+    "Fortified Milk",
+    "Milk",
+    "Yogurt",
+    "Mushrooms",
+  ],
+
+  relatedNutrients: [
+    "Vitamin D",
+    "Calcium",
+  ],
+},
+
+{
+  id: 29,
+  title: "Vitamin D And Calcium: Why They Work Together",
+  slug: "vitamin-d-and-calcium",
+  description:
+    "Understand how vitamin D and calcium work together for bone health, calcium absorption, muscle function, food sources, and daily nutrition.",
+  category: "Nutrition",
+  author: "NutriCompass Team",
+  readTime: "8 min read",
+  publishedDate: "September 23, 2026",
+
+  content:
+    "Vitamin D and calcium are closely connected nutrients. Calcium is needed for bones, teeth, muscles, and nerves, while vitamin D helps the body absorb calcium and supports normal bone and muscle function.",
+
+  contentHtml: `
+    <p>
+      <strong>Vitamin D and calcium</strong> work together to support normal
+      bone health. Calcium is a major mineral stored in bones and teeth, while
+      vitamin D helps the body absorb calcium.
+    </p>
+
+    <p>
+      These nutrients have different roles, but getting enough of both is part
+      of a balanced approach to bone and overall nutrition.
+    </p>
+
+    <h2>What Does Calcium Do?</h2>
+
+    <p>
+      Calcium is needed to build and maintain bones and teeth. It also
+      contributes to normal muscle movement and nerve signaling.
+    </p>
+
+    <h2>What Does Vitamin D Do?</h2>
+
+    <p>
+      Vitamin D helps the body absorb calcium and supports normal bones,
+      muscles, and immune function.
+    </p>
+
+    <h2>How Vitamin D Helps Calcium Absorption</h2>
+
+    <p>
+      Vitamin D supports the body's ability to absorb calcium from the diet.
+      This is one reason the nutrients are often discussed together in relation
+      to bone health.
+    </p>
+
+    <p>
+      Learn more about
+      <a href="/nutrients/vitamin-d">Vitamin D</a>
+      and
+      <a href="/nutrients/calcium">Calcium</a>.
+    </p>
+
+    <h2>Why Both Nutrients Matter For Bones</h2>
+
+    <p>
+      Bones continually undergo remodeling throughout life. Calcium provides
+      structural mineral support, while vitamin D helps regulate calcium
+      absorption and metabolism. Maintaining adequate intake of both nutrients
+      is therefore important as part of overall bone health.
+    </p>
+
+    <h2>Foods That Provide Calcium</h2>
+
+    <ul>
+      <li><a href="/foods/milk">Milk</a></li>
+      <li><a href="/foods/yogurt">Yogurt</a></li>
+      <li><a href="/foods/cheese">Cheese</a></li>
+      <li>Calcium-fortified plant-based drinks</li>
+      <li>Some vegetables and other calcium-containing foods</li>
+    </ul>
+
+    <h2>Foods That Provide Vitamin D</h2>
+
+    <ul>
+      <li><a href="/foods/salmon">Salmon</a></li>
+      <li><a href="/foods/fatty-fish">Fatty Fish</a></li>
+      <li><a href="/foods/eggs">Eggs</a></li>
+      <li><a href="/foods/fortified-milk">Fortified Milk</a></li>
+      <li><a href="/foods/mushrooms">Mushrooms</a> when appropriately exposed to UV light</li>
+    </ul>
+
+    <h2>Foods That Can Provide Both</h2>
+
+    <p>
+      Some fortified milk and plant-based drinks can provide both vitamin D
+      and calcium. Some yogurt products can also provide both when vitamin D
+      has been added.
+    </p>
+
+    <p>
+      The amounts vary by product, so nutrition labels are the best way to
+      check the actual vitamin D and calcium content.
+    </p>
+
+    <h2>Vegetarian And Vegan Options</h2>
+
+    <p>
+      Vegetarians can obtain calcium from dairy foods and fortified
+      alternatives, while eggs and fortified products can contribute vitamin D.
+      Vegans can use appropriately fortified plant-based drinks, cereals, tofu,
+      and other fortified foods depending on the product.
+    </p>
+
+    <p>
+      Read
+      <a href="/articles/vitamin-d-foods-for-vegetarians">
+        Vitamin D Foods For Vegetarians
+      </a>
+      for more detail.
+    </p>
+
+    <h2>How Much Vitamin D Do Adults Need?</h2>
+
+    <p>
+      The NIH lists 15 mcg (600 IU) of vitamin D per day for adults ages 19 to
+      70 and 20 mcg (800 IU) per day for adults 71 and older.
+    </p>
+
+    <h2>How Much Calcium Do Adults Need?</h2>
+
+    <p>
+      The NIH lists 1,000 mg of calcium per day for adults ages 19 to 50,
+      1,000 mg for men ages 51 to 70, 1,200 mg for women ages 51 to 70, and
+      1,200 mg for adults 71 and older.
+    </p>
+
+    <h2>Can You Get Enough From Food?</h2>
+
+    <p>
+      Many people can obtain vitamin D and calcium through a varied diet,
+      although vitamin D is naturally present in relatively few foods. Fortified
+      foods can be particularly useful dietary sources of vitamin D.
+    </p>
+
+    <h2>Frequently Asked Questions About Vitamin D And Calcium</h2>
+
+    <h3>Does Vitamin D Help Your Body Absorb Calcium?</h3>
+    <p>
+      Yes. Vitamin D helps the body absorb calcium, which is one reason these
+      nutrients are closely linked in bone health.
+    </p>
+
+    <h3>Can You Take Calcium Without Vitamin D?</h3>
+    <p>
+      Calcium and vitamin D have different roles. Whether a person needs a
+      supplement depends on their diet, health circumstances, medications, and
+      nutritional status. Food-first choices are generally preferable when
+      appropriate, while supplement decisions should be individualized.
+    </p>
+
+    <h3>Which Foods Have Both Vitamin D And Calcium?</h3>
+    <p>
+      Fortified milk and some fortified plant-based drinks can provide both.
+      Some fortified yogurt products can also contain both nutrients.
+    </p>
+
+    <h3>Are Vitamin D And Calcium Important For Bone Health?</h3>
+    <p>
+      Yes. Calcium is a major structural mineral in bones, and vitamin D helps
+      the body absorb calcium and supports normal bone health.
+    </p>
+
+    <h2>Related Vitamin D And Calcium Guides</h2>
+    <ul>
+      <li><a href="/articles/vitamin-d-rich-foods">Vitamin D Rich Foods</a></li>
+      <li><a href="/articles/vitamin-d-and-calcium-foods">Best Foods For Vitamin D And Calcium</a></li>
+      <li><a href="/articles/vitamin-d-foods-for-vegetarians">Vitamin D Foods For Vegetarians</a></li>
+      <li><a href="/nutrients/vitamin-d">Vitamin D</a></li>
+      <li><a href="/nutrients/calcium">Calcium</a></li>
+    </ul>
+  `,
+
+  relatedSymptoms: [
+    "Vitamin D Deficiency",
+    "Weakness",
+  ],
+
+  relatedFoods: [
+    "Milk",
+    "Fortified Milk",
+    "Yogurt",
+    "Cheese",
+    "Eggs",
+    "Salmon",
+    "Fatty Fish",
+    "Mushrooms",
+  ],
+
+  relatedNutrients: [
+    "Vitamin D",
+    "Calcium",
+  ],
+},
+
+{
+  id: 30,
+  title: "Vitamin D Foods For Adults: Daily Needs And Food Sources",
+  slug: "vitamin-d-foods-for-adults",
+  description:
+    "Learn how much vitamin D adults need and which foods can provide it, including fatty fish, eggs, fortified milk, plant-based drinks, cereals, yogurt, and mushrooms.",
+  category: "Nutrition",
+  author: "NutriCompass Team",
+  readTime: "8 min read",
+  publishedDate: "September 23, 2026",
+
+  content:
+    "Adults need vitamin D for normal bone, muscle, and other body functions. Food sources include fatty fish, egg yolks, fortified milk, fortified plant-based drinks, fortified cereals, some yogurt products, and certain mushrooms.",
+
+  contentHtml: `
+    <p>
+      <strong>Vitamin D foods for adults</strong> include fatty fish, eggs,
+      fortified milk, fortified plant-based drinks, fortified breakfast
+      cereals, some yogurt products, and certain mushrooms.
+    </p>
+
+    <p>
+      Vitamin D is naturally present in relatively few foods, so fortified
+      products can be useful sources. The amount of vitamin D in a food can
+      vary by product, country, preparation, and fortification.
+    </p>
+
+    <h2>How Much Vitamin D Do Adults Need?</h2>
+
+    <p>
+      According to the U.S. National Institutes of Health, adults ages 19 to
+      70 need <strong>15 mcg (600 IU) per day</strong>, while adults age 71
+      and older need <strong>20 mcg (800 IU) per day</strong>.
+    </p>
+
+    <p>
+      These recommendations describe average daily dietary needs. Individual
+      medical circumstances can affect vitamin D recommendations.
+    </p>
+
+    <h2>Vitamin D Food Sources For Adults</h2>
+
+    <h3>Fatty Fish</h3>
+    <p>
+      <a href="/foods/fatty-fish">Fatty fish</a> such as salmon, trout, tuna,
+      and mackerel are among the best natural food sources of vitamin D.
+    </p>
+
+    <h3>Salmon</h3>
+    <p>
+      <a href="/foods/salmon">Salmon</a> provides vitamin D together with
+      protein and omega-3 fatty acids.
+    </p>
+
+    <h3>Eggs</h3>
+    <p>
+      <a href="/foods/eggs">Eggs</a> contain vitamin D in the yolk. They also
+      provide protein, vitamin B12, and choline.
+    </p>
+
+    <h3>Fortified Milk</h3>
+    <p>
+      <a href="/foods/fortified-milk">Fortified milk</a> can provide vitamin D
+      along with calcium and protein. Check the label for the actual amount.
+    </p>
+
+    <h3>Plant-Based Drinks</h3>
+    <p>
+      Some soy, almond, oat, and other plant-based drinks are fortified with
+      vitamin D. Choose products based on their nutrition labels.
+    </p>
+
+    <h3>Fortified Breakfast Cereals</h3>
+    <p>
+      Some breakfast cereals contain added vitamin D. Serving sizes and
+      fortification levels differ between products.
+    </p>
+
+    <h3>Yogurt</h3>
+    <p>
+      Some <a href="/foods/yogurt">yogurt</a> products are fortified with
+      vitamin D. Yogurt can also provide calcium and protein.
+    </p>
+
+    <h3>Mushrooms</h3>
+    <p>
+      <a href="/foods/mushrooms">Mushrooms</a> can provide vitamin D2 when
+      appropriately exposed to ultraviolet light. Amounts vary considerably.
+    </p>
+
+    <h2>Vegetarian Sources</h2>
+
+    <p>
+      Vegetarian adults can use eggs, dairy foods, and appropriately fortified
+      foods as dietary sources of vitamin D. People following a vegan diet can
+      use fortified plant-based drinks, cereals, and other fortified products
+      when they contain vitamin D.
+    </p>
+
+    <p>
+      See
+      <a href="/articles/vitamin-d-foods-for-vegetarians">
+        Vitamin D Foods For Vegetarians
+      </a>
+      for a more detailed guide.
+    </p>
+
+    <h2>Building A Vitamin D-Friendly Diet</h2>
+
+    <ul>
+      <li>Include a variety of nutrient-rich foods rather than relying on one source.</li>
+      <li>Check labels for vitamin D fortification.</li>
+      <li>Include fatty fish if it fits your eating pattern.</li>
+      <li>Use eggs as one dietary source when appropriate.</li>
+      <li>Choose fortified milk or plant-based drinks when useful.</li>
+      <li>Include foods that also provide calcium and protein.</li>
+    </ul>
+
+    <h2>Food And Sunlight</h2>
+
+    <p>
+      The body can make vitamin D when skin is exposed to ultraviolet
+      radiation. The amount produced varies according to several factors,
+      including season, location, skin exposure, age, and individual
+      circumstances.
+    </p>
+
+    <p>
+      Food is therefore one part of overall vitamin D nutrition rather than
+      the only source.
+    </p>
+
+    <h2>When Food May Not Be Enough</h2>
+
+    <p>
+      Some people may have limited vitamin D intake or higher risk of
+      deficiency because of limited sunlight exposure, absorption problems,
+      medical conditions, or other factors. If you are concerned about vitamin
+      D status, discuss testing and supplementation with a qualified
+      healthcare professional.
+    </p>
+
+    <h2>Frequently Asked Questions About Vitamin D Foods For Adults</h2>
+
+    <h3>How Much Vitamin D Do Adults Need Every Day?</h3>
+    <p>
+      The NIH recommends 15 mcg (600 IU) per day for adults ages 19 to 70 and
+      20 mcg (800 IU) per day for adults 71 and older.
+    </p>
+
+    <h3>What Is The Best Food Source Of Vitamin D?</h3>
+    <p>
+      Fatty fish such as trout and salmon are among the best natural food
+      sources. Fortified foods can also provide useful amounts depending on
+      the product.
+    </p>
+
+    <h3>Can Adults Get Vitamin D From Eggs?</h3>
+    <p>
+      Yes. Egg yolks contain vitamin D and can contribute to dietary intake.
+    </p>
+
+    <h3>Can Vegetarians Get Vitamin D From Food?</h3>
+    <p>
+      Yes. Eggs, dairy foods, and appropriately fortified products can provide
+      vitamin D for vegetarians. Vegan diets can use fortified plant-based
+      products and other reliable fortified sources.
+    </p>
+
+    <h3>Should Adults Take A Vitamin D Supplement?</h3>
+    <p>
+      Supplement needs depend on diet, sunlight exposure, risk factors,
+      medical conditions, and vitamin D status. A healthcare professional can
+      help determine whether supplementation is appropriate.
+    </p>
+
+    <h2>Related Vitamin D Guides</h2>
+    <ul>
+      <li><a href="/articles/vitamin-d-rich-foods">Vitamin D Rich Foods</a></li>
+      <li><a href="/articles/vitamin-d-foods">Vitamin D Foods</a></li>
+      <li><a href="/articles/vitamin-d-foods-for-vegetarians">Vitamin D Foods For Vegetarians</a></li>
+      <li><a href="/articles/vitamin-d-deficiency-symptoms-causes">Vitamin D Deficiency: Symptoms And Causes</a></li>
+      <li><a href="/articles/vitamin-d-and-calcium">Vitamin D And Calcium</a></li>
+      <li><a href="/nutrients/vitamin-d">Vitamin D</a></li>
+    </ul>
+  `,
+
+  relatedSymptoms: [
+    "Vitamin D Deficiency",
+    "Fatigue",
+    "Weakness",
+  ],
+
+  relatedFoods: [
+    "Fatty Fish",
+    "Salmon",
+    "Eggs",
+    "Fortified Milk",
+    "Milk",
+    "Yogurt",
+    "Mushrooms",
+  ],
+
+  relatedNutrients: [
+    "Vitamin D",
+    "Calcium",
+  ],
+},
   ];
