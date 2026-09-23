@@ -7,7 +7,7 @@ export const nutrients: Nutrient[] = [
     slug: "iron",
     description:
       "Iron is an essential mineral that helps produce hemoglobin, which carries oxygen throughout the body.",
-    image: "/images/nutrients/iron.jpg",
+    image: "/images/nutrients/iron.jpg?v=2",
 
     benefits: [
       "Supports Healthy Red Blood Cells",
@@ -45,7 +45,7 @@ export const nutrients: Nutrient[] = [
     slug: "vitamin-c",
     description:
       "Vitamin C is an essential vitamin and antioxidant that supports immune function, collagen formation, and iron absorption.",
-    image: "/images/nutrients/vitamin-c.jpg",
+    image: "/images/nutrients/vitamin-c.jpg?v=2",
 
     benefits: [
       "Supports Normal Immune Function",
@@ -80,7 +80,7 @@ export const nutrients: Nutrient[] = [
     slug: "vitamin-b12",
     description:
       "Vitamin B12 is an essential vitamin that supports normal nerve function and red blood cell formation.",
-    image: "/images/nutrients/vitamin-b12.jpg",
+    image: "/images/nutrients/vitamin-b12.jpg?v=2",
 
     benefits: [
       "Supports Normal Nerve Function",
@@ -118,7 +118,7 @@ export const nutrients: Nutrient[] = [
     slug: "folate",
     description:
       "Folate is a B vitamin that supports DNA formation, cell division, and normal red blood cell production.",
-    image: "/images/nutrients/folate.jpg",
+    image: "/images/nutrients/folate.jpg?v=2",
 
     benefits: [
       "Supports Cell Division",
@@ -154,7 +154,7 @@ export const nutrients: Nutrient[] = [
     slug: "vitamin-d",
     description:
       "Vitamin D helps the body absorb calcium and supports normal bones, muscles, and immune function.",
-    image: "/images/nutrients/vitamin-d.jpg",
+    image: "/images/nutrients/vitamin-d.jpg?v=2",
 
     benefits: [
       "Supports Bone Health",
@@ -190,7 +190,7 @@ export const nutrients: Nutrient[] = [
     slug: "calcium",
     description:
       "Calcium is an essential mineral needed for strong bones and teeth, muscle function, and normal nerve signaling.",
-    image: "/images/nutrients/calcium.jpg",
+    image: "/images/nutrients/calcium.jpg?v=2",
 
     benefits: [
       "Supports Strong Bones",
@@ -225,7 +225,7 @@ export const nutrients: Nutrient[] = [
     slug: "magnesium",
     description:
       "Magnesium is an essential mineral involved in muscle function, nerve function, energy metabolism, and many biochemical reactions.",
-    image: "/images/nutrients/magnesium.jpg",
+    image: "/images/nutrients/magnesium.jpg?v=2",
 
     benefits: [
       "Supports Normal Muscle Function",
@@ -262,7 +262,7 @@ export const nutrients: Nutrient[] = [
     slug: "zinc",
     description:
       "Zinc is an essential mineral that supports immune function, wound healing, and normal growth and development.",
-    image: "/images/nutrients/zinc.jpg",
+    image: "/images/nutrients/zinc.jpg?v=2",
 
     benefits: [
       "Supports Normal Immune Function",
@@ -297,7 +297,7 @@ export const nutrients: Nutrient[] = [
     slug: "vitamin-a",
     description:
       "Vitamin A supports normal vision, immune function, skin health, and cell growth.",
-    image: "/images/nutrients/vitamin-a.jpg",
+    image: "/images/nutrients/vitamin-a.jpg?v=2",
 
     benefits: [
       "Supports Normal Vision",
@@ -332,7 +332,7 @@ export const nutrients: Nutrient[] = [
     slug: "vitamin-e",
     description:
       "Vitamin E is an antioxidant that helps protect cells from oxidative damage and supports immune function.",
-    image: "/images/nutrients/vitamin-e.jpg",
+    image: "/images/nutrients/vitamin-e.jpg?v=2",
 
     benefits: [
       "Provides Antioxidant Protection",
@@ -366,7 +366,7 @@ export const nutrients: Nutrient[] = [
     slug: "potassium",
     description:
       "Potassium is an essential mineral and electrolyte that supports normal muscle, nerve, and heart function.",
-    image: "/images/nutrients/potassium.jpg",
+    image: "/images/nutrients/potassium.jpg?v=2",
 
     benefits: [
       "Supports Normal Muscle Function",
@@ -402,7 +402,7 @@ export const nutrients: Nutrient[] = [
     slug: "fiber",
     description:
       "Dietary fiber is found mainly in plant foods and supports healthy digestion and regular bowel movements.",
-    image: "/images/nutrients/fiber.jpg",
+    image: "/images/nutrients/fiber.jpg?v=2",
 
     benefits: [
       "Supports Healthy Digestion",
@@ -440,7 +440,7 @@ export const nutrients: Nutrient[] = [
     slug: "protein",
     description:
       "Protein is an essential macronutrient needed for muscle, tissue repair, enzymes, hormones, and many other functions.",
-    image: "/images/nutrients/protein.jpg",
+    image: "/images/nutrients/protein.jpg?v=2",
 
     benefits: [
       "Supports Muscle Health",
@@ -480,7 +480,7 @@ export const nutrients: Nutrient[] = [
     slug: "omega-3-fatty-acids",
     description:
       "Omega-3 fatty acids are essential fats found in foods such as fatty fish, nuts, and seeds.",
-    image: "/images/nutrients/omega-3-fatty-acids.jpg",
+    image: "/images/nutrients/omega-3-fatty-acids.jpg?v=2",
 
     benefits: [
       "Supports Heart Health",
@@ -512,7 +512,7 @@ export const nutrients: Nutrient[] = [
     slug: "choline",
     description:
       "Choline is an essential nutrient involved in normal cell structure, neurotransmitter production, and fat metabolism.",
-    image: "/images/nutrients/choline.jpg",
+    image: "/images/nutrients/choline.jpg?v=2",
 
     benefits: [
       "Supports Normal Cell Structure",
@@ -545,7 +545,7 @@ export const nutrients: Nutrient[] = [
     slug: "selenium",
     description:
       "Selenium is an essential trace mineral that supports thyroid function, antioxidant protection, and immune function.",
-    image: "/images/nutrients/selenium.jpg",
+    image: "/images/nutrients/selenium.jpg?v=2",
 
     benefits: [
       "Supports Thyroid Function",
@@ -580,7 +580,7 @@ export const nutrients: Nutrient[] = [
     slug: "b-vitamins",
     description:
       "B vitamins are a group of essential vitamins that help support energy metabolism, nervous system function, and normal cell processes.",
-    image: "/images/nutrients/b-vitamins.jpg",
+    image: "/images/nutrients/b-vitamins.jpg?v=2",
 
     benefits: [
       "Supports Energy Metabolism",
@@ -617,7 +617,7 @@ export const nutrients: Nutrient[] = [
     slug: "antioxidants",
     description:
       "Antioxidants are compounds found in many plant foods that help protect cells from oxidative stress.",
-    image: "/images/nutrients/antioxidants.jpg",
+    image: "/images/nutrients/antioxidants.jpg?v=2",
 
     benefits: [
       "Supports Cellular Protection",

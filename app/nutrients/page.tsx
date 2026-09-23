@@ -266,7 +266,7 @@ export default function NutrientsPage() {
                 <div className="relative w-full aspect-[3/2] bg-green-50 overflow-hidden">
 
                   <Image
-                    src={nutrient.image}
+                    src={`${nutrient.image}?v=2`}
                     alt={`${nutrient.name} nutrition and food sources`}
                     fill
                     priority={nutrient.id <= 3}
