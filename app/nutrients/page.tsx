@@ -266,11 +266,12 @@ export default function NutrientsPage() {
                 <div className="relative w-full aspect-[3/2] bg-green-50 overflow-hidden">
 
                   <Image
-                    src={`${nutrient.image}?v=2`}
+                    src={nutrient.image}
                     alt={`${nutrient.name} nutrition and food sources`}
                     fill
                     priority={nutrient.id <= 3}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    unoptimized
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
 
